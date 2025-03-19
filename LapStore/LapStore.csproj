@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LapStore</RootNamespace>
+    <AssemblyName>LapStore</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\asus\source\repos\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="View\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SanPham.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\chuotUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\chuotUserControl.Designer.cs">
+      <DependentUpon>chuotUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\gameUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\gameUserControl.Designer.cs">
+      <DependentUpon>gameUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\micUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\micUserControl.Designer.cs">
+      <DependentUpon>micUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\cartUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\cartUser.Designer.cs">
+      <DependentUpon>cartUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\itemSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\itemSanPham.Designer.cs">
+      <DependentUpon>itemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\lapTopUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\lapTopUserControl.Designer.cs">
+      <DependentUpon>lapTopUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\loaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\loaUserControl.Designer.cs">
+      <DependentUpon>loaUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\manHinhUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\manHinhUserControl.Designer.cs">
+      <DependentUpon>manHinhUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\pcUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\pcUserControl.Designer.cs">
+      <DependentUpon>pcUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\phimUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\phimUserControl.Designer.cs">
+      <DependentUpon>phimUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\phuKienUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\phuKienUserControl.Designer.cs">
+      <DependentUpon>phuKienUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\taiNgheUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\taiNgheUserControl.Designer.cs">
+      <DependentUpon>taiNgheUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\thongKeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\thongKeUserControl.Designer.cs">
+      <DependentUpon>thongKeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\profileUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\profileUser.Designer.cs">
+      <DependentUpon>profileUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\trangChuUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\trangChuUser.Designer.cs">
+      <DependentUpon>trangChuUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\userUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\userUserControl.Designer.cs">
+      <DependentUpon>userUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\webCamUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\webCamUserControl.Designer.cs">
+      <DependentUpon>webCamUserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\chuotUserControl.resx">
+      <DependentUpon>chuotUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\gameUserControl.resx">
+      <DependentUpon>gameUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\micUserControl.resx">
+      <DependentUpon>micUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\cartUser.resx">
+      <DependentUpon>cartUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\itemSanPham.resx">
+      <DependentUpon>itemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\lapTopUserControl.resx">
+      <DependentUpon>lapTopUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\loaUserControl.resx">
+      <DependentUpon>loaUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\manHinhUserControl.resx">
+      <DependentUpon>manHinhUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\pcUserControl.resx">
+      <DependentUpon>pcUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\phimUserControl.resx">
+      <DependentUpon>phimUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\phuKienUserControl.resx">
+      <DependentUpon>phuKienUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\taiNgheUserControl.resx">
+      <DependentUpon>taiNgheUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\thongKeUserControl.resx">
+      <DependentUpon>thongKeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\profileUser.resx">
+      <DependentUpon>profileUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\trangChuUser.resx">
+      <DependentUpon>trangChuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\userUserControl.resx">
+      <DependentUpon>userUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\webCamUserControl.resx">
+      <DependentUpon>webCamUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-laptop-242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-screen-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pc-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-keyboard-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-computer-mouse-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-headphones-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ssd-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-portable-speaker-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-webcam-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon-hacom-2024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-out-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-playstation-portable-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microphone-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-analytics-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pencil-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pencil-32den.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-image-symbol-missing-available-icon-gallery-vector-45703245.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-32black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-out-32black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-32black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-32mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-done-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-03-19 235121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07_Febaf33f489136d42d1299f8589de8eed44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07_Feb5dbefdcf6be0f3ba088f4fc3f7122629.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-03-19 2351211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
