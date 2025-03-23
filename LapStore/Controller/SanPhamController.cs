@@ -112,21 +112,26 @@ namespace LapStore
         }
 
         // Tìm kiếm sản phẩm
-        public static List<SanPham> SearchSanPham(string searchValue)
+        public static List<SanPham> SearchSanPham(string searchValue, string maDm)
         {
-            List<SanPham> SanPham = new List<SanPham>();
+            List<SanPham> SanPhams = new List<SanPham>();
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                string query = "SELECT * FROM SANPHAM WHERE maSp LIKE @search OR tenSp LIKE @search OR moTa LIKE @search";
+                string query = @"SELECT * FROM SANPHAM 
+                         WHERE maDm = @maDm 
+                         AND (maSp LIKE @search OR tenSp LIKE @search OR moTa LIKE @search)";
+
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    cmd.Parameters.AddWithValue("@maDm", maDm);
                     cmd.Parameters.AddWithValue("@search", "%" + searchValue + "%");
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            SanPham.Add(new SanPham
+                            SanPhams.Add(new SanPham
                             {
                                 MaSp = reader["maSp"].ToString(),
                                 MaDm = reader["maDm"].ToString(),
@@ -143,7 +148,53 @@ namespace LapStore
                 }
             }
 
-            return SanPham;
+            return SanPhams;
         }
+        // Tạo mã sản phẩm mới tự động
+        public static string GenerateNewMaSp()
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT maSp FROM SANPHAM";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    List<int> existingNumbers = new List<int>();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string maSp = reader["maSp"].ToString();
+                            string numberPart = new string(maSp.SkipWhile(c => !char.IsDigit(c)).ToArray());
+
+                            if (int.TryParse(numberPart, out int numericPart))
+                            {
+                                existingNumbers.Add(numericPart);
+                            }
+                        }
+                    }
+
+                    // Sắp xếp danh sách số
+                    existingNumbers.Sort();
+
+                    // Tìm số bị thiếu trong dãy
+                    int newNumber = 1;
+                    for (int i = 0; i < existingNumbers.Count; i++)
+                    {
+                        if (existingNumbers[i] != newNumber)
+                        {
+                            break;
+                        }
+                        newNumber++;
+                    }
+
+                    // Trả về mã mới với định dạng SP###
+                    return "SP" + newNumber.ToString("D3");
+                }
+            }
+        }
+
+
     }
 }

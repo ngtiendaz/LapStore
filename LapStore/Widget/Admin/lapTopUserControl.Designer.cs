@@ -48,7 +48,7 @@
             this.txtGiaBan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.dateCreateAt = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dgvLapTop = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgvSP = new Guna.UI2.WinForms.Guna2DataGridView();
             this.hinhAnh = new System.Windows.Forms.DataGridViewImageColumn();
             this.maSp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maDm = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +65,8 @@
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.btn_addImage = new Guna.UI2.WinForms.Guna2CircleButton();
             this.imageSp = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLapTop)).BeginInit();
+            this.newMaSp = new Guna.UI2.WinForms.Guna2CircleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,7 +194,6 @@
             this.txtMaSp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaSp.Location = new System.Drawing.Point(310, 66);
             this.txtMaSp.Name = "txtMaSp";
-            this.txtMaSp.PasswordChar = '\0';
             this.txtMaSp.PlaceholderText = "";
             this.txtMaSp.SelectedText = "";
             this.txtMaSp.ShadowDecoration.Color = System.Drawing.Color.Gray;
@@ -216,7 +216,6 @@
             this.txtMaDm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaDm.Location = new System.Drawing.Point(310, 118);
             this.txtMaDm.Name = "txtMaDm";
-            this.txtMaDm.PasswordChar = '\0';
             this.txtMaDm.PlaceholderText = "";
             this.txtMaDm.SelectedText = "";
             this.txtMaDm.Size = new System.Drawing.Size(200, 36);
@@ -238,7 +237,6 @@
             this.txtTenSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenSP.Location = new System.Drawing.Point(310, 167);
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.PasswordChar = '\0';
             this.txtTenSP.PlaceholderText = "";
             this.txtTenSP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTenSP.SelectedText = "";
@@ -262,7 +260,6 @@
             this.txtMoTa.Location = new System.Drawing.Point(310, 215);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.PasswordChar = '\0';
             this.txtMoTa.PlaceholderText = "";
             this.txtMoTa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMoTa.SelectedText = "";
@@ -285,7 +282,6 @@
             this.txtGiaNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaNhap.Location = new System.Drawing.Point(645, 66);
             this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.PasswordChar = '\0';
             this.txtGiaNhap.PlaceholderText = "";
             this.txtGiaNhap.SelectedText = "";
             this.txtGiaNhap.Size = new System.Drawing.Size(155, 36);
@@ -307,7 +303,6 @@
             this.txtGiaBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaBan.Location = new System.Drawing.Point(645, 118);
             this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.PasswordChar = '\0';
             this.txtGiaBan.PlaceholderText = "";
             this.txtGiaBan.SelectedText = "";
             this.txtGiaBan.Size = new System.Drawing.Size(155, 36);
@@ -329,7 +324,6 @@
             this.txtSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuong.Location = new System.Drawing.Point(645, 167);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.PasswordChar = '\0';
             this.txtSoLuong.PlaceholderText = "";
             this.txtSoLuong.SelectedText = "";
             this.txtSoLuong.Size = new System.Drawing.Size(155, 36);
@@ -353,17 +347,17 @@
             this.dateCreateAt.TabIndex = 25;
             this.dateCreateAt.Value = new System.DateTime(2025, 3, 15, 23, 49, 4, 161);
             // 
-            // dgvLapTop
+            // dgvSP
             // 
-            this.dgvLapTop.AllowUserToAddRows = false;
-            this.dgvLapTop.AllowUserToOrderColumns = true;
-            this.dgvLapTop.AllowUserToResizeColumns = false;
-            this.dgvLapTop.AllowUserToResizeRows = false;
+            this.dgvSP.AllowUserToAddRows = false;
+            this.dgvSP.AllowUserToOrderColumns = true;
+            this.dgvSP.AllowUserToResizeColumns = false;
+            this.dgvSP.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvLapTop.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvLapTop.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvLapTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dgvLapTop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dgvSP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,10 +365,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLapTop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLapTop.ColumnHeadersHeight = 20;
-            this.dgvLapTop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvLapTop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSP.ColumnHeadersHeight = 20;
+            this.dgvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hinhAnh,
             this.maSp,
             this.maDm,
@@ -391,38 +385,38 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLapTop.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvLapTop.GridColor = System.Drawing.Color.Black;
-            this.dgvLapTop.Location = new System.Drawing.Point(3, 402);
-            this.dgvLapTop.MultiSelect = false;
-            this.dgvLapTop.Name = "dgvLapTop";
-            this.dgvLapTop.ReadOnly = true;
-            this.dgvLapTop.RowHeadersVisible = false;
-            this.dgvLapTop.RowTemplate.Height = 80;
-            this.dgvLapTop.Size = new System.Drawing.Size(964, 345);
-            this.dgvLapTop.TabIndex = 27;
-            this.dgvLapTop.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvLapTop.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvLapTop.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvLapTop.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvLapTop.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvLapTop.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dgvLapTop.ThemeStyle.GridColor = System.Drawing.Color.Black;
-            this.dgvLapTop.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Maroon;
-            this.dgvLapTop.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvLapTop.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvLapTop.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvLapTop.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvLapTop.ThemeStyle.HeaderStyle.Height = 20;
-            this.dgvLapTop.ThemeStyle.ReadOnly = true;
-            this.dgvLapTop.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.Gray;
-            this.dgvLapTop.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvLapTop.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvLapTop.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvLapTop.ThemeStyle.RowsStyle.Height = 80;
-            this.dgvLapTop.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvLapTop.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvLapTop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLapTop_CellClick);
+            this.dgvSP.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSP.GridColor = System.Drawing.Color.Black;
+            this.dgvSP.Location = new System.Drawing.Point(3, 402);
+            this.dgvSP.MultiSelect = false;
+            this.dgvSP.Name = "dgvSP";
+            this.dgvSP.ReadOnly = true;
+            this.dgvSP.RowHeadersVisible = false;
+            this.dgvSP.RowTemplate.Height = 80;
+            this.dgvSP.Size = new System.Drawing.Size(964, 345);
+            this.dgvSP.TabIndex = 27;
+            this.dgvSP.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvSP.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSP.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvSP.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvSP.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvSP.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvSP.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.dgvSP.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Maroon;
+            this.dgvSP.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvSP.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSP.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvSP.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvSP.ThemeStyle.HeaderStyle.Height = 20;
+            this.dgvSP.ThemeStyle.ReadOnly = true;
+            this.dgvSP.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.Gray;
+            this.dgvSP.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvSP.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSP.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvSP.ThemeStyle.RowsStyle.Height = 80;
+            this.dgvSP.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvSP.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLapTop_CellClick);
             // 
             // hinhAnh
             // 
@@ -496,7 +490,6 @@
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.Location = new System.Drawing.Point(37, 345);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "";
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.Size = new System.Drawing.Size(255, 30);
@@ -607,19 +600,39 @@
             this.imageSp.TabIndex = 26;
             this.imageSp.TabStop = false;
             // 
+            // newMaSp
+            // 
+            this.newMaSp.BorderColor = System.Drawing.Color.Transparent;
+            this.newMaSp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.newMaSp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.newMaSp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.newMaSp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.newMaSp.FillColor = System.Drawing.Color.Transparent;
+            this.newMaSp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.newMaSp.ForeColor = System.Drawing.Color.Transparent;
+            this.newMaSp.Image = global::LapStore.Properties.Resources.icons8_pencil_32den;
+            this.newMaSp.Location = new System.Drawing.Point(481, 73);
+            this.newMaSp.Name = "newMaSp";
+            this.newMaSp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.newMaSp.Size = new System.Drawing.Size(20, 20);
+            this.newMaSp.TabIndex = 34;
+            this.newMaSp.UseTransparentBackground = true;
+            this.newMaSp.Click += new System.EventHandler(this.newMaSp_Click);
+            // 
             // LapTop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.newMaSp);
             this.Controls.Add(this.btn_addImage);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.dgvLapTop);
+            this.Controls.Add(this.dgvSP);
             this.Controls.Add(this.imageSp);
             this.Controls.Add(this.dateCreateAt);
             this.Controls.Add(this.txtSoLuong);
@@ -646,7 +659,7 @@
             this.Size = new System.Drawing.Size(970, 750);
             this.Load += new System.EventHandler(this.LapTop_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.LapTop_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLapTop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -673,7 +686,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSoLuong;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateCreateAt;
         private Guna.UI2.WinForms.Guna2PictureBox imageSp;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvLapTop;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvSP;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button btnSua;
@@ -689,5 +702,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn createAt;
+        private Guna.UI2.WinForms.Guna2CircleButton newMaSp;
     }
 }

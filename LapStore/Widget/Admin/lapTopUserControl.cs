@@ -13,6 +13,7 @@ namespace LapStore.Widget
 {
     public partial class LapTop : UserControl
     {
+        string MADANHMUC = "DM001";
         public LapTop()
         {
             InitializeComponent();
@@ -36,8 +37,9 @@ namespace LapStore.Widget
 
         private void LapTop_Load(object sender, EventArgs e)
         {
-            LoadingData("DM001");
-            dgvLapTop.DefaultCellStyle.ForeColor = Color.Black;
+            txtMaDm.Text = MADANHMUC;
+            LoadingData(MADANHMUC);
+            dgvSP.DefaultCellStyle.ForeColor = Color.Black;
             txtMaDm.Enabled = false;
         }
 
@@ -60,7 +62,7 @@ namespace LapStore.Widget
         public void LoadingData(string maDm)
         {
             List<SanPham> SanPhams = SanPhamController.getSanPhamByMaDm(maDm);
-            dgvLapTop.Rows.Clear();
+            dgvSP.Rows.Clear();
 
             foreach (SanPham sp in SanPhams)
             {
@@ -82,7 +84,7 @@ namespace LapStore.Widget
                 }
 
                 // Thêm hàng mới vào DataGridView
-                        int rowIndex = dgvLapTop.Rows.Add(
+                        int rowIndex = dgvSP.Rows.Add(
                              img,                        // Hình ảnh
                              sp.MaSp,                 // Mã sản phẩm
                              sp.MaDm,                 // Mã danh mục
@@ -95,7 +97,7 @@ namespace LapStore.Widget
                          );
 
                 // Lưu đường dẫn vào thuộc tính Tag của ô hình ảnh
-                dgvLapTop.Rows[rowIndex].Cells["HinhAnh"].Tag = sp.HinhAnh;
+                dgvSP.Rows[rowIndex].Cells["HinhAnh"].Tag = sp.HinhAnh;
             }
         }
 
@@ -130,7 +132,7 @@ namespace LapStore.Widget
 
             // Gọi hàm thêm sản phẩm
             SanPhamController.AddSanPham(sanPham);
-            LoadingData("DM001");
+            LoadingData(MADANHMUC);
             MessageBox.Show("Thêm sản phẩm thành công!");
             ClearForm();
         }
@@ -142,7 +144,7 @@ namespace LapStore.Widget
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvLapTop.Rows[e.RowIndex];
+                DataGridViewRow row = dgvSP.Rows[e.RowIndex];
 
                 // Lấy thông tin từ các ô
                 txtMaSp.Text = row.Cells["maSp"].Value?.ToString().Trim();
@@ -225,7 +227,7 @@ namespace LapStore.Widget
                     SanPhamController.DeleteSanPham(maSp);
 
                     // Tải lại dữ liệu sau khi xóa
-                    LoadingData("DM001");
+                    LoadingData(MADANHMUC);
                     MessageBox.Show("Xóa sản phẩm thành công!");
                     ClearForm();
                 }
@@ -265,7 +267,7 @@ namespace LapStore.Widget
 
             // Gọi hàm cập nhật sản phẩm
             SanPhamController.UpdateSanPham(sanPham);
-            LoadingData("DM001");
+            LoadingData(MADANHMUC);
             MessageBox.Show("Cập nhật sản phẩm thành công!");
             ClearForm();
 
@@ -274,8 +276,10 @@ namespace LapStore.Widget
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             string keyword = txtTimKiem.Text.Trim();
-            List<SanPham> SanPhams = SanPhamController.SearchSanPham(keyword);
-            dgvLapTop.Rows.Clear();
+            string maDm = txtMaDm.Text.Trim();
+
+            List<SanPham> SanPhams = SanPhamController.SearchSanPham(keyword, maDm);
+            dgvSP.Rows.Clear();
 
             foreach (SanPham sp in SanPhams)
             {
@@ -287,7 +291,7 @@ namespace LapStore.Widget
                     {
                         using (var bmpTemp = new Bitmap(sp.HinhAnh))
                         {
-                            img = new Bitmap(bmpTemp, new Size(80, 80));  // Resize về 50x50
+                            img = new Bitmap(bmpTemp, new Size(80, 80));  // Resize về 80x80
                         }
                     }
                     catch (Exception ex)
@@ -297,21 +301,26 @@ namespace LapStore.Widget
                 }
 
                 // Thêm hàng mới vào DataGridView
-                        int rowIndex = dgvLapTop.Rows.Add(
-                             img,                        // Hình ảnh
-                             sp.MaSp,                 // Mã sản phẩm
-                             sp.MaDm,                 // Mã danh mục
-                             sp.TenSp,                // Tên sản phẩm
-                             sp.MoTa,                 // Mô tả
-                             sp.GiaNhap,              // Giá nhập
-                             sp.GiaBan,               // Giá bán
-                             sp.SoLuong,              // Số lượng
-                             sp.CreatedAt             // Ngày tạo
-                         );
+                int rowIndex = dgvSP.Rows.Add(
+                    img,       // Hình ảnh
+                    sp.MaSp,   // Mã sản phẩm
+                    sp.MaDm,   // Mã danh mục
+                    sp.TenSp,  // Tên sản phẩm
+                    sp.MoTa,   // Mô tả
+                    sp.GiaNhap, // Giá nhập
+                    sp.GiaBan,  // Giá bán
+                    sp.SoLuong, // Số lượng
+                    sp.CreatedAt // Ngày tạo
+                );
 
                 // Lưu đường dẫn vào thuộc tính Tag của ô hình ảnh
-                dgvLapTop.Rows[rowIndex].Cells["HinhAnh"].Tag = sp.HinhAnh;
+                dgvSP.Rows[rowIndex].Cells["HinhAnh"].Tag = sp.HinhAnh;
             }
+        }
+
+        private void newMaSp_Click(object sender, EventArgs e)
+        {
+            txtMaSp.Text = SanPhamController.GenerateNewMaSp();
         }
     }
 }
