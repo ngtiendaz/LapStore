@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LapStore.Model;
 using LapStore.Widget;
 using LapStore.Widget.User;
 
@@ -24,19 +25,10 @@ namespace LapStore.View
         }
         private void AddUserControl(UserControl uc)
         {
-            // Xóa các control cũ trong panel
             chuyen.Controls.Clear();
-
-            // Thiết lập lại thuộc tính cuộn
             chuyen.AutoScroll = true;
-
-            // Thiết lập Dock để chiếm toàn bộ không gian
             uc.Dock = DockStyle.Fill;
-
-            // Thêm UserControl vào panel
             chuyen.Controls.Add(uc);
-
-            // Đưa UserControl lên trước
             uc.BringToFront();
         }
 
@@ -59,6 +51,16 @@ namespace LapStore.View
         {
             profileUser uc = new profileUser();
             AddUserControl(uc);
+        }
+
+        private void menuUser_Paint(object sender, PaintEventArgs e)
+        {
+         
+        }
+        public void ShowDetailSanPham(SanPham sp)
+        {
+            detailSanPham detailPanel = new detailSanPham(sp);
+            AddUserControl(detailPanel);
         }
     }
 }

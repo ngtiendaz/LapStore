@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Custom.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="View\Admin.cs">
       <SubType>Form</SubType>
@@ -97,6 +98,12 @@
     </Compile>
     <Compile Include="Widget\User\cartUser.Designer.cs">
       <DependentUpon>cartUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\detailSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\detailSanPham.Designer.cs">
+      <DependentUpon>detailSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\User\itemSanPham.cs">
       <SubType>UserControl</SubType>
@@ -203,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\cartUser.resx">
       <DependentUpon>cartUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\detailSanPham.resx">
+      <DependentUpon>detailSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\itemSanPham.resx">
       <DependentUpon>itemSanPham.cs</DependentUpon>
@@ -361,6 +371,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-arrow-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-left-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-03-27 010741.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-03-27 011304.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-03-27 010912.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minus-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-favorite-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-nofavorite-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

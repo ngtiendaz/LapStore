@@ -93,6 +93,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bottom {
+            get {
+                object obj = ResourceManager.GetObject("bottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap daz {
             get {
                 object obj = ResourceManager.GetObject("daz", resourceCulture);
@@ -106,6 +116,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap favicon_hacom_2024 {
             get {
                 object obj = ResourceManager.GetObject("favicon-hacom-2024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +183,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_favorite_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-favorite-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_find_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-find-32", resourceCulture);
@@ -176,6 +206,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_headphones_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-headphones-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_home_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-home-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +243,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_left_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-left-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_menu_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-32", resourceCulture);
@@ -216,6 +266,26 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_microphone_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-microphone-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minus_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minus-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_nofavorite_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-nofavorite-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +476,36 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap Screenshot_2025_03_19_2351211 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2025-03-19 2351211", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_03_27_010741 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-03-27 010741", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_03_27_010912 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-03-27 010912", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_03_27_011304 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-03-27 011304", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

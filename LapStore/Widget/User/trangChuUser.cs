@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LapStore.Model;
+using LapStore.View;
 
 namespace LapStore.Widget
 {
@@ -21,25 +22,17 @@ namespace LapStore.Widget
             InitializeComponent();
             timer1.Start();
             InitializeSlider();
-
-           
         }
         private void InitializeSlider()
         {
-            // Lấy tất cả các tệp ảnh từ thư mục D:\Images
             string folderPath = @"D:\DataC#\slide";
             imagePaths = new List<string>(Directory.GetFiles(folderPath, "*.jpg"));
-
-             //Hoặc lấy nhiều định dạng ảnh
              imagePaths = new List<string>(Directory.GetFiles(folderPath, "*.jpg").Concat(Directory.GetFiles(folderPath, "*.png")));
 
             if (imagePaths.Count > 0)
             {
                 imageSlide.Image = Image.FromFile(imagePaths[currentIndex]);
-            }
-
-            // Khởi động Timer
-            
+            }        
         }
         private void NextSlide()
         {
@@ -47,63 +40,46 @@ namespace LapStore.Widget
             imageSlide.Image = Image.FromFile(imagePaths[currentIndex]);
         }
 
-        //private void PreviousSlide()
-        //{
-        //    currentIndex = (currentIndex - 1 + imagePaths.Count) % imagePaths.Count;
-        //    imageSlide.Image = Image.FromFile(imagePaths[currentIndex]);
-        //}
-
-
-
         private void LoadDanhSachSanPham(string maDm)
         {
-            List<SanPham> dsSanPham = SanPhamController.getSanPhamByMaDm(maDm);
+            List<SanPham> dsSanPham = SanPhamController.getAllSanPhamRandom();
             flowSP.Controls.Clear();
 
-            int itemWidth = flowSP.Width / 4 - 20; // 4 cột và trừ đi khoảng cách
+            int itemWidth = flowSP.Width / 4 - 20;
             foreach (var sp in dsSanPham)
             {
-                itemSanPham item = new itemSanPham
+                itemSanPham item = new itemSanPham(sp)
                 {
-                    MaSp = sp.MaSp,
-                    TenSp = sp.TenSp,
-                    GiaBan = sp.GiaBan,
-                    GiaNhap = sp.GiaBan,
-                    HinhAnh = sp.HinhAnh,
                     Width = itemWidth,
-                    Height = 380 // Đặt chiều cao phù hợp
+                    Height = 380
                 };
 
+                item.OnSanPhamClick += ItemSanPham_Click;
                 flowSP.Controls.Add(item);
             }
         }
-
-
+        private void ItemSanPham_Click(SanPham sp)
+        {
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.ShowDetailSanPham(sp);
+            }
+        }
 
         private void trangChuUser_Load(object sender, EventArgs e)
         {
-         
-            // Đặt lại AutoScroll khi load trang
-    
             scroll.AutoScroll = true;
-
-            // Đảm bảo FlowLayoutPanel vẫn đúng thuộc tính
             flowSP.WrapContents = true;
             flowSP.FlowDirection = FlowDirection.LeftToRight;
-           
-
-
             LoadDanhSachSanPham("DM001");
         }
-
-
-      
 
         private void flowSP_SizeChanged(object sender, EventArgs e)
         {
             foreach (Control control in flowSP.Controls)
             {
-                control.Width = flowSP.Width / 4 - 20; // Cập nhật lại width khi thay đổi kích thước
+                control.Width = flowSP.Width / 4 - 20;
             }
         }
 

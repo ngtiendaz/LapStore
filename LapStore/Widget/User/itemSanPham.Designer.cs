@@ -116,9 +116,9 @@
             this.txtGiaNhap.ForeColor = System.Drawing.Color.Red;
             this.txtGiaNhap.Location = new System.Drawing.Point(3, 303);
             this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.Size = new System.Drawing.Size(99, 21);
+            this.txtGiaNhap.Size = new System.Drawing.Size(108, 21);
             this.txtGiaNhap.TabIndex = 5;
-            this.txtGiaNhap.Text = "11.999.000đ";
+            this.txtGiaNhap.Text = "999.999.000đ";
             // 
             // itemSanPham
             // 

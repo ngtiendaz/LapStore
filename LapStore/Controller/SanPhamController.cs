@@ -13,7 +13,73 @@ namespace LapStore
 {
     class SanPhamController
     {
+        public static List<SanPham> getAllSanPhamRandom()
+        {
+            List<SanPham> sanPhamList = new List<SanPham>();
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT * FROM SANPHAM ORDER BY NEWID()"; // Lấy ngẫu nhiên
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            sanPhamList.Add(new SanPham
+                            {
+                                MaSp = reader["maSp"].ToString(),
+                                MaDm = reader["maDm"].ToString(),
+                                TenSp = reader["tenSp"].ToString(),
+                                HinhAnh = reader["hinhAnh"].ToString(),
+                                MoTa = reader["moTa"].ToString(),
+                                GiaNhap = (long)reader["giaNhap"],
+                                GiaBan = (long)reader["giaBan"],
+                                SoLuong = (int)reader["soLuong"],
+                                CreatedAt = (DateTime)reader["created_at"]
+                            });
+                        }
+                    }
+                }
+            }
+
+            return sanPhamList;
+        }
+
         // Lấy tất cả sản phẩm
+        public static List<SanPham> getAllSanPham()
+        {
+            List<SanPham> sanPhamList = new List<SanPham>();
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT * FROM SANPHAM";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            sanPhamList.Add(new SanPham
+                            {
+                                MaSp = reader["maSp"].ToString(),
+                                MaDm = reader["maDm"].ToString(),
+                                TenSp = reader["tenSp"].ToString(),
+                                HinhAnh = reader["hinhAnh"].ToString(),
+                                MoTa = reader["moTa"].ToString(),
+                                GiaNhap = (long)reader["giaNhap"],
+                                GiaBan = (long)reader["giaBan"],
+                                SoLuong = (int)reader["soLuong"],
+                                CreatedAt = (DateTime)reader["created_at"]
+                            });
+                        }
+                    }
+                }
+            }
+
+            return sanPhamList;
+        }
+
         // Lấy danh sách sản phẩm theo mã danh mục
         public static List<SanPham> getSanPhamByMaDm(string maDm)
         {

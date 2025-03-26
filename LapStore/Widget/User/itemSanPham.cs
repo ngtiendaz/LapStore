@@ -7,12 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LapStore.Model;
 
 namespace LapStore.Widget
 {
     public partial class itemSanPham : UserControl
     {
-        private static Random random = new Random();
+        public static Random random = new Random();
+
+
+        public event Action<SanPham> OnSanPhamClick; // Sự kiện để truyền dữ liệu sản phẩm
+
+        private SanPham sanPham;
+        private long Gia;
         public string MaSp
         {
             get => txtMaSp.Text;
@@ -28,14 +35,15 @@ namespace LapStore.Widget
         public long GiaBan
         {
             set => txtGiaBan.Text = value.ToString("N0") + "đ";
+           
+
         }
         public long GiaNhap
         {
             set
             {
-                // Random từ 1,000,000 đến 2,000,000
-                long randomGia = random.Next(1_000_000, 2_000_001);
-                txtGiaNhap.Text = (value + randomGia).ToString("N0") + "đ";
+
+                txtGiaNhap.Text = value.ToString("N0") + "đ";
             }
         }
 
@@ -57,12 +65,31 @@ namespace LapStore.Widget
             }
         }
 
-        public itemSanPham()
+        public itemSanPham(SanPham sp)
         {
             InitializeComponent();
             this.Size = new Size(200, 250); // Đặt kích thước cố định
             this.AutoSize = false;          // Tắt tự động thay đổi kích thước
             this.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+
+            this.sanPham = sp;
+            GiaNhap = sp.GiaBan + 5999000;
+            MaSp = sp.MaSp;
+            TenSp = sp.TenSp;
+            GiaBan = sp.GiaBan;
+            HinhAnh = sp.HinhAnh;
+
+            this.Click += ItemSanPham_Click;
+            foreach (Control control in this.Controls)
+            {
+                control.Click += ItemSanPham_Click;
+            }
+
+        }
+        private void ItemSanPham_Click(object sender, EventArgs e)
+        {
+            OnSanPhamClick?.Invoke(sanPham);
         }
     }
 }

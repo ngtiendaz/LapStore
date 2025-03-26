@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LapStore.Model
 {
-    class SanPham
+    public class SanPham
     {
         public string MaSp { get; set; }          // mã sản phẩm (char(10))
         public string MaDm { get; set; }          // mã danh mục (char(10))

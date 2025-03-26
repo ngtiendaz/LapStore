@@ -174,7 +174,7 @@
             this.flowSP.BackColor = System.Drawing.Color.Transparent;
             this.flowSP.Location = new System.Drawing.Point(97, 430);
             this.flowSP.Name = "flowSP";
-            this.flowSP.Size = new System.Drawing.Size(1050, 1279);
+            this.flowSP.Size = new System.Drawing.Size(1050, 3000);
             this.flowSP.TabIndex = 0;
             this.flowSP.SizeChanged += new System.EventHandler(this.flowSP_SizeChanged);
             // 
