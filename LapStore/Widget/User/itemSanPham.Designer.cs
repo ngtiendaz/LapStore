@@ -34,6 +34,7 @@
             this.btn_addToCart = new Guna.UI2.WinForms.Guna2CircleButton();
             this.imageSp = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtGiaNhap = new System.Windows.Forms.Label();
+            this.txt_trangThai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageSp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +121,23 @@
             this.txtGiaNhap.TabIndex = 5;
             this.txtGiaNhap.Text = "999.999.000đ";
             // 
+            // txt_trangThai
+            // 
+            this.txt_trangThai.AutoSize = true;
+            this.txt_trangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_trangThai.ForeColor = System.Drawing.Color.Green;
+            this.txt_trangThai.Location = new System.Drawing.Point(4, 361);
+            this.txt_trangThai.Name = "txt_trangThai";
+            this.txt_trangThai.Size = new System.Drawing.Size(64, 17);
+            this.txt_trangThai.TabIndex = 6;
+            this.txt_trangThai.Text = "Sẵn hàng";
+            // 
             // itemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txt_trangThai);
             this.Controls.Add(this.txtGiaNhap);
             this.Controls.Add(this.btn_addToCart);
             this.Controls.Add(this.txtGiaBan);
@@ -147,5 +160,6 @@
         private System.Windows.Forms.Label txtGiaBan;
         private Guna.UI2.WinForms.Guna2CircleButton btn_addToCart;
         private System.Windows.Forms.Label txtGiaNhap;
+        private System.Windows.Forms.Label txt_trangThai;
     }
 }

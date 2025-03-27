@@ -16,14 +16,13 @@ namespace LapStore.Widget.User
     {
         private bool isLiked = false;
         private int soLuong = 1;
-        private string heartEmptyPath = @"D:\DataC#\icon\false.png";
-        private string heartFilledPath = @"D:\Icons\true.png";
         public detailSanPham(SanPham sp)
         {
             long tietKiem= 5999000;
             InitializeComponent();
             txtMaSP.Text = "Mã SP: "+ sp.MaSp;
             txt_TenSP.Text = sp.TenSp;
+            txt_soLuongKho.Text = "*Số lượng còn lại trong kho: "+sp.SoLuong;
             txt_giaCu.Text = (sp.GiaBan + tietKiem).ToString("N0") + "đ";
             txtGia.Text = sp.GiaBan.ToString("N0") + "đ";
             txt_tietKiem.Text = "Tiết kiệm: "+tietKiem.ToString("N0") + "đ";
@@ -39,12 +38,27 @@ namespace LapStore.Widget.User
             {
                 //imageSP.Image = Properties.Resources.default_image;
             }
+            if (sp.SoLuong == 0)
+            {
+                btn_mua.Text = "Hết hàng";       // Thay đổi chữ
+                btn_mua.Enabled = false;         // Vô hiệu hóa nút
+              
+            }
         }
 
         private void btn_congSoLuong_Click(object sender, EventArgs e)
         {
-            soLuong++;
-            txtSoLuong.Text = soLuong.ToString();
+            int soLuongKho = int.Parse(txt_soLuongKho.Text.Split(':')[1].Trim()); // Lấy số lượng kho từ label
+            if (soLuong < soLuongKho)
+            {
+                soLuong++;
+                txtSoLuongMua.Text = soLuong.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Số lượng mua vượt quá số lượng kho!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void btn_truSoLuong_Click(object sender, EventArgs e)
@@ -52,7 +66,7 @@ namespace LapStore.Widget.User
             if (soLuong > 1)
             {
                 soLuong--;
-                txtSoLuong.Text = soLuong.ToString();
+                txtSoLuongMua.Text = soLuong.ToString();
             }
         }
 

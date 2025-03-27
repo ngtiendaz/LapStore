@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\SanPhamController.cs" />
-    <Compile Include="Custom.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="View\Admin.cs">
       <SubType>Form</SubType>
@@ -98,6 +97,12 @@
     </Compile>
     <Compile Include="Widget\User\cartUser.Designer.cs">
       <DependentUpon>cartUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\danhMuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\danhMuc.Designer.cs">
+      <DependentUpon>danhMuc.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\User\detailSanPham.cs">
       <SubType>UserControl</SubType>
@@ -210,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\cartUser.resx">
       <DependentUpon>cartUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\danhMuc.resx">
+      <DependentUpon>danhMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\detailSanPham.resx">
       <DependentUpon>detailSanPham.cs</DependentUpon>

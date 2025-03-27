@@ -19,7 +19,6 @@ namespace LapStore.Widget
         public event Action<SanPham> OnSanPhamClick; // Sự kiện để truyền dữ liệu sản phẩm
 
         private SanPham sanPham;
-        private long Gia;
         public string MaSp
         {
             get => txtMaSp.Text;
@@ -44,6 +43,27 @@ namespace LapStore.Widget
             {
 
                 txtGiaNhap.Text = value.ToString("N0") + "đ";
+            }
+        }
+        public long SoLuong
+        {
+            set
+            {
+
+                
+                    if (value == 0)
+                    {
+                        txt_trangThai.Text = "Hết hàng";
+                        txt_trangThai.ForeColor = Color.Red; // Chữ màu đỏ
+                        this.BackColor = Color.LightGray; // Background màu xám
+                    }
+                    else
+                    {
+                    txt_trangThai.Text = "Sẵn hàng";
+                    txt_trangThai.ForeColor = Color.Green;
+
+                }
+                
             }
         }
 
@@ -79,6 +99,7 @@ namespace LapStore.Widget
             TenSp = sp.TenSp;
             GiaBan = sp.GiaBan;
             HinhAnh = sp.HinhAnh;
+            SoLuong = sp.SoLuong;
 
             this.Click += ItemSanPham_Click;
             foreach (Control control in this.Controls)
