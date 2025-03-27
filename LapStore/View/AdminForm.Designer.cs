@@ -46,13 +46,13 @@
             this.btn_ManHinh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Laptop = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txt_tenAdmin = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.imageAdmin = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChuyen = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // menu
@@ -75,9 +75,9 @@
             this.menu.Controls.Add(this.btn_ManHinh);
             this.menu.Controls.Add(this.btn_Laptop);
             this.menu.Controls.Add(this.label1);
-            this.menu.Controls.Add(this.label2);
+            this.menu.Controls.Add(this.txt_tenAdmin);
             this.menu.Controls.Add(this.bunifuSeparator1);
-            this.menu.Controls.Add(this.guna2CirclePictureBox1);
+            this.menu.Controls.Add(this.imageAdmin);
             this.menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menu.ForeColor = System.Drawing.Color.White;
             this.menu.Location = new System.Drawing.Point(0, 0);
@@ -437,17 +437,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Admin";
             // 
-            // label2
+            // txt_tenAdmin
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(80, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nguyễn Tiến Đạt";
+            this.txt_tenAdmin.AutoSize = true;
+            this.txt_tenAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.txt_tenAdmin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tenAdmin.ForeColor = System.Drawing.Color.White;
+            this.txt_tenAdmin.Location = new System.Drawing.Point(80, 25);
+            this.txt_tenAdmin.Name = "txt_tenAdmin";
+            this.txt_tenAdmin.Size = new System.Drawing.Size(113, 17);
+            this.txt_tenAdmin.TabIndex = 1;
+            this.txt_tenAdmin.Text = "Nguyễn Tiến Đạt";
             // 
             // bunifuSeparator1
             // 
@@ -462,20 +462,20 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // guna2CirclePictureBox1
+            // imageAdmin
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2CirclePictureBox1.Image = global::LapStore.Properties.Resources.daz;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 13);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.imageAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.imageAdmin.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.imageAdmin.Image = global::LapStore.Properties.Resources.daz;
+            this.imageAdmin.ImageRotate = 0F;
+            this.imageAdmin.Location = new System.Drawing.Point(12, 13);
+            this.imageAdmin.Name = "imageAdmin";
+            this.imageAdmin.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imageAdmin.Size = new System.Drawing.Size(60, 60);
+            this.imageAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageAdmin.TabIndex = 1;
+            this.imageAdmin.TabStop = false;
+            this.imageAdmin.UseTransparentBackground = true;
             // 
             // panel2
             // 
@@ -512,9 +512,10 @@
             this.Name = "adminHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.adminHome_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,8 +524,8 @@
 
         private System.Windows.Forms.Panel menu;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imageAdmin;
+        private System.Windows.Forms.Label txt_tenAdmin;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btn_Laptop;
         private Guna.UI2.WinForms.Guna2Button btn_user;

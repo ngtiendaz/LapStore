@@ -222,3 +222,13 @@ Có thể kết hợp sử dụng với quạt NZXT F120/F140 RGB
 Cá nhân hóa hiệu ứng ánh sáng RGB và điều chỉnh quạt thông qua NZXT CAM
 Kích thước 120mm
 Bộ sản phẩm gồm 3 quạt tản nhiệt', 2000000, 2599000, 15);
+
+
+
+
+INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)  
+VALUES ('1', N'Daz', 'user@email.com', '123456', N'Hà Nội', '0987654321', 1, N'D:\DataC#\image\daz.jpg');
+INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)  
+VALUES ('2', N'Daz', 'admin@email.com', '123456', N'Hà Nội', '0987654321', 1, N'D:\DataC#\image\daz.jpg');
+INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)  
+VALUES ('3', N'Daz', 'admin2@email.com', '123456', N'Hà Nội', '0987654321', 0, N'D:\DataC#\image\daz.jpg');

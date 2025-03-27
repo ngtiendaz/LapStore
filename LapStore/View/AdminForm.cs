@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LapStore.Controller;
 using LapStore.Widget;
 using LapStore.Widget.Admin;
 
@@ -32,6 +33,18 @@ namespace LapStore
             panelChuyen.Controls.Add(uc);
             
             uc.BringToFront();
+        }
+        private void SetUserImage(string imagePath)
+        {
+            if (!string.IsNullOrEmpty(imagePath) && System.IO.File.Exists(imagePath))
+            {
+                imageAdmin.ImageLocation = imagePath;
+            }
+            else
+            {
+                imageAdmin.Image = null;
+                imageAdmin.BackColor = Color.Gray; // Nếu không có ảnh, đổi màu PictureBox thành đỏ
+            }
         }
 
 
@@ -131,6 +144,15 @@ namespace LapStore
         {
             thongKeUserControl uc = new thongKeUserControl();
             AddUserControl(uc);
+        }
+
+        private void adminHome_Load(object sender, EventArgs e)
+        {
+            if (UserController.CurrentUser != null)
+            {
+                txt_tenAdmin.Text = UserController.CurrentUser.HoTen;
+                SetUserImage(UserController.CurrentUser.HinhAnh);
+            }
         }
     }
 }

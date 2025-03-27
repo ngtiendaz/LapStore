@@ -246,6 +246,7 @@
             this.btn_mua.Size = new System.Drawing.Size(460, 58);
             this.btn_mua.TabIndex = 15;
             this.btn_mua.Text = "Mua Ngay";
+            this.btn_mua.Click += new System.EventHandler(this.btn_mua_Click);
             // 
             // txt_tietKiem
             // 

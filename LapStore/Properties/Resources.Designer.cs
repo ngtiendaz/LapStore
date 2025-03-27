@@ -83,6 +83,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _false {
+            get {
+                object obj = ResourceManager.GetObject("false", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aaaaa {
             get {
                 object obj = ResourceManager.GetObject("aaaaa", resourceCulture);
@@ -186,6 +196,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_favorite_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-favorite-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_favorite22_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-favorite22-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +336,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_pencil_32den {
             get {
                 object obj = ResourceManager.GetObject("icons8-pencil-32den", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pencil_32den1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pencil-32den1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

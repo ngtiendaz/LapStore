@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LapStore.Controller;
 using LapStore.Model;
 
 namespace LapStore.Widget.User
@@ -83,6 +84,11 @@ namespace LapStore.Widget.User
             {
                 btn_like.Image = img;
             }
+        }
+
+        private void btn_mua_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

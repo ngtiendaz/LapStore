@@ -57,22 +57,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\DonHangController.cs" />
+    <Compile Include="Controller\GioHangController.cs" />
     <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Database.cs" />
-    <Compile Include="View\Admin.cs">
+    <Compile Include="Model\DonHang.cs" />
+    <Compile Include="Model\GioHang.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="View\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\User.cs">
+    <Compile Include="View\LoginFake.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\User.Designer.cs">
-      <DependentUpon>User.cs</DependentUpon>
+    <Compile Include="View\LoginFake.Designer.cs">
+      <DependentUpon>LoginFake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\Admin\chuotUserControl.cs">
       <SubType>UserControl</SubType>
@@ -188,8 +200,8 @@
     <Compile Include="Widget\Admin\webCamUserControl.Designer.cs">
       <DependentUpon>webCamUserControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <EmbeddedResource Include="View\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,8 +213,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\User.resx">
-      <DependentUpon>User.cs</DependentUpon>
+    <EmbeddedResource Include="View\LoginFake.resx">
+      <DependentUpon>LoginFake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\Admin\chuotUserControl.resx">
       <DependentUpon>chuotUserControl.cs</DependentUpon>
@@ -409,6 +424,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-nofavorite-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\false.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-favorite22-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pencil-32den1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

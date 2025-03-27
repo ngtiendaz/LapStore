@@ -1,0 +1,170 @@
+﻿using LapStore.Model;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+
+namespace LapStore.Controller
+{
+    internal class UserController
+    {
+        public static User CurrentUser { get; private set; }
+
+
+        public static string Login(string email, string password)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT * FROM USERS WHERE email = @Email AND pass = @Password";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read()) // Nếu có kết quả, tức là đăng nhập thành công
+                        {
+                            CurrentUser = new User
+                            {
+                                Id = reader["id"].ToString(),
+                                HoTen = reader["hoTen"].ToString(),
+                                Email = reader["email"].ToString(),
+                                Pass = reader["pass"].ToString(),
+                                DiaChi = reader["diaChi"].ToString(),
+                                Sdt = reader["sdt"].ToString(),
+                                Check = (bool)reader["check"],
+                                HinhAnh = reader["hinhAnh"].ToString()
+                            };
+
+                            return CurrentUser.Check ? "USER" : "ADMIN";
+                        }
+                    }
+                }
+            }
+            return "INVALID"; // Sai email hoặc mật khẩu
+        }
+
+
+        public static List<User> GetAllUsers()
+        {
+            List<User> users = new List<User>();
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT * FROM USERS";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            users.Add(new User
+                            {
+                                Id = reader["id"].ToString(),
+                                HoTen = reader["hoTen"].ToString(),
+                                Email = reader["email"].ToString(),
+                                Pass = reader["pass"].ToString(),
+                                DiaChi = reader["diaChi"].ToString(),
+                                Sdt = reader["sdt"].ToString(),
+                                Check = (bool)reader["check"],
+                                HinhAnh = reader["hinhAnh"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            return users;
+        }
+
+        // Thêm người dùng mới
+        public static void AddUser(User user)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "INSERT INTO USERS(id, hoTen, email, pass, diaChi, sdt, check, hinhAnh) " +
+                               "VALUES (@id, @hoTen, @email, @pass, @diaChi, @sdt, @check, @hinhAnh)";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", user.Id);
+                    cmd.Parameters.AddWithValue("@hoTen", user.HoTen);
+                    cmd.Parameters.AddWithValue("@email", user.Email);
+                    cmd.Parameters.AddWithValue("@pass", user.Pass);
+                    cmd.Parameters.AddWithValue("@diaChi", user.DiaChi);
+                    cmd.Parameters.AddWithValue("@sdt", user.Sdt);
+                    cmd.Parameters.AddWithValue("@check", user.Check);
+                    cmd.Parameters.AddWithValue("@hinhAnh", user.HinhAnh);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Cập nhật thông tin người dùng
+        public static void UpdateUser(User user)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "UPDATE USERS SET hoTen = @hoTen, email = @email, pass = @pass, diaChi = @diaChi, " +
+                               "sdt = @sdt, check = @check, hinhAnh = @hinhAnh WHERE id = @id";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", user.Id);
+                    cmd.Parameters.AddWithValue("@hoTen", user.HoTen);
+                    cmd.Parameters.AddWithValue("@email", user.Email);
+                    cmd.Parameters.AddWithValue("@pass", user.Pass);
+                    cmd.Parameters.AddWithValue("@diaChi", user.DiaChi);
+                    cmd.Parameters.AddWithValue("@sdt", user.Sdt);
+                    cmd.Parameters.AddWithValue("@check", user.Check);
+                    cmd.Parameters.AddWithValue("@hinhAnh", user.HinhAnh);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Xóa người dùng
+        public static void DeleteUser(string userId)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "DELETE FROM USERS WHERE id = @id";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", userId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Tạo mã user mới tự động
+        public static int GenerateNewMaUser()
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT CAST(id AS INT) AS NumericId FROM USERS";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    List<int> existingNumbers = new List<int>();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            existingNumbers.Add(reader.GetInt32(0));
+                        }
+                    }
+                    existingNumbers.Sort();
+                    int newNumber = 1;
+                    foreach (int num in existingNumbers)
+                    {
+                        if (num != newNumber)
+                        {
+                            break;
+                        }
+                        newNumber++;
+                    }
+                    return newNumber;
+                }
+            }
+        }
+
+    }
+
+}
