@@ -8,7 +8,7 @@ namespace LapStore.Controller
 {
     internal class UserController
     {
-        public static User CurrentUser { get; private set; }
+        public static UserModel CurrentUser { get; private set; }
 
 
         public static string Login(string email, string password)
@@ -25,7 +25,7 @@ namespace LapStore.Controller
                     {
                         if (reader.Read()) // Nếu có kết quả, tức là đăng nhập thành công
                         {
-                            CurrentUser = new User
+                            CurrentUser = new UserModel
                             {
                                 Id = reader["id"].ToString(),
                                 HoTen = reader["hoTen"].ToString(),
@@ -46,9 +46,9 @@ namespace LapStore.Controller
         }
 
 
-        public static List<User> GetAllUsers()
+        public static List<UserModel> GetAllUsers()
         {
-            List<User> users = new List<User>();
+            List<UserModel> users = new List<UserModel>();
             using (SqlConnection conn = Database.GetConnection())
             {
                 string query = "SELECT * FROM USERS";
@@ -58,7 +58,7 @@ namespace LapStore.Controller
                     {
                         while (reader.Read())
                         {
-                            users.Add(new User
+                            users.Add(new UserModel
                             {
                                 Id = reader["id"].ToString(),
                                 HoTen = reader["hoTen"].ToString(),
@@ -77,11 +77,11 @@ namespace LapStore.Controller
         }
 
         // Thêm người dùng mới
-        public static void AddUser(User user)
+        public static void AddUser(UserModel user)
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                string query = "INSERT INTO USERS(id, hoTen, email, pass, diaChi, sdt, check, hinhAnh) " +
+                string query = "INSERT INTO USERS(id, hoTen, email, pass, diaChi, sdt,[check], hinhAnh) " +
                                "VALUES (@id, @hoTen, @email, @pass, @diaChi, @sdt, @check, @hinhAnh)";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -99,12 +99,12 @@ namespace LapStore.Controller
         }
 
         // Cập nhật thông tin người dùng
-        public static void UpdateUser(User user)
+        public static void UpdateUser(UserModel user)
         {
             using (SqlConnection conn = Database.GetConnection())
             {
                 string query = "UPDATE USERS SET hoTen = @hoTen, email = @email, pass = @pass, diaChi = @diaChi, " +
-                               "sdt = @sdt, check = @check, hinhAnh = @hinhAnh WHERE id = @id";
+                               "sdt = @sdt, [check] = @check, hinhAnh = @hinhAnh WHERE id = @id";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", user.Id);
@@ -186,6 +186,45 @@ namespace LapStore.Controller
                 }
             }
         }
+        public static List<UserModel> SearchUsers(string keyword)
+        {
+            List<UserModel> users = new List<UserModel>();
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT * FROM USERS WHERE " +
+                               "id LIKE @Keyword OR " +
+                               "hoTen LIKE @Keyword OR " +
+                               "email LIKE @Keyword OR " +
+                               "[check] LIKE @Keyword OR " +
+                               "sdt LIKE @Keyword";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            users.Add(new UserModel
+                            {
+                                Id = reader["id"].ToString(),
+                                HoTen = reader["hoTen"].ToString(),
+                                Email = reader["email"].ToString(),
+                                Pass = reader["pass"].ToString(),
+                                DiaChi = reader["diaChi"].ToString(),
+                                Sdt = reader["sdt"].ToString(),
+                                Check = (bool)reader["check"],
+                                HinhAnh = reader["hinhAnh"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            return users;
+        }
+
 
 
     }

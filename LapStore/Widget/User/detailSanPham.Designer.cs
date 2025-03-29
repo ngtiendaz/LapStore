@@ -53,6 +53,7 @@
             this.txt_TenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.imageSP = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_trangChu = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelTong.SuspendLayout();
             this.panelSoLuong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -60,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelMoTa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTong
@@ -67,6 +69,7 @@
             this.panelTong.BackColor = System.Drawing.Color.White;
             this.panelTong.BorderColor = System.Drawing.Color.Black;
             this.panelTong.BorderRadius = 15;
+            this.panelTong.Controls.Add(this.guna2PictureBox3);
             this.panelTong.Controls.Add(this.txt_soLuongKho);
             this.panelTong.Controls.Add(this.panelSoLuong);
             this.panelTong.Controls.Add(this.guna2PictureBox4);
@@ -388,6 +391,17 @@
             this.btn_trangChu.TabIndex = 17;
             this.btn_trangChu.Text = "Trang Chủ";
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::LapStore.Properties.Resources.Screenshot_2025_03_29_191332;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(710, 81);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(97, 19);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 24;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // detailSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +424,7 @@
             this.panelMoTa.ResumeLayout(false);
             this.panelMoTa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -440,5 +455,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CircleButton btn_like;
         private System.Windows.Forms.Label txt_soLuongKho;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }

@@ -30,13 +30,6 @@
         {
             this.panelLogin = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_dangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_sangDK = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_pass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_thoat = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.loading1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelRegister = new System.Windows.Forms.Panel();
             this.txt_checkPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_tenDK = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,10 +38,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_passDK = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_emailDK = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_dangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_sangDK = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_pass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_thoat = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.loading1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelChuyen = new System.Windows.Forms.Panel();
             this.panelLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loading1)).BeginInit();
             this.panelRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loading1)).BeginInit();
             this.panelChuyen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +81,167 @@
             this.label2.Size = new System.Drawing.Size(113, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Quên mật khẩu ?";
+            // 
+            // panelRegister
+            // 
+            this.panelRegister.BackColor = System.Drawing.Color.Transparent;
+            this.panelRegister.Controls.Add(this.txt_checkPass);
+            this.panelRegister.Controls.Add(this.txt_tenDK);
+            this.panelRegister.Controls.Add(this.btn_dangKi);
+            this.panelRegister.Controls.Add(this.btn_sangDN);
+            this.panelRegister.Controls.Add(this.label4);
+            this.panelRegister.Controls.Add(this.txt_passDK);
+            this.panelRegister.Controls.Add(this.txt_emailDK);
+            this.panelRegister.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRegister.Location = new System.Drawing.Point(0, 0);
+            this.panelRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.panelRegister.MaximumSize = new System.Drawing.Size(400, 540);
+            this.panelRegister.MinimumSize = new System.Drawing.Size(400, 540);
+            this.panelRegister.Name = "panelRegister";
+            this.panelRegister.Size = new System.Drawing.Size(400, 540);
+            this.panelRegister.TabIndex = 6;
+            this.panelRegister.Visible = false;
+            // 
+            // txt_checkPass
+            // 
+            this.txt_checkPass.BorderColor = System.Drawing.Color.Black;
+            this.txt_checkPass.BorderRadius = 10;
+            this.txt_checkPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_checkPass.DefaultText = "";
+            this.txt_checkPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_checkPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_checkPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_checkPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_checkPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_checkPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_checkPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_checkPass.IconLeft = global::LapStore.Properties.Resources.icons8_password_32;
+            this.txt_checkPass.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_checkPass.Location = new System.Drawing.Point(58, 302);
+            this.txt_checkPass.Name = "txt_checkPass";
+            this.txt_checkPass.PlaceholderText = "Nhập lại mật khẩu";
+            this.txt_checkPass.SelectedText = "";
+            this.txt_checkPass.Size = new System.Drawing.Size(290, 40);
+            this.txt_checkPass.TabIndex = 7;
+            // 
+            // txt_tenDK
+            // 
+            this.txt_tenDK.BorderColor = System.Drawing.Color.Black;
+            this.txt_tenDK.BorderRadius = 10;
+            this.txt_tenDK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_tenDK.DefaultText = "";
+            this.txt_tenDK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_tenDK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_tenDK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_tenDK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_tenDK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_tenDK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_tenDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_tenDK.IconLeft = global::LapStore.Properties.Resources.icons8_user_32black;
+            this.txt_tenDK.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_tenDK.Location = new System.Drawing.Point(58, 102);
+            this.txt_tenDK.Name = "txt_tenDK";
+            this.txt_tenDK.PlaceholderText = "Tên người dùng";
+            this.txt_tenDK.SelectedText = "";
+            this.txt_tenDK.Size = new System.Drawing.Size(290, 40);
+            this.txt_tenDK.TabIndex = 6;
+            // 
+            // btn_dangKi
+            // 
+            this.btn_dangKi.BorderRadius = 10;
+            this.btn_dangKi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dangKi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dangKi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dangKi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dangKi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dangKi.FillColor = System.Drawing.Color.Black;
+            this.btn_dangKi.FillColor2 = System.Drawing.Color.Gray;
+            this.btn_dangKi.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_dangKi.ForeColor = System.Drawing.Color.White;
+            this.btn_dangKi.Location = new System.Drawing.Point(58, 379);
+            this.btn_dangKi.Name = "btn_dangKi";
+            this.btn_dangKi.Size = new System.Drawing.Size(290, 50);
+            this.btn_dangKi.TabIndex = 5;
+            this.btn_dangKi.Text = "ĐĂNG KÝ";
+            this.btn_dangKi.Click += new System.EventHandler(this.btn_dangKi_Click);
+            // 
+            // btn_sangDN
+            // 
+            this.btn_sangDN.BackColor = System.Drawing.Color.Transparent;
+            this.btn_sangDN.BorderRadius = 10;
+            this.btn_sangDN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_sangDN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_sangDN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_sangDN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_sangDN.FillColor = System.Drawing.Color.Transparent;
+            this.btn_sangDN.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_sangDN.ForeColor = System.Drawing.Color.Silver;
+            this.btn_sangDN.Image = global::LapStore.Properties.Resources.icons8_arrow_32r2;
+            this.btn_sangDN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_sangDN.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_sangDN.Location = new System.Drawing.Point(58, 465);
+            this.btn_sangDN.Name = "btn_sangDN";
+            this.btn_sangDN.Size = new System.Drawing.Size(290, 35);
+            this.btn_sangDN.TabIndex = 4;
+            this.btn_sangDN.Text = "Đã có tài khoản. Đăng nhập";
+            this.btn_sangDN.UseTransparentBackground = true;
+            this.btn_sangDN.Click += new System.EventHandler(this.btn_sangDN_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(109, 28);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 50);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Đăng ký";
+            // 
+            // txt_passDK
+            // 
+            this.txt_passDK.BorderColor = System.Drawing.Color.Black;
+            this.txt_passDK.BorderRadius = 10;
+            this.txt_passDK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_passDK.DefaultText = "";
+            this.txt_passDK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_passDK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_passDK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_passDK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_passDK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_passDK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_passDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_passDK.IconLeft = global::LapStore.Properties.Resources.icons8_password_32;
+            this.txt_passDK.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_passDK.Location = new System.Drawing.Point(58, 237);
+            this.txt_passDK.Name = "txt_passDK";
+            this.txt_passDK.PlaceholderText = "Mật khẩu";
+            this.txt_passDK.SelectedText = "";
+            this.txt_passDK.Size = new System.Drawing.Size(290, 40);
+            this.txt_passDK.TabIndex = 1;
+            // 
+            // txt_emailDK
+            // 
+            this.txt_emailDK.BorderColor = System.Drawing.Color.Black;
+            this.txt_emailDK.BorderRadius = 10;
+            this.txt_emailDK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_emailDK.DefaultText = "";
+            this.txt_emailDK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_emailDK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_emailDK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_emailDK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_emailDK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_emailDK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_emailDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_emailDK.IconLeft = global::LapStore.Properties.Resources.icons8_user_32black;
+            this.txt_emailDK.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_emailDK.Location = new System.Drawing.Point(58, 169);
+            this.txt_emailDK.Name = "txt_emailDK";
+            this.txt_emailDK.PlaceholderText = "Email";
+            this.txt_emailDK.SelectedText = "";
+            this.txt_emailDK.Size = new System.Drawing.Size(290, 40);
+            this.txt_emailDK.TabIndex = 0;
             // 
             // btn_dangNhap
             // 
@@ -119,7 +280,7 @@
             this.btn_sangDK.Name = "btn_sangDK";
             this.btn_sangDK.Size = new System.Drawing.Size(290, 35);
             this.btn_sangDK.TabIndex = 4;
-            this.btn_sangDK.Text = "Chưa có tài khoản ? Đăng kí ngay ";
+            this.btn_sangDK.Text = "Chưa có tài khoản ? Đăng ký ngay ";
             this.btn_sangDK.UseTransparentBackground = true;
             this.btn_sangDK.Click += new System.EventHandler(this.btn_sangDK_Click);
             // 
@@ -213,167 +374,6 @@
             this.loading1.UseTransparentBackground = true;
             this.loading1.Visible = false;
             // 
-            // panelRegister
-            // 
-            this.panelRegister.BackColor = System.Drawing.Color.Transparent;
-            this.panelRegister.Controls.Add(this.txt_checkPass);
-            this.panelRegister.Controls.Add(this.txt_tenDK);
-            this.panelRegister.Controls.Add(this.btn_dangKi);
-            this.panelRegister.Controls.Add(this.btn_sangDN);
-            this.panelRegister.Controls.Add(this.label4);
-            this.panelRegister.Controls.Add(this.txt_passDK);
-            this.panelRegister.Controls.Add(this.txt_emailDK);
-            this.panelRegister.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRegister.Location = new System.Drawing.Point(0, 0);
-            this.panelRegister.Margin = new System.Windows.Forms.Padding(2);
-            this.panelRegister.MaximumSize = new System.Drawing.Size(400, 540);
-            this.panelRegister.MinimumSize = new System.Drawing.Size(400, 540);
-            this.panelRegister.Name = "panelRegister";
-            this.panelRegister.Size = new System.Drawing.Size(400, 540);
-            this.panelRegister.TabIndex = 6;
-            this.panelRegister.Visible = false;
-            // 
-            // txt_checkPass
-            // 
-            this.txt_checkPass.BorderColor = System.Drawing.Color.Black;
-            this.txt_checkPass.BorderRadius = 10;
-            this.txt_checkPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_checkPass.DefaultText = "";
-            this.txt_checkPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_checkPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_checkPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_checkPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_checkPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_checkPass.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_checkPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_checkPass.IconLeft = global::LapStore.Properties.Resources.icons8_password_32;
-            this.txt_checkPass.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_checkPass.Location = new System.Drawing.Point(58, 302);
-            this.txt_checkPass.Name = "txt_checkPass";
-            this.txt_checkPass.PlaceholderText = "Nhập lại mật khẩu";
-            this.txt_checkPass.SelectedText = "";
-            this.txt_checkPass.Size = new System.Drawing.Size(290, 40);
-            this.txt_checkPass.TabIndex = 7;
-            // 
-            // txt_tenDK
-            // 
-            this.txt_tenDK.BorderColor = System.Drawing.Color.Black;
-            this.txt_tenDK.BorderRadius = 10;
-            this.txt_tenDK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_tenDK.DefaultText = "";
-            this.txt_tenDK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_tenDK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_tenDK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_tenDK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_tenDK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_tenDK.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_tenDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_tenDK.IconLeft = global::LapStore.Properties.Resources.icons8_user_32black;
-            this.txt_tenDK.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_tenDK.Location = new System.Drawing.Point(58, 102);
-            this.txt_tenDK.Name = "txt_tenDK";
-            this.txt_tenDK.PlaceholderText = "Tên người dùng";
-            this.txt_tenDK.SelectedText = "";
-            this.txt_tenDK.Size = new System.Drawing.Size(290, 40);
-            this.txt_tenDK.TabIndex = 6;
-            // 
-            // btn_dangKi
-            // 
-            this.btn_dangKi.BorderRadius = 10;
-            this.btn_dangKi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_dangKi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_dangKi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_dangKi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_dangKi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_dangKi.FillColor = System.Drawing.Color.Black;
-            this.btn_dangKi.FillColor2 = System.Drawing.Color.Gray;
-            this.btn_dangKi.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_dangKi.ForeColor = System.Drawing.Color.White;
-            this.btn_dangKi.Location = new System.Drawing.Point(58, 379);
-            this.btn_dangKi.Name = "btn_dangKi";
-            this.btn_dangKi.Size = new System.Drawing.Size(290, 50);
-            this.btn_dangKi.TabIndex = 5;
-            this.btn_dangKi.Text = "ĐĂNG KÍ";
-            this.btn_dangKi.Click += new System.EventHandler(this.btn_dangKi_Click);
-            // 
-            // btn_sangDN
-            // 
-            this.btn_sangDN.BackColor = System.Drawing.Color.Transparent;
-            this.btn_sangDN.BorderRadius = 10;
-            this.btn_sangDN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_sangDN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_sangDN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_sangDN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_sangDN.FillColor = System.Drawing.Color.Transparent;
-            this.btn_sangDN.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_sangDN.ForeColor = System.Drawing.Color.Silver;
-            this.btn_sangDN.Image = global::LapStore.Properties.Resources.icons8_arrow_32r2;
-            this.btn_sangDN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btn_sangDN.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_sangDN.Location = new System.Drawing.Point(58, 465);
-            this.btn_sangDN.Name = "btn_sangDN";
-            this.btn_sangDN.Size = new System.Drawing.Size(290, 35);
-            this.btn_sangDN.TabIndex = 4;
-            this.btn_sangDN.Text = "Đã có tài khoản. Đăng nhập";
-            this.btn_sangDN.UseTransparentBackground = true;
-            this.btn_sangDN.Click += new System.EventHandler(this.btn_sangDN_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(109, 28);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 50);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Đăng kí";
-            // 
-            // txt_passDK
-            // 
-            this.txt_passDK.BorderColor = System.Drawing.Color.Black;
-            this.txt_passDK.BorderRadius = 10;
-            this.txt_passDK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_passDK.DefaultText = "";
-            this.txt_passDK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_passDK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_passDK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_passDK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_passDK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_passDK.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_passDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_passDK.IconLeft = global::LapStore.Properties.Resources.icons8_password_32;
-            this.txt_passDK.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_passDK.Location = new System.Drawing.Point(58, 237);
-            this.txt_passDK.Name = "txt_passDK";
-            this.txt_passDK.PlaceholderText = "Mật khẩu";
-            this.txt_passDK.SelectedText = "";
-            this.txt_passDK.Size = new System.Drawing.Size(290, 40);
-            this.txt_passDK.TabIndex = 1;
-            // 
-            // txt_emailDK
-            // 
-            this.txt_emailDK.BorderColor = System.Drawing.Color.Black;
-            this.txt_emailDK.BorderRadius = 10;
-            this.txt_emailDK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_emailDK.DefaultText = "";
-            this.txt_emailDK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_emailDK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_emailDK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_emailDK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_emailDK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_emailDK.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_emailDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_emailDK.IconLeft = global::LapStore.Properties.Resources.icons8_user_32black;
-            this.txt_emailDK.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_emailDK.Location = new System.Drawing.Point(58, 169);
-            this.txt_emailDK.Name = "txt_emailDK";
-            this.txt_emailDK.PlaceholderText = "Email";
-            this.txt_emailDK.SelectedText = "";
-            this.txt_emailDK.Size = new System.Drawing.Size(290, 40);
-            this.txt_emailDK.TabIndex = 0;
-            // 
             // panelChuyen
             // 
             this.panelChuyen.BackColor = System.Drawing.Color.Transparent;
@@ -406,9 +406,9 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loading1)).EndInit();
             this.panelRegister.ResumeLayout(false);
             this.panelRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loading1)).EndInit();
             this.panelChuyen.ResumeLayout(false);
             this.ResumeLayout(false);
 

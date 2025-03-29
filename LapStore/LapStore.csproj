@@ -64,7 +64,7 @@
     <Compile Include="Database.cs" />
     <Compile Include="Model\DonHang.cs" />
     <Compile Include="Model\GioHang.cs" />
-    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserModel.cs" />
     <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -484,6 +484,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\qq.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-03-29 191332.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

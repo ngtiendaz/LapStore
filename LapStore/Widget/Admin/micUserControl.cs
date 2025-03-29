@@ -167,7 +167,7 @@ namespace LapStore.Widget.Admin
         {
 
             // Sử dụng hàm kiểm tra từ lớp Validator
-            if (!Database.KiemTraMaSp(txtMaSp.Text) ||
+            if (!Database.CheckNull(txtMaSp.Text) ||
                 !Database.KiemTraGia(txtGiaNhap.Text, txtGiaBan.Text) ||
                 !Database.KiemTraSoLuong(txtSoLuong.Text))
             {

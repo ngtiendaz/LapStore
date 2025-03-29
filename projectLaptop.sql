@@ -1,5 +1,5 @@
-﻿create database aa
-use aa
+﻿create database projectLap
+use projectLap
 CREATE TABLE USERS (
     id char(10) PRIMARY KEY,
     hoTen NVARCHAR(255),
@@ -227,8 +227,6 @@ Bộ sản phẩm gồm 3 quạt tản nhiệt', 2000000, 2599000, 15);
 
 
 INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)  
-VALUES ('1', N'Daz', 'user@email.com', '123456', N'Hà Nội', '0987654321', 1, N'D:\DataC#\image\daz.jpg');
+VALUES ('1', N'Daz', 'user@gmail.com', '123456', N'Hà Nội', '0987654321', 1, N'D:\DataC#\image\daz.jpg');
 INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)  
-VALUES ('2', N'Daz', 'admin@email.com', '123456', N'Hà Nội', '0987654321', 1, N'D:\DataC#\image\daz.jpg');
-INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)  
-VALUES ('3', N'Daz', 'admin2@email.com', '123456', N'Hà Nội', '0987654321', 0, N'D:\DataC#\image\daz.jpg');
+VALUES ('2', N'Daz', 'admin@gmail.com', '123456', N'Hà Nội', '0987654321', 0, N'D:\DataC#\image\daz.jpg');

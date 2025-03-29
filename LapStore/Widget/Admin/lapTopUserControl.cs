@@ -14,6 +14,7 @@ namespace LapStore.Widget
     public partial class LapTop : UserControl
     {
         string MADANHMUC = "DM001";
+        string imagePath;
         public LapTop()
         {
             InitializeComponent();
@@ -101,7 +102,7 @@ namespace LapStore.Widget
             }
         }
 
-        string imagePath;
+        
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -242,7 +243,7 @@ namespace LapStore.Widget
         {
 
             // Sử dụng hàm kiểm tra từ lớp Validator
-            if (!Database.KiemTraMaSp(txtMaSp.Text) ||
+            if (!Database.CheckNull(txtMaSp.Text) ||
                 !Database.KiemTraGia(txtGiaNhap.Text, txtGiaBan.Text) ||
                 !Database.KiemTraSoLuong(txtSoLuong.Text))
             {

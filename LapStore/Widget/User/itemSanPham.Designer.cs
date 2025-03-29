@@ -31,10 +31,12 @@
             this.txtMaSp = new System.Windows.Forms.Label();
             this.txtTenSp = new System.Windows.Forms.Label();
             this.txtGiaBan = new System.Windows.Forms.Label();
-            this.btn_addToCart = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.imageSp = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtGiaNhap = new System.Windows.Forms.Label();
             this.txt_trangThai = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_addToCart = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.imageSp = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +76,40 @@
             this.txtGiaBan.TabIndex = 3;
             this.txtGiaBan.Text = "11.999.000đ";
             // 
+            // txtGiaNhap
+            // 
+            this.txtGiaNhap.AutoSize = true;
+            this.txtGiaNhap.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaNhap.ForeColor = System.Drawing.Color.Red;
+            this.txtGiaNhap.Location = new System.Drawing.Point(3, 303);
+            this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.Size = new System.Drawing.Size(108, 21);
+            this.txtGiaNhap.TabIndex = 5;
+            this.txtGiaNhap.Text = "999.999.000đ";
+            // 
+            // txt_trangThai
+            // 
+            this.txt_trangThai.AutoSize = true;
+            this.txt_trangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_trangThai.ForeColor = System.Drawing.Color.Green;
+            this.txt_trangThai.Location = new System.Drawing.Point(4, 361);
+            this.txt_trangThai.Name = "txt_trangThai";
+            this.txt_trangThai.Size = new System.Drawing.Size(64, 17);
+            this.txt_trangThai.TabIndex = 6;
+            this.txt_trangThai.Text = "Sẵn hàng";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::LapStore.Properties.Resources.Screenshot_2025_03_29_191332;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(7, 230);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(90, 16);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 7;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // btn_addToCart
             // 
             this.btn_addToCart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -109,34 +145,12 @@
             this.imageSp.TabStop = false;
             this.imageSp.UseTransparentBackground = true;
             // 
-            // txtGiaNhap
-            // 
-            this.txtGiaNhap.AutoSize = true;
-            this.txtGiaNhap.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaNhap.ForeColor = System.Drawing.Color.Red;
-            this.txtGiaNhap.Location = new System.Drawing.Point(3, 303);
-            this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.Size = new System.Drawing.Size(108, 21);
-            this.txtGiaNhap.TabIndex = 5;
-            this.txtGiaNhap.Text = "999.999.000đ";
-            // 
-            // txt_trangThai
-            // 
-            this.txt_trangThai.AutoSize = true;
-            this.txt_trangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_trangThai.ForeColor = System.Drawing.Color.Green;
-            this.txt_trangThai.Location = new System.Drawing.Point(4, 361);
-            this.txt_trangThai.Name = "txt_trangThai";
-            this.txt_trangThai.Size = new System.Drawing.Size(64, 17);
-            this.txt_trangThai.TabIndex = 6;
-            this.txt_trangThai.Text = "Sẵn hàng";
-            // 
             // itemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.txt_trangThai);
             this.Controls.Add(this.txtGiaNhap);
             this.Controls.Add(this.btn_addToCart);
@@ -146,6 +160,7 @@
             this.Controls.Add(this.imageSp);
             this.Name = "itemSanPham";
             this.Size = new System.Drawing.Size(239, 378);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,5 +176,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btn_addToCart;
         private System.Windows.Forms.Label txtGiaNhap;
         private System.Windows.Forms.Label txt_trangThai;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

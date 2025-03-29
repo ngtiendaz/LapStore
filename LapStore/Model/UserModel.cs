@@ -2,7 +2,7 @@
 
 namespace LapStore.Model
 {
-    internal class User
+    internal class UserModel
     {
         public string Id { get; set; }
         public string HoTen { get; set; }
@@ -14,9 +14,9 @@ namespace LapStore.Model
         public string HinhAnh { get; set; }
 
         // Constructor
-        public User() { }
+        public UserModel() { }
 
-        public User(string id, string hoTen, string email, string pass, string diaChi, string sdt, bool check, string hinhAnh)
+        public UserModel(string id, string hoTen, string email, string pass, string diaChi, string sdt, bool check, string hinhAnh)
         {
             Id = id;
             HoTen = hoTen;
