@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LapStore.Controller;
+using LapStore.View;
 using LapStore.Widget;
 using LapStore.Widget.Admin;
 
@@ -20,6 +22,16 @@ namespace LapStore
             InitializeComponent();
             LapTop uc = new LapTop();
             AddUserControl(uc);
+        }
+        private void MakeRoundedCorners(int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(this.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(this.Width - radius, this.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, this.Height - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+            this.Region = new Region(path);
         }
         private void AddUserControl(UserControl uc)
         {
@@ -152,6 +164,19 @@ namespace LapStore
             {
                 txt_tenAdmin.Text = UserController.CurrentUser.HoTen;
                 SetUserImage(UserController.CurrentUser.HinhAnh);
+                MakeRoundedCorners(30);
+            }
+        }
+
+        private void btn_dangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận",
+                                                      MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Login login = new Login();
+                login.Show();
+                this.Close(); // Đóng form hiện tại
             }
         }
     }

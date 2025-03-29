@@ -187,6 +187,7 @@
             this.btn_dangXuat.TabIndex = 12;
             this.btn_dangXuat.Text = "Đăng xuất";
             this.btn_dangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
             // 
             // bunifuSeparator2
             // 

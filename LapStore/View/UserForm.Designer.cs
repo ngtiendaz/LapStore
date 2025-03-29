@@ -66,13 +66,12 @@
             this.menuUser.Controls.Add(this.btn_profile);
             this.menuUser.Controls.Add(this.btn_cart);
             this.menuUser.Controls.Add(this.menu);
-            this.menuUser.Location = new System.Drawing.Point(-1, 0);
+            this.menuUser.Location = new System.Drawing.Point(2, 3);
             this.menuUser.MaximumSize = new System.Drawing.Size(1200, 50);
             this.menuUser.MinimumSize = new System.Drawing.Size(1200, 50);
             this.menuUser.Name = "menuUser";
             this.menuUser.Size = new System.Drawing.Size(1200, 50);
             this.menuUser.TabIndex = 0;
-            this.menuUser.Paint += new System.Windows.Forms.PaintEventHandler(this.menuUser_Paint);
             // 
             // panelChuyen
             // 
@@ -95,10 +94,10 @@
             this.btn_timKiem.ForeColor = System.Drawing.Color.Transparent;
             this.btn_timKiem.Image = global::LapStore.Properties.Resources.icons8_find_32;
             this.btn_timKiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_timKiem.Location = new System.Drawing.Point(761, 6);
+            this.btn_timKiem.Location = new System.Drawing.Point(761, 9);
             this.btn_timKiem.Name = "btn_timKiem";
             this.btn_timKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_timKiem.Size = new System.Drawing.Size(40, 40);
+            this.btn_timKiem.Size = new System.Drawing.Size(37, 37);
             this.btn_timKiem.TabIndex = 7;
             // 
             // btn_logOut
@@ -117,6 +116,7 @@
             this.btn_logOut.Name = "btn_logOut";
             this.btn_logOut.Size = new System.Drawing.Size(64, 45);
             this.btn_logOut.TabIndex = 6;
+            this.btn_logOut.Click += new System.EventHandler(this.btn_logOut_Click);
             // 
             // txt_timKiem
             // 
@@ -132,11 +132,11 @@
             this.txt_timKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_timKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_timKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_timKiem.Location = new System.Drawing.Point(342, 5);
+            this.txt_timKiem.Location = new System.Drawing.Point(342, 9);
             this.txt_timKiem.Name = "txt_timKiem";
             this.txt_timKiem.PlaceholderText = "";
             this.txt_timKiem.SelectedText = "";
-            this.txt_timKiem.Size = new System.Drawing.Size(413, 41);
+            this.txt_timKiem.Size = new System.Drawing.Size(413, 37);
             this.txt_timKiem.TabIndex = 5;
             // 
             // logo
@@ -209,7 +209,6 @@
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(64, 45);
             this.menu.TabIndex = 0;
-            this.menu.Click += new System.EventHandler(this.menu_Click);
             this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
             this.menu.MouseLeave += new System.EventHandler(this.menu_MouseLeave);
             // 
@@ -472,14 +471,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.ClientSize = new System.Drawing.Size(1200, 750);
             this.Controls.Add(this.chuyen);
             this.Controls.Add(this.menuUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1200, 750);
             this.MinimumSize = new System.Drawing.Size(1200, 750);
             this.Name = "userHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
+            this.Load += new System.EventHandler(this.userHome_Load);
             this.menuUser.ResumeLayout(false);
             this.chuyen.ResumeLayout(false);
             this.panelDanhMuc.ResumeLayout(false);

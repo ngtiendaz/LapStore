@@ -164,6 +164,29 @@ namespace LapStore.Controller
                 }
             }
         }
+        public static bool Register(string hoTen, string email, string pass)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "INSERT INTO USERS(id, hoTen, email, pass, diaChi, sdt,  [check], hinhAnh) " +
+                               "VALUES (@id, @hoTen, @email, @pass, NULL, NULL, 1, NULL)"; // check = 1 là USER
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    int newId = GenerateNewMaUser(); // Tạo ID mới tự động
+
+                    cmd.Parameters.AddWithValue("@id", newId);
+                    cmd.Parameters.AddWithValue("@hoTen", hoTen);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@pass", pass);
+
+                    int rowsAffected = cmd.ExecuteNonQuery(); // Thực thi truy vấn
+
+                    return rowsAffected > 0; // Trả về true nếu thành công
+                }
+            }
+        }
+
 
     }
 

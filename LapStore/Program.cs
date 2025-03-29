@@ -17,7 +17,7 @@ namespace LapStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginFake());
+            Application.Run(new Login());
         }
     }
 }
