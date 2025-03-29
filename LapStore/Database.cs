@@ -145,7 +145,7 @@ namespace LapStore
 
             return true;
         }
-        public static bool CheckEmailNull(string email)
+        public static bool CheckEmailNull(string email, string currentUserId = null)
         {
             // Kiểm tra email có rỗng không
             if (string.IsNullOrWhiteSpace(email))
@@ -161,9 +161,30 @@ namespace LapStore
                 return false;
             }
 
-            
+            // Kiểm tra email đã tồn tại trong database (ngoại trừ tài khoản hiện tại)
+            using (SqlConnection conn = Database.GetConnection())
+            {
+               
+                string query = "SELECT COUNT(*) FROM USERS WHERE email = @email AND id != @currentUserId";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@currentUserId", currentUserId ?? (object)DBNull.Value); // Nếu không có ID thì bỏ qua
+
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Email đã tồn tại! Vui lòng chọn email khác.");
+                        return false;
+                    }
+                }
+            }
+
             return true;
         }
+
 
         public static bool KiemTraIdUser(string userId)
         {

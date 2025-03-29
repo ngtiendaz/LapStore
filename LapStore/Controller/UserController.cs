@@ -224,6 +224,36 @@ namespace LapStore.Controller
             }
             return users;
         }
+        public static void LoadCurrentUser(string userId)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT * FROM USERS WHERE id = @id";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", userId);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            CurrentUser = new UserModel
+                            {
+                                Id = reader["id"].ToString(),
+                                HoTen = reader["hoTen"].ToString(),
+                                Email = reader["email"].ToString(),
+                                Pass = reader["pass"].ToString(),
+                                DiaChi = reader["diaChi"].ToString(),
+                                Sdt = reader["sdt"].ToString(),
+                                Check = (bool)reader["check"],
+                                HinhAnh = reader["hinhAnh"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+        }
+
 
 
 

@@ -19,6 +19,9 @@ namespace LapStore.View
         public Login()
         {
             InitializeComponent();
+            txt_pass.UseSystemPasswordChar = true;
+            txt_checkPass.UseSystemPasswordChar = true;
+            txt_passDK.UseSystemPasswordChar = true;
 
         }
         private void MakeRoundedCorners(int radius)
@@ -144,6 +147,52 @@ namespace LapStore.View
             }
         }
 
+        private void btn_xemPassDN_Click(object sender, EventArgs e)
+        {
+
+            // Đảo trạng thái UseSystemPasswordChar
+            txt_pass.UseSystemPasswordChar = !txt_pass.UseSystemPasswordChar;
+
+            // Thay đổi icon trên nút
+            if (txt_pass.UseSystemPasswordChar==false)
+            {
+                btn_xemPassDN.Image = Properties.Resources.icons8_hide_32; // Icon ẩn mật khẩu
+            }
+            else
+            {
+                btn_xemPassDN.Image = Properties.Resources.icons8_visibility_32; // Icon hiện mật khẩu
+            }
+        }
+
+        private void btn_xemPassDK_Click(object sender, EventArgs e)
+        {
+            txt_passDK.UseSystemPasswordChar = !txt_passDK.UseSystemPasswordChar;
+
+            // Thay đổi icon trên nút
+            if (txt_pass.UseSystemPasswordChar == false)
+            {
+                btn_xemPassDK.Image = Properties.Resources.icons8_hide_32; // Icon ẩn mật khẩu
+            }
+            else
+            {
+                btn_xemPassDK.Image = Properties.Resources.icons8_visibility_32; // Icon hiện mật khẩu
+            }
+        }
+
+        private void btn_xemCheck_Click(object sender, EventArgs e)
+        {
+            txt_checkPass.UseSystemPasswordChar = !txt_checkPass.UseSystemPasswordChar;
+
+            // Thay đổi icon trên nút
+            if (txt_pass.UseSystemPasswordChar == false)
+            {
+                btn_xemCheck.Image = Properties.Resources.icons8_hide_32; // Icon ẩn mật khẩu
+            }
+            else
+            {
+                btn_xemCheck.Image = Properties.Resources.icons8_visibility_32; // Icon hiện mật khẩu
+            }
+        }
     }
 }
 

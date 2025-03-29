@@ -265,7 +265,7 @@ namespace LapStore.Widget
         {
             // Sử dụng hàm kiểm tra từ lớp Database
             if (!Database.CheckNull(txtId.Text) ||
-                !Database.CheckEmailNull(txtEmail.Text) ||
+                !Database.CheckEmailNull(txtEmail.Text,txtId.Text) ||
                 !Database.KiemTraSoDienThoai(txt_sdt.Text))
             {
                 return;
