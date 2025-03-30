@@ -104,11 +104,11 @@
     <Compile Include="Widget\Admin\micUserControl.Designer.cs">
       <DependentUpon>micUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Widget\User\cartUser.cs">
+    <Compile Include="Widget\User\gioHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Widget\User\cartUser.Designer.cs">
-      <DependentUpon>cartUser.cs</DependentUpon>
+    <Compile Include="Widget\User\gioHang.Designer.cs">
+      <DependentUpon>gioHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\User\danhMuc.cs">
       <SubType>UserControl</SubType>
@@ -176,6 +176,12 @@
     <Compile Include="Widget\Admin\thongKeUserControl.Designer.cs">
       <DependentUpon>thongKeUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\User\itemSPGioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\itemSPGioHang.Designer.cs">
+      <DependentUpon>itemSPGioHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\User\profileUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,8 +240,8 @@
     <EmbeddedResource Include="Widget\Admin\micUserControl.resx">
       <DependentUpon>micUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Widget\User\cartUser.resx">
-      <DependentUpon>cartUser.cs</DependentUpon>
+    <EmbeddedResource Include="Widget\User\gioHang.resx">
+      <DependentUpon>gioHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\danhMuc.resx">
       <DependentUpon>danhMuc.cs</DependentUpon>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\Admin\thongKeUserControl.resx">
       <DependentUpon>thongKeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\itemSPGioHang.resx">
+      <DependentUpon>itemSPGioHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\profileUser.resx">
       <DependentUpon>profileUser.cs</DependentUpon>
@@ -508,6 +517,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Magnify%401x-1.0s-200px-200px.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

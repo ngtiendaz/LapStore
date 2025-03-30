@@ -26,10 +26,11 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.adminHome.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.userHome.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.itemSanPham.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.trangChuUser.resources
-D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.cartUser.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.profileUser.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.micUserControl.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.detailSanPham.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.danhMuc.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.Login.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.timKiemSanPham.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.gioHang.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.itemSPGioHang.resources

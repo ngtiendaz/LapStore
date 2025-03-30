@@ -75,7 +75,7 @@ namespace LapStore.View
 
         private void btn_cart_Click(object sender, EventArgs e)
         {
-            cartUser uc = new cartUser();
+            gioHang uc = new gioHang();
             AddUserControl(uc);
 
         }

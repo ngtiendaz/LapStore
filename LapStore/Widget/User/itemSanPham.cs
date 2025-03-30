@@ -13,9 +13,6 @@ namespace LapStore.Widget
 {
     public partial class itemSanPham : UserControl
     {
-        public static Random random = new Random();
-
-
         public event Action<SanPham> OnSanPhamClick; // Sự kiện để truyền dữ liệu sản phẩm
 
         private SanPham sanPham;
