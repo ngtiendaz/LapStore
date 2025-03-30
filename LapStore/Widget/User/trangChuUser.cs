@@ -40,9 +40,9 @@ namespace LapStore.Widget
             imageSlide.Image = Image.FromFile(imagePaths[currentIndex]);
         }
 
-        private void LoadDanhSachSanPham(string maDm)
+        private void LoadDanhSachSanPham()
         {
-            List<SanPham> dsSanPham = SanPhamController.getAllSanPhamRandom();
+            List<SanPham> dsSanPham = SanPhamController.GetSanPham();
             flowSP.Controls.Clear();
 
             int itemWidth = flowSP.Width / 4 - 20;
@@ -72,7 +72,7 @@ namespace LapStore.Widget
             scroll.AutoScroll = true;
             flowSP.WrapContents = true;
             flowSP.FlowDirection = FlowDirection.LeftToRight;
-            LoadDanhSachSanPham("DM001");
+            LoadDanhSachSanPham();
         }
 
         private void flowSP_SizeChanged(object sender, EventArgs e)

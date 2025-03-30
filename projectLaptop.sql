@@ -1,4 +1,6 @@
-﻿create database projectLap
+﻿--Lưu ý có một số thay đổi về cấu trúc database , user, danh mục, sản phẩm không đổi
+-- đổi lại bắt đầu từ giỏ hàng nên xóa mấy cái cũ đi 
+create database projectLap
 use projectLap
 CREATE TABLE USERS (
     id char(10) PRIMARY KEY,
@@ -29,32 +31,51 @@ CREATE TABLE SANPHAM (
     FOREIGN KEY (maDm) REFERENCES DANHMUC(id),
     CHECK (giaNhap < giaBan)
 );
-
+-- xóa mấy bảng GIOHANG, DONHANG, THONGKE cũ đi xong mới add mấy bảng mới này vào
 CREATE TABLE GIOHANG (
-    id char(10) PRIMARY KEY,
-    maUser char(10),
-    maSp char(10),
+    id CHAR(10) PRIMARY KEY,
+    maUser CHAR(10),
+    maSp CHAR(10),
     soLuong INT,
     gia BIGINT,
     FOREIGN KEY (maUser) REFERENCES USERS(id),
     FOREIGN KEY (maSp) REFERENCES SANPHAM(maSp)
 );
 
-CREATE TABLE YEUTHICH (
-    id char(10) PRIMARY KEY,
-    maUser char(10),
-    maSp char(10),
-    UNIQUE (maUser, maSp),
-    FOREIGN KEY (maUser) REFERENCES USERS(id),
+-- Bảng DONHANG (Lưu thông tin đơn hàng)
+CREATE TABLE DONHANG (
+    id CHAR(10) PRIMARY KEY,
+    maUser CHAR(10),
+    diaChi NVARCHAR(MAX), -- Địa chỉ giao hàng
+    tongTien BIGINT,
+    phuongThucThanhToan NVARCHAR(50), -- 'Online' hoặc 'Khi nhận hàng'
+    trangThai NVARCHAR(50) DEFAULT N'Chờ thanh toán', -- Mặc định là chưa thanh toán
+    created_at DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (maUser) REFERENCES USERS(id)
+);
+
+-- Bảng CHITIETDONHANG (Lưu danh sách sản phẩm trong đơn)
+CREATE TABLE CHITIETDONHANG (
+    id CHAR(10) PRIMARY KEY,
+    maDonHang CHAR(10),
+    maSp CHAR(10),
+    soLuong INT,
+    giaBan BIGINT,
+    FOREIGN KEY (maDonHang) REFERENCES DONHANG(id),
     FOREIGN KEY (maSp) REFERENCES SANPHAM(maSp)
 );
 
-CREATE TABLE DONHANG (
-    id char(10) PRIMARY KEY,
-    maUser char(10),
-    tongTien BIGINT,
-	 created_at DATETIME DEFAULT GETDATE(),
-    FOREIGN KEY (maUser) REFERENCES USERS(id),
+-- Bảng THONGKE (Chỉ lưu đơn hàng đã thanh toán)
+CREATE TABLE THONGKE (
+    id CHAR(10) PRIMARY KEY,
+    maDonHang CHAR(10),
+    maSp CHAR(10),
+    soLuong INT,
+    doanhThu BIGINT, -- doanhThu = giaBan * soLuong
+    loiNhuan BIGINT, -- loiNhuan = (giaBan - giaNhap) * soLuong
+    created_at DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (maDonHang) REFERENCES DONHANG(id),
+    FOREIGN KEY (maSp) REFERENCES SANPHAM(maSp)
 );
 
 INSERT INTO DANHMUC(id, tenDanhMuc)

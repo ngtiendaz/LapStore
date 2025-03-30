@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\C#\\LapStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\profileuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\profileuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\profileuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\profileuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\admin\\userusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\userusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\admin\\userusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\userusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\timkiemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\timkiemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\timkiemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\timkiemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,78 +51,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\UserController.cs",
-              "RelativeDocumentMoniker": "LapStore\\Controller\\UserController.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\UserController.cs",
-              "RelativeToolTip": "LapStore\\Controller\\UserController.cs",
-              "ViewState": "AgIAANYAAAAAAAAAAAAUwP8AAAAAAAAAAAAAAA==",
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\Login.cs",
+              "RelativeDocumentMoniker": "LapStore\\View\\Login.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\Login.cs [Design]",
+              "RelativeToolTip": "LapStore\\View\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T19:51:00.632Z",
+              "WhenOpened": "2025-03-30T18:17:12.221Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserForm.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
+              "RelativeDocumentMoniker": "LapStore\\View\\UserForm.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
+              "RelativeToolTip": "LapStore\\View\\UserForm.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T18:07:38.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "userUserControl.cs",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\userUserControl.cs",
-              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\userUserControl.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\userUserControl.cs",
-              "RelativeToolTip": "LapStore\\Widget\\Admin\\userUserControl.cs",
-              "ViewState": "AgIAACkBAAAAAAAAAADwv1EBAAAAAAAAAAAAAA==",
+              "Title": "UserForm.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
+              "RelativeDocumentMoniker": "LapStore\\View\\UserForm.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs [Design]",
+              "RelativeToolTip": "LapStore\\View\\UserForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T19:31:58.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "userUserControl.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\userUserControl.cs",
-              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\userUserControl.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\userUserControl.cs [Design]",
-              "RelativeToolTip": "LapStore\\Widget\\Admin\\userUserControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T19:31:54.837Z",
+              "WhenOpened": "2025-03-30T18:07:35.685Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "timKiemSanPham.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\timKiemSanPham.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\timKiemSanPham.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\timKiemSanPham.cs",
+              "RelativeToolTip": "LapStore\\Widget\\User\\timKiemSanPham.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCAAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T17:43:05.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "timKiemSanPham.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\timKiemSanPham.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\timKiemSanPham.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\timKiemSanPham.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\User\\timKiemSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T17:42:07.863Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\Login.cs",
               "RelativeDocumentMoniker": "LapStore\\View\\Login.cs",
               "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\Login.cs",
               "RelativeToolTip": "LapStore\\View\\Login.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAArwJwAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-29T19:25:03.888Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "profileUser.cs",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\profileUser.cs",
-              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\profileUser.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\profileUser.cs",
-              "RelativeToolTip": "LapStore\\Widget\\User\\profileUser.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAAALsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T18:52:47.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "profileUser.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\profileUser.cs",
-              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\profileUser.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\profileUser.cs [Design]",
-              "RelativeToolTip": "LapStore\\Widget\\User\\profileUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T18:52:11.21Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

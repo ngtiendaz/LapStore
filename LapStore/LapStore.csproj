@@ -182,6 +182,12 @@
     <Compile Include="Widget\User\profileUser.Designer.cs">
       <DependentUpon>profileUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\User\timKiemSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\timKiemSanPham.Designer.cs">
+      <DependentUpon>timKiemSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\User\trangChuUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\profileUser.resx">
       <DependentUpon>profileUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\timKiemSanPham.resx">
+      <DependentUpon>timKiemSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\trangChuUser.resx">
       <DependentUpon>trangChuUser.cs</DependentUpon>
@@ -496,6 +505,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-visibility-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnify%401x-1.0s-200px-200px.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

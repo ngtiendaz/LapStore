@@ -25,7 +25,7 @@ namespace LapStore.View
             trangChuUser uc = new trangChuUser();
             AddUserControl(uc);
             InitializePanelEffect();
-
+     
 
         }
         private void MakeRoundedCorners(int radius)
@@ -42,7 +42,6 @@ namespace LapStore.View
         {
             panelDanhMuc.Height = 0; // Ban đầu ẩn panel
             panelDanhMuc.Visible = false;
-
             slideTimer = new Timer();
             slideTimer.Interval = 10; // Khoảng thời gian mỗi lần cập nhật
             slideTimer.Tick += SlidePanel;
@@ -59,7 +58,6 @@ namespace LapStore.View
             chuyen.Controls.Clear();
             chuyen.Controls.Add(panelDanhMuc); // Giữ lại panel1
             panelDanhMuc.BringToFront(); // Đảm bảo nó luôn ở trên cùng
-
             chuyen.AutoScroll = true;
             uc.Dock = DockStyle.Fill;
             chuyen.Controls.Add(uc);
@@ -71,6 +69,7 @@ namespace LapStore.View
         {
             trangChuUser uc = new trangChuUser();
             AddUserControl(uc);
+            txt_timKiem.Text = string.Empty;
 
         }
 
@@ -165,6 +164,157 @@ namespace LapStore.View
                 Login login = new Login();
                 login.Show();
                 this.Close(); // Đóng form hiện tại
+            }
+        }
+
+        private  void btn_timKiem_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu ô tìm kiếm rỗng thì không thực hiện tìm kiếm
+            if (string.IsNullOrWhiteSpace(txt_timKiem.Text))
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            timKiemSanPham uc = new timKiemSanPham();
+            uc.SetDanhMuc(txt_timKiem.Text); // Truyền key
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl tìm kiếm
+            }
+        }
+
+
+        private void btn_Laptop_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM001","LapTop"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_ManHinh_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM002", "Màn hình"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_PC_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM003", "PC"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_phim_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM004", "Bàn phím"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_chuot_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM005", "Chuột máy tính"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_taiNghe_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM006", "Tai nghe"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_mic_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM007", "Microphone"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_Loa_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM008", "Loa"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_webCam_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM009", "Webcam & Camera"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_game_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM010", "Máy chơi game"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
+            }
+        }
+
+        private void btn_phuKien_Click(object sender, EventArgs e)
+        {
+            danhMuc uc = new danhMuc();
+            uc.SetDanhMuc("DM011", "Phụ kiện các loại"); // Truyền mã danh mục
+
+            userHome userForm = this.FindForm() as userHome;
+            if (userForm != null)
+            {
+                userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
             }
         }
     }

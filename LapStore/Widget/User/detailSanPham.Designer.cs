@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(detailSanPham));
             this.panelTong = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txt_soLuongKho = new System.Windows.Forms.Label();
             this.panelSoLuong = new System.Windows.Forms.Panel();
             this.btn_like = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -53,15 +54,14 @@
             this.txt_TenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.imageSP = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_trangChu = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelTong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.panelSoLuong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelMoTa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTong
@@ -92,6 +92,17 @@
             this.panelTong.Name = "panelTong";
             this.panelTong.Size = new System.Drawing.Size(1030, 1450);
             this.panelTong.TabIndex = 0;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::LapStore.Properties.Resources.Screenshot_2025_03_29_191332;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(710, 81);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(97, 19);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 24;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // txt_soLuongKho
             // 
@@ -391,17 +402,6 @@
             this.btn_trangChu.TabIndex = 17;
             this.btn_trangChu.Text = "Trang Chủ";
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::LapStore.Properties.Resources.Screenshot_2025_03_29_191332;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(710, 81);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(97, 19);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 24;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // detailSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +416,7 @@
             this.Size = new System.Drawing.Size(1183, 700);
             this.panelTong.ResumeLayout(false);
             this.panelTong.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.panelSoLuong.ResumeLayout(false);
             this.panelSoLuong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
@@ -424,7 +425,6 @@
             this.panelMoTa.ResumeLayout(false);
             this.panelMoTa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

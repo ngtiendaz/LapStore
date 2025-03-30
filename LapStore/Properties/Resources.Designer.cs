@@ -663,6 +663,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Magnify_1x_1_0s_200px_200px {
+            get {
+                object obj = ResourceManager.GetObject("Magnify@1x-1.0s-200px-200px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_image_symbol_missing_available_icon_gallery_vector_45703245 {
             get {
                 object obj = ResourceManager.GetObject("no-image-symbol-missing-available-icon-gallery-vector-45703245", resourceCulture);

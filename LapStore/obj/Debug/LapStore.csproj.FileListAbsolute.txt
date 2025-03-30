@@ -32,3 +32,4 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.micUserControl.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.detailSanPham.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.danhMuc.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.Login.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.timKiemSanPham.resources
