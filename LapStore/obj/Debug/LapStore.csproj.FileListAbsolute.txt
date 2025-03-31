@@ -34,3 +34,4 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.Login.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.timKiemSanPham.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.gioHang.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.itemSPGioHang.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.QuangCao.resources

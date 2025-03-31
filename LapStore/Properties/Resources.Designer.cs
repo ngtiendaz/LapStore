@@ -63,6 +63,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0106_DSCF7884 {
+            get {
+                object obj = ResourceManager.GetObject("0106_DSCF7884", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _07_Feb5dbefdcf6be0f3ba088f4fc3f7122629 {
             get {
                 object obj = ResourceManager.GetObject("07_Feb5dbefdcf6be0f3ba088f4fc3f7122629", resourceCulture);
@@ -133,6 +143,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _486760526_1035775685083470_1340345819902764889_n {
+            get {
+                object obj = ResourceManager.GetObject("486760526_1035775685083470_1340345819902764889_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _false {
             get {
                 object obj = ResourceManager.GetObject("false", resourceCulture);
@@ -196,6 +216,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap cfd9ea48816e6cb204157adc4c28ab1b {
             get {
                 object obj = ResourceManager.GetObject("cfd9ea48816e6cb204157adc4c28ab1b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dark_dancing_Sticker_by_88rising {
+            get {
+                object obj = ResourceManager.GetObject("dark dancing Sticker by 88rising", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -666,6 +696,36 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_webcam_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-webcam-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kha_banh_mua_quat_VEED {
+            get {
+                object obj = ResourceManager.GetObject("kha-banh-mua-quat-VEED", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kha_banh_mua_quat_VEED11 {
+            get {
+                object obj = ResourceManager.GetObject("kha-banh-mua-quat-VEED11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kha_banh_mua_quat1_VEED {
+            get {
+                object obj = ResourceManager.GetObject("kha-banh-mua-quat1-VEED", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
