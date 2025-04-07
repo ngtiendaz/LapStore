@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.Panel();
+            this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_mic = new Guna.UI2.WinForms.Guna2Button();
@@ -58,6 +59,7 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.SystemColors.MenuText;
+            this.menu.Controls.Add(this.btn_donHang);
             this.menu.Controls.Add(this.guna2Button1);
             this.menu.Controls.Add(this.bunifuSeparator3);
             this.menu.Controls.Add(this.btn_mic);
@@ -88,6 +90,28 @@
             this.menu.TabIndex = 0;
             this.menu.Paint += new System.Windows.Forms.PaintEventHandler(this.menu_Paint);
             // 
+            // btn_donHang
+            // 
+            this.btn_donHang.BackColor = System.Drawing.Color.Transparent;
+            this.btn_donHang.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_donHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_donHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_donHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_donHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_donHang.FillColor = System.Drawing.Color.Transparent;
+            this.btn_donHang.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_donHang.ForeColor = System.Drawing.Color.White;
+            this.btn_donHang.Image = global::LapStore.Properties.Resources.icons8_delivery_truck_3222;
+            this.btn_donHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_donHang.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_donHang.Location = new System.Drawing.Point(12, 562);
+            this.btn_donHang.Name = "btn_donHang";
+            this.btn_donHang.Size = new System.Drawing.Size(203, 26);
+            this.btn_donHang.TabIndex = 17;
+            this.btn_donHang.Text = "Đơn hàng";
+            this.btn_donHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_donHang.Click += new System.EventHandler(this.btn_donHang_Click);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
@@ -102,7 +126,7 @@
             this.guna2Button1.Image = global::LapStore.Properties.Resources.icons8_analytics_32;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(12, 608);
+            this.guna2Button1.Location = new System.Drawing.Point(12, 626);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(203, 26);
             this.guna2Button1.TabIndex = 16;
@@ -181,7 +205,7 @@
             this.btn_dangXuat.Image = global::LapStore.Properties.Resources.icons8_sign_out_32;
             this.btn_dangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_dangXuat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_dangXuat.Location = new System.Drawing.Point(12, 676);
+            this.btn_dangXuat.Location = new System.Drawing.Point(9, 687);
             this.btn_dangXuat.Name = "btn_dangXuat";
             this.btn_dangXuat.Size = new System.Drawing.Size(218, 51);
             this.btn_dangXuat.TabIndex = 12;
@@ -194,7 +218,7 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 652);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 663);
             this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(230, 17);
@@ -216,7 +240,7 @@
             this.btn_user.Image = global::LapStore.Properties.Resources.icons8_user_32__1_;
             this.btn_user.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_user.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_user.Location = new System.Drawing.Point(12, 576);
+            this.btn_user.Location = new System.Drawing.Point(12, 594);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(203, 26);
             this.btn_user.TabIndex = 10;
@@ -546,6 +570,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_mic;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_donHang;
     }
 }
 

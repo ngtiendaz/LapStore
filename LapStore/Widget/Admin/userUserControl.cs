@@ -116,23 +116,6 @@ namespace LapStore.Widget
             LoadComboBoxRole();
             dgvUser.DefaultCellStyle.ForeColor = Color.Black;
         }
-
-        private void btn_addImage_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Title = "Chọn hình ảnh";
-                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    // Hiển thị hình ảnh lên PictureBox
-                    imageSp.Image = new Bitmap(ofd.FileName);
-                    imageSp.Tag = ofd.FileName; // Lưu đường dẫn vào Tag
-                }
-            }
-        }
-
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -330,6 +313,22 @@ namespace LapStore.Widget
                 catch (Exception ex)
                 {
                     MessageBox.Show("Xóa người dùng thất bại! Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btn_taiAnh_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Title = "Chọn hình ảnh";
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    // Hiển thị hình ảnh lên PictureBox
+                    imageSp.Image = new Bitmap(ofd.FileName);
+                    imageSp.Tag = ofd.FileName; // Lưu đường dẫn vào Tag
                 }
             }
         }

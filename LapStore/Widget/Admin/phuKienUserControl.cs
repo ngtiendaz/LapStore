@@ -110,23 +110,6 @@ namespace LapStore.Widget
             MessageBox.Show("Thêm sản phẩm thành công!");
             ClearForm();
         }
-
-        private void btn_addImage_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Title = "Chọn hình ảnh";
-                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    // Hiển thị hình ảnh lên PictureBox
-                    imageSp.Image = new Bitmap(ofd.FileName);
-                    imageSp.Tag = ofd.FileName; // Lưu đường dẫn vào Tag
-                }
-            }
-        }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
 
@@ -318,6 +301,22 @@ namespace LapStore.Widget
         private void newMasp_Click(object sender, EventArgs e)
         {
             txtMaSp.Text = SanPhamController.GenerateNewMaSp();
+        }
+
+        private void btn_taiAnh_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Title = "Chọn hình ảnh";
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    // Hiển thị hình ảnh lên PictureBox
+                    imageSp.Image = new Bitmap(ofd.FileName);
+                    imageSp.Tag = ofd.FileName; // Lưu đường dẫn vào Tag
+                }
+            }
         }
     }
 }

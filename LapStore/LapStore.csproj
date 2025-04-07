@@ -102,6 +102,12 @@
     <Compile Include="Widget\Admin\chuotUserControl.Designer.cs">
       <DependentUpon>chuotUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\Admin\donHangAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\donHangAdmin.Designer.cs">
+      <DependentUpon>donHangAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\Admin\gameUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="Widget\Admin\micUserControl.Designer.cs">
       <DependentUpon>micUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\donHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\donHang.Designer.cs">
+      <DependentUpon>donHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\User\gioHang.cs">
       <SubType>UserControl</SubType>
@@ -253,11 +265,17 @@
     <EmbeddedResource Include="Widget\Admin\chuotUserControl.resx">
       <DependentUpon>chuotUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\donHangAdmin.resx">
+      <DependentUpon>donHangAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Widget\Admin\gameUserControl.resx">
       <DependentUpon>gameUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\Admin\micUserControl.resx">
       <DependentUpon>micUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\donHang.resx">
+      <DependentUpon>donHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\gioHang.resx">
       <DependentUpon>gioHang.cs</DependentUpon>
@@ -587,6 +605,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Screenshot 2025-04-07 214625.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delivery-truck-3222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-image-symbol-missing-available-icon-gallery-vector-457032451.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

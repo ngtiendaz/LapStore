@@ -79,34 +79,82 @@ namespace LapStore.Controller
 
 
 
-        public static void CapNhatThongTinDonHang(string idDonHang, string diaChiMoi, string phuongThucMoi, string sdtMoi)
+        //public static void CapNhatThongTinDonHang(string idDonHang, string diaChiMoi, string phuongThucMoi, string sdtMoi)
+        //{
+        //    using (SqlConnection conn = Database.GetConnection())
+        //    {
+        //        string query = @"UPDATE DONHANG SET diaChi = @diaChi, phuongThucThanhToan = @pttt, sdt = @sdt WHERE id = @id";
+        //        using (SqlCommand cmd = new SqlCommand(query, conn))
+        //        {
+        //            cmd.Parameters.AddWithValue("@diaChi", diaChiMoi);
+        //            cmd.Parameters.AddWithValue("@pttt", phuongThucMoi);
+        //            cmd.Parameters.AddWithValue("@sdt", sdtMoi);
+        //            cmd.Parameters.AddWithValue("@id", idDonHang);
+        //            cmd.ExecuteNonQuery();
+        //        }
+        //    }
+        //}
+
+        //public static bool HuyDonHang(string idDonHang)
+        //{
+        //    using (SqlConnection conn = Database.GetConnection())
+        //    {
+        //        string query = "DELETE FROM DONHANG WHERE id = @id AND trangThai = N'Chờ thanh toán'";
+        //        using (SqlCommand cmd = new SqlCommand(query, conn))
+        //        {
+        //            cmd.Parameters.AddWithValue("@id", idDonHang);
+        //            return cmd.ExecuteNonQuery() > 0;
+        //        }
+        //    }
+        //}
+        public static string GetTrangThaiDonHang(string maDonHang)
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                string query = @"UPDATE DONHANG SET diaChi = @diaChi, phuongThucThanhToan = @pttt, sdt = @sdt WHERE id = @id";
+                string query = "SELECT trangThai FROM DONHANG WHERE id = @id";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@diaChi", diaChiMoi);
-                    cmd.Parameters.AddWithValue("@pttt", phuongThucMoi);
-                    cmd.Parameters.AddWithValue("@sdt", sdtMoi);
-                    cmd.Parameters.AddWithValue("@id", idDonHang);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@id", maDonHang);
+                    return cmd.ExecuteScalar()?.ToString();
+                }
+            }
+        }
+        public static void CapNhatTrangThaiDonHang(string maDonHang, string trangThaiMoi)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+
+                // Lấy trạng thái hiện tại của đơn hàng
+                string getStatusQuery = "SELECT trangThai FROM DONHANG WHERE id = @id";
+                using (SqlCommand getCmd = new SqlCommand(getStatusQuery, conn))
+                {
+                    getCmd.Parameters.AddWithValue("@id", maDonHang);
+                    string trangThaiHienTai = getCmd.ExecuteScalar()?.ToString();
+
+                    if (trangThaiHienTai == null)
+                    {
+                        throw new Exception("Không tìm thấy đơn hàng.");
+                    }
+
+                    // Chỉ cho phép yêu cầu hủy khi trạng thái hiện tại là "Chờ thanh toán"
+                    if (trangThaiMoi == "Yêu cầu hủy" && trangThaiHienTai != "Chờ thanh toán")
+                    {
+                        throw new Exception("Chỉ có thể gửi yêu cầu hủy khi đơn hàng đang ở trạng thái 'Chờ thanh toán'.");
+                    }
+
+                    // Cập nhật trạng thái nếu hợp lệ
+                    string updateQuery = "UPDATE DONHANG SET trangThai = @trangThai WHERE id = @id";
+                    using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
+                    {
+                        updateCmd.Parameters.AddWithValue("@trangThai", trangThaiMoi);
+                        updateCmd.Parameters.AddWithValue("@id", maDonHang);
+                        updateCmd.ExecuteNonQuery();
+                    }
                 }
             }
         }
 
-        public static bool HuyDonHang(string idDonHang)
-        {
-            using (SqlConnection conn = Database.GetConnection())
-            {
-                string query = "DELETE FROM DONHANG WHERE id = @id AND trangThai = N'Chờ thanh toán'";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", idDonHang);
-                    return cmd.ExecuteNonQuery() > 0;
-                }
-            }
-        }
+
 
         public static List<DonHang> GetDonHangTheoTrangThai(string trangThai)
         {
@@ -140,15 +188,19 @@ namespace LapStore.Controller
             return list;
         }
 
-        public static void XuLyGiaoThanhCong(string idDonHang)
+        public static void XuLyDonHangSauKhiTao(string idDonHang)
         {
             using (SqlConnection conn = Database.GetConnection())
             {
+             
                 using (SqlTransaction tran = conn.BeginTransaction())
                 {
                     try
                     {
+                        // 1. Lấy chi tiết đơn hàng
                         string queryCT = "SELECT maSp, soLuong, giaBan FROM CHITIETDONHANG WHERE maDonHang = @maDonHang";
+                        var sanPhamList = new List<(string maSp, int soLuong, long giaBan)>();
+
                         using (SqlCommand cmd = new SqlCommand(queryCT, conn, tran))
                         {
                             cmd.Parameters.AddWithValue("@maDonHang", idDonHang);
@@ -159,43 +211,52 @@ namespace LapStore.Controller
                                     string maSp = reader["maSp"].ToString();
                                     int soLuong = Convert.ToInt32(reader["soLuong"]);
                                     long giaBan = Convert.ToInt64(reader["giaBan"]);
-                                    long giaNhap = 0;
-
-                                    reader.Close();
-                                    using (SqlCommand getGiaNhap = new SqlCommand("SELECT giaNhap FROM SANPHAM WHERE maSp = @maSp", conn, tran))
-                                    {
-                                        getGiaNhap.Parameters.AddWithValue("@maSp", maSp);
-                                        giaNhap = Convert.ToInt64(getGiaNhap.ExecuteScalar());
-                                    }
-
-                                    using (SqlCommand updateSL = new SqlCommand("UPDATE SANPHAM SET soLuong = soLuong - @soLuong WHERE maSp = @maSp", conn, tran))
-                                    {
-                                        updateSL.Parameters.AddWithValue("@soLuong", soLuong);
-                                        updateSL.Parameters.AddWithValue("@maSp", maSp);
-                                        updateSL.ExecuteNonQuery();
-                                    }
-
-                                    string idTK = ThongKeController.GenerateNewThongKeId();
-                                    using (SqlCommand insertTK = new SqlCommand(@"
-                                        INSERT INTO THONGKE(id, maDonHang, maSp, soLuong, doanhThu, loiNhuan)
-                                        VALUES(@id, @maDonHang, @maSp, @soLuong, @doanhThu, @loiNhuan)", conn, tran))
-                                    {
-                                        insertTK.Parameters.AddWithValue("@id", idTK);
-                                        insertTK.Parameters.AddWithValue("@maDonHang", idDonHang);
-                                        insertTK.Parameters.AddWithValue("@maSp", maSp);
-                                        insertTK.Parameters.AddWithValue("@soLuong", soLuong);
-                                        insertTK.Parameters.AddWithValue("@doanhThu", giaBan * soLuong);
-                                        insertTK.Parameters.AddWithValue("@loiNhuan", (giaBan - giaNhap) * soLuong);
-                                        insertTK.ExecuteNonQuery();
-                                    }
+                                    sanPhamList.Add((maSp, soLuong, giaBan));
                                 }
                             }
                         }
 
-                        using (SqlCommand cmd = new SqlCommand("UPDATE DONHANG SET trangThai = N'Giao thành công' WHERE id = @id", conn, tran))
+                        // 2. Tạo trước các ID thống kê
+                        var listIdThongKe = new List<string>();
+                        for (int i = 0; i < sanPhamList.Count; i++)
                         {
-                            cmd.Parameters.AddWithValue("@id", idDonHang);
-                            cmd.ExecuteNonQuery();
+                            listIdThongKe.Add(ThongKeController.GenerateNewThongKeId());
+                        }
+
+                        // 3. Xử lý từng sản phẩm
+                        for (int i = 0; i < sanPhamList.Count; i++)
+                        {
+                            var sp = sanPhamList[i];
+                            long giaNhap = 0;
+
+                            // Lấy giá nhập
+                            using (SqlCommand getGiaNhap = new SqlCommand("SELECT giaNhap FROM SANPHAM WHERE maSp = @maSp", conn, tran))
+                            {
+                                getGiaNhap.Parameters.AddWithValue("@maSp", sp.maSp);
+                                giaNhap = Convert.ToInt64(getGiaNhap.ExecuteScalar());
+                            }
+
+                            // Cập nhật tồn kho
+                            using (SqlCommand updateSL = new SqlCommand("UPDATE SANPHAM SET soLuong = soLuong - @soLuong WHERE maSp = @maSp", conn, tran))
+                            {
+                                updateSL.Parameters.AddWithValue("@soLuong", sp.soLuong);
+                                updateSL.Parameters.AddWithValue("@maSp", sp.maSp);
+                                updateSL.ExecuteNonQuery();
+                            }
+
+                            // Thêm vào thống kê
+                            using (SqlCommand insertTK = new SqlCommand(@"
+                        INSERT INTO THONGKE(id, maDonHang, maSp, soLuong, doanhThu, loiNhuan)
+                        VALUES(@id, @maDonHang, @maSp, @soLuong, @doanhThu, @loiNhuan)", conn, tran))
+                            {
+                                insertTK.Parameters.AddWithValue("@id", listIdThongKe[i]);
+                                insertTK.Parameters.AddWithValue("@maDonHang", idDonHang);
+                                insertTK.Parameters.AddWithValue("@maSp", sp.maSp);
+                                insertTK.Parameters.AddWithValue("@soLuong", sp.soLuong);
+                                insertTK.Parameters.AddWithValue("@doanhThu", sp.giaBan * sp.soLuong);
+                                insertTK.Parameters.AddWithValue("@loiNhuan", (sp.giaBan - giaNhap) * sp.soLuong);
+                                insertTK.ExecuteNonQuery();
+                            }
                         }
 
                         tran.Commit();
@@ -203,9 +264,79 @@ namespace LapStore.Controller
                     catch
                     {
                         tran.Rollback();
+                        throw;
                     }
                 }
             }
         }
+
+        public static void HoanTacDonHangBiHuy(string idDonHang)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                using (SqlTransaction tran = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        // 1. Lưu danh sách sản phẩm từ đơn hàng
+                        string queryCT = "SELECT maSp, soLuong FROM CHITIETDONHANG WHERE maDonHang = @maDonHang";
+                        var sanPhamList = new List<(string maSp, int soLuong)>();
+
+                        using (SqlCommand cmd = new SqlCommand(queryCT, conn, tran))
+                        {
+                            cmd.Parameters.AddWithValue("@maDonHang", idDonHang);
+                            using (var reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    string maSp = reader["maSp"].ToString();
+                                    int soLuong = Convert.ToInt32(reader["soLuong"]);
+                                    sanPhamList.Add((maSp, soLuong));
+                                }
+                            }
+                        }
+
+                        // 2. Hoàn tác tồn kho và xoá thống kê
+                        foreach (var sp in sanPhamList)
+                        {
+                            // Cộng lại số lượng trong kho
+                            using (SqlCommand updateSL = new SqlCommand(
+                                "UPDATE SANPHAM SET soLuong = soLuong + @soLuong WHERE maSp = @maSp", conn, tran))
+                            {
+                                updateSL.Parameters.AddWithValue("@soLuong", sp.soLuong);
+                                updateSL.Parameters.AddWithValue("@maSp", sp.maSp);
+                                updateSL.ExecuteNonQuery();
+                            }
+
+                            // Xóa thống kê tương ứng
+                            using (SqlCommand deleteTK = new SqlCommand(
+                                "DELETE FROM THONGKE WHERE maDonHang = @maDonHang AND maSp = @maSp", conn, tran))
+                            {
+                                deleteTK.Parameters.AddWithValue("@maDonHang", idDonHang);
+                                deleteTK.Parameters.AddWithValue("@maSp", sp.maSp);
+                                deleteTK.ExecuteNonQuery();
+                            }
+                        }
+
+                        // 3. Cập nhật trạng thái đơn hàng
+                        using (SqlCommand update = new SqlCommand(
+                            "UPDATE DONHANG SET trangThai = N'Đã hủy' WHERE id = @id", conn, tran))
+                        {
+                            update.Parameters.AddWithValue("@id", idDonHang);
+                            update.ExecuteNonQuery();
+                        }
+
+                        tran.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        throw new Exception("Lỗi khi hoàn tác đơn hàng bị hủy: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+
     }
 }

@@ -348,5 +348,11 @@ namespace LapStore.View
             uc.OnDatHang += ChuyenSangThanhToan; // Gắn sự kiện luôn
             AddUserControl(uc);
         }
+
+        private void btn_donHang_Click(object sender, EventArgs e)
+        {
+            donHang uc = new donHang();
+            AddUserControl(uc);
+        }
     }
 }

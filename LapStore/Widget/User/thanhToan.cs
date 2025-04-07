@@ -68,21 +68,65 @@ namespace LapStore.Widget.User
                 .Select(sp => (sp.MaSp, sp.SoLuong, sp.Gia))
                 .ToList();
 
-            bool donHangOk = DonHangController.TaoDonHang(
-                newId,
-                maUser,
-                diaChi,
-                phuongThuc,
-                sdt,
-                TONG,
-                spList
-            );
-            ChiTietDonHangController.ThemChiTietDonHang(newId, spList);
-            GioHangController.XoaSauKhiMua(maUser, spList);
+            try
+            {
+                bool donHangOk = DonHangController.TaoDonHang(
+                    newId,
+                    maUser,
+                    diaChi,
+                    phuongThuc,
+                    sdt,
+                    TONG,
+                    spList
+                );
+
+                if (!donHangOk)
+                {
+                    MessageBox.Show("❌ Tạo đơn hàng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tạo đơn hàng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                ChiTietDonHangController.ThemChiTietDonHang(newId, spList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm chi tiết đơn hàng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                GioHangController.XoaSauKhiMua(maUser, spList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xoá giỏ hàng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                DonHangController.XuLyDonHangSauKhiTao(newId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xử lý tồn kho & thống kê: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Nếu đến đây thì mọi thứ đều OK
             MessageBox.Show("🎉 Đặt hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             OnBackToHome?.Invoke(this, EventArgs.Empty);
         }
+
 
 
     }

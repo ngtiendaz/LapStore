@@ -179,5 +179,11 @@ namespace LapStore
                 this.Close(); // Đóng form hiện tại
             }
         }
+
+        private void btn_donHang_Click(object sender, EventArgs e)
+        {
+            donHangAdmin uc = new donHangAdmin();
+            AddUserControl(uc);
+        }
     }
 }

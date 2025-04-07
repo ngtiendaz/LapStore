@@ -383,6 +383,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delivery_truck_3222 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delivery-truck-3222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_done_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-done-32", resourceCulture);
@@ -693,6 +703,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_upload_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-upload-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_user_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-32", resourceCulture);
@@ -796,6 +816,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap no_image_symbol_missing_available_icon_gallery_vector_45703245 {
             get {
                 object obj = ResourceManager.GetObject("no-image-symbol-missing-available-icon-gallery-vector-45703245", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_image_symbol_missing_available_icon_gallery_vector_457032451 {
+            get {
+                object obj = ResourceManager.GetObject("no-image-symbol-missing-available-icon-gallery-vector-457032451", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

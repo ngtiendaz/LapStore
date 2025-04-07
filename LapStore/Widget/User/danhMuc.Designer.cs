@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.scroll = new System.Windows.Forms.Panel();
-            this.flowSP = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbb_sapXep = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtHienThi = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLoc = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbb_sapXep = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.flowSP = new System.Windows.Forms.FlowLayoutPanel();
             this.scroll.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,13 +52,15 @@
             this.scroll.Size = new System.Drawing.Size(1200, 700);
             this.scroll.TabIndex = 3;
             // 
-            // flowSP
+            // txtHienThi
             // 
-            this.flowSP.BackColor = System.Drawing.Color.Transparent;
-            this.flowSP.Location = new System.Drawing.Point(97, 211);
-            this.flowSP.Name = "flowSP";
-            this.flowSP.Size = new System.Drawing.Size(1050, 1233);
-            this.flowSP.TabIndex = 0;
+            this.txtHienThi.AutoSize = true;
+            this.txtHienThi.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHienThi.Location = new System.Drawing.Point(90, 22);
+            this.txtHienThi.Name = "txtHienThi";
+            this.txtHienThi.Size = new System.Drawing.Size(177, 45);
+            this.txtHienThi.TabIndex = 20;
+            this.txtHienThi.Text = "Tìm kiếm: ";
             // 
             // panel1
             // 
@@ -70,42 +72,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(991, 113);
             this.panel1.TabIndex = 19;
-            // 
-            // cbb_sapXep
-            // 
-            this.cbb_sapXep.BackColor = System.Drawing.Color.Transparent;
-            this.cbb_sapXep.BorderRadius = 10;
-            this.cbb_sapXep.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbb_sapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_sapXep.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbb_sapXep.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbb_sapXep.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbb_sapXep.ForeColor = System.Drawing.Color.Black;
-            this.cbb_sapXep.ItemHeight = 30;
-            this.cbb_sapXep.Location = new System.Drawing.Point(23, 61);
-            this.cbb_sapXep.Name = "cbb_sapXep";
-            this.cbb_sapXep.Size = new System.Drawing.Size(191, 36);
-            this.cbb_sapXep.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 30);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Lọc sản phẩm";
-            // 
-            // txtHienThi
-            // 
-            this.txtHienThi.AutoSize = true;
-            this.txtHienThi.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHienThi.Location = new System.Drawing.Point(90, 22);
-            this.txtHienThi.Name = "txtHienThi";
-            this.txtHienThi.Size = new System.Drawing.Size(177, 45);
-            this.txtHienThi.TabIndex = 20;
-            this.txtHienThi.Text = "Tìm kiếm: ";
             // 
             // btnLoc
             // 
@@ -124,11 +90,47 @@
             this.btnLoc.Text = "Lọc";
             this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 30);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Lọc sản phẩm";
+            // 
+            // cbb_sapXep
+            // 
+            this.cbb_sapXep.BackColor = System.Drawing.Color.Transparent;
+            this.cbb_sapXep.BorderRadius = 10;
+            this.cbb_sapXep.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbb_sapXep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_sapXep.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_sapXep.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_sapXep.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbb_sapXep.ForeColor = System.Drawing.Color.Black;
+            this.cbb_sapXep.ItemHeight = 30;
+            this.cbb_sapXep.Location = new System.Drawing.Point(23, 61);
+            this.cbb_sapXep.Name = "cbb_sapXep";
+            this.cbb_sapXep.Size = new System.Drawing.Size(191, 36);
+            this.cbb_sapXep.TabIndex = 1;
+            // 
+            // flowSP
+            // 
+            this.flowSP.BackColor = System.Drawing.Color.Transparent;
+            this.flowSP.Location = new System.Drawing.Point(97, 211);
+            this.flowSP.Name = "flowSP";
+            this.flowSP.Size = new System.Drawing.Size(1050, 1233);
+            this.flowSP.TabIndex = 0;
+            // 
             // danhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.scroll);
+            this.MaximumSize = new System.Drawing.Size(1200, 700);
+            this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "danhMuc";
             this.Size = new System.Drawing.Size(1200, 700);
             this.Load += new System.EventHandler(this.danhMuc_Load);

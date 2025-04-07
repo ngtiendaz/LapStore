@@ -36,3 +36,5 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.gioHang.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.itemSPGioHang.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.QuangCao.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.thanhToan.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.donHang.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.donHangAdmin.resources

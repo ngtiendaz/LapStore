@@ -11,8 +11,7 @@ namespace LapStore.Controller
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                conn.Open();
-
+         
                 string query = "SELECT id FROM THONGKE";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
