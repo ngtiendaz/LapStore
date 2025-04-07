@@ -303,6 +303,26 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_arrow_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-arrow-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_arrow_322 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-arrow-322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_arrow_32r2 {
             get {
                 object obj = ResourceManager.GetObject("icons8-arrow-32r2", resourceCulture);
@@ -346,6 +366,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_delete_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delivery_truck_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delivery-truck-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -566,6 +596,26 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_portable_speaker_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-portable-speaker-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reply_arrow_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reply-arrow-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reply_arrow_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reply-arrow-321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -823,9 +873,49 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_04_07_180136 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-04-07 180136", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_04_07_214625 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-04-07 214625", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tenor {
             get {
                 object obj = ResourceManager.GetObject("tenor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z5944219984636_c3568a0d50cc767d74e6ea88a0d544da {
+            get {
+                object obj = ResourceManager.GetObject("z5944219984636_c3568a0d50cc767d74e6ea88a0d544da", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z5944227486683_50f1031d95748796373b4319d136d0ba {
+            get {
+                object obj = ResourceManager.GetObject("z5944227486683_50f1031d95748796373b4319d136d0ba", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

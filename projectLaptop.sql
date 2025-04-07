@@ -1,5 +1,8 @@
 ﻿--Lưu ý có một số thay đổi về cấu trúc database , user, danh mục, sản phẩm không đổi
--- đổi lại bắt đầu từ giỏ hàng nên xóa mấy cái cũ đi 
+-- đổi lại bắt đầu từ giỏ hàng nên xóa mấy cái cũ đi
+
+--Xóa data cũ đi create cái mới cho nhanh
+
 create database projectLap
 use projectLap
 CREATE TABLE USERS (
@@ -51,9 +54,9 @@ CREATE TABLE DONHANG (
     phuongThucThanhToan NVARCHAR(50), -- 'Online' hoặc 'Khi nhận hàng'
     trangThai NVARCHAR(50) DEFAULT N'Chờ thanh toán', -- Mặc định là chưa thanh toán
     created_at DATETIME DEFAULT GETDATE(),
+	sdt char(10),
     FOREIGN KEY (maUser) REFERENCES USERS(id)
-);
-
+	)
 -- Bảng CHITIETDONHANG (Lưu danh sách sản phẩm trong đơn)
 CREATE TABLE CHITIETDONHANG (
     id CHAR(10) PRIMARY KEY,
@@ -251,3 +254,4 @@ INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)
 VALUES ('1', N'Daz', 'user@gmail.com', '123456', N'Hà Nội', '0987654321', 1, N'D:\DataC#\image\daz.jpg');
 INSERT INTO USERS (id, hoTen, email, pass, diaChi, sdt, [check], hinhAnh)  
 VALUES ('2', N'Daz', 'admin@gmail.com', '123456', N'Hà Nội', '0987654321', 0, N'D:\DataC#\image\daz.jpg');
+

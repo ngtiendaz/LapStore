@@ -57,13 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ChiTietDonHangController.cs" />
     <Compile Include="Controller\DonHangController.cs" />
     <Compile Include="Controller\GioHangController.cs" />
     <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Controller\ThongKeController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Model\ChiTietDonHang.cs" />
     <Compile Include="Model\DonHang.cs" />
     <Compile Include="Model\GioHang.cs" />
+    <Compile Include="Model\ThongKe.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="View\AdminForm.cs">
       <SubType>Form</SubType>
@@ -194,6 +198,12 @@
     <Compile Include="Widget\User\profileUser.Designer.cs">
       <DependentUpon>profileUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\User\thanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\thanhToan.Designer.cs">
+      <DependentUpon>thanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\User\timKiemSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -290,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\profileUser.resx">
       <DependentUpon>profileUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\thanhToan.resx">
+      <DependentUpon>thanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\timKiemSanPham.resx">
       <DependentUpon>timKiemSanPham.cs</DependentUpon>
@@ -547,6 +560,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dark dancing Sticker by 88rising.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delivery-truck-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-04-07 180136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reply-arrow-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reply-arrow-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5944219984636_c3568a0d50cc767d74e6ea88a0d544da.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5944227486683_50f1031d95748796373b4319d136d0ba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-04-07 214625.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

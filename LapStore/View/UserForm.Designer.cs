@@ -44,6 +44,7 @@
             this.btn_phim = new Guna.UI2.WinForms.Guna2Button();
             this.btn_ManHinh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Laptop = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_timKiem = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_logOut = new Guna.UI2.WinForms.Guna2Button();
             this.logo = new Guna.UI2.WinForms.Guna2Button();
@@ -58,6 +59,7 @@
             // menuUser
             // 
             this.menuUser.BackColor = System.Drawing.Color.White;
+            this.menuUser.Controls.Add(this.btn_donHang);
             this.menuUser.Controls.Add(this.panelChuyen);
             this.menuUser.Controls.Add(this.btn_timKiem);
             this.menuUser.Controls.Add(this.btn_logOut);
@@ -368,6 +370,23 @@
             this.btn_Laptop.TextFormatNoPrefix = true;
             this.btn_Laptop.Click += new System.EventHandler(this.btn_Laptop_Click);
             // 
+            // btn_donHang
+            // 
+            this.btn_donHang.BackColor = System.Drawing.Color.Transparent;
+            this.btn_donHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_donHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_donHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_donHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_donHang.FillColor = System.Drawing.Color.Transparent;
+            this.btn_donHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_donHang.ForeColor = System.Drawing.Color.White;
+            this.btn_donHang.Image = global::LapStore.Properties.Resources.icons8_delivery_truck_32;
+            this.btn_donHang.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_donHang.Location = new System.Drawing.Point(900, 1);
+            this.btn_donHang.Name = "btn_donHang";
+            this.btn_donHang.Size = new System.Drawing.Size(64, 45);
+            this.btn_donHang.TabIndex = 8;
+            // 
             // btn_timKiem
             // 
             this.btn_timKiem.BackColor = System.Drawing.Color.Transparent;
@@ -524,5 +543,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_phim;
         private Guna.UI2.WinForms.Guna2Button btn_ManHinh;
         private Guna.UI2.WinForms.Guna2Button btn_Laptop;
+        private Guna.UI2.WinForms.Guna2Button btn_donHang;
     }
 }

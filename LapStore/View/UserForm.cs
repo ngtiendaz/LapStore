@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using LapStore.Model;
 using LapStore.Widget;
 using LapStore.Widget.User;
+using static LapStore.Widget.User.gioHang;
 
 namespace LapStore.View
 {
@@ -75,9 +76,26 @@ namespace LapStore.View
 
         private void btn_cart_Click(object sender, EventArgs e)
         {
-            gioHang uc = new gioHang();
-            AddUserControl(uc);
+            ShowGioHang(); // Thay vì tạo lại
 
+        }
+        private void ChuyenSangThanhToan(object sender, DatHangEventArgs e)
+        {
+            thanhToan uc = new thanhToan();
+            uc.HienThiThongTin(e.SanPhamDaChon, e.TongTien, e.TongSoLuong);
+
+            // Lắng nghe sự kiện trở về từ thanh toán
+            uc.OnBackToGioHang += (s, evt) =>
+            {
+                ShowGioHang(); // hoặc viết lại như bên dưới nếu bạn không có hàm này
+            };
+            uc.OnBackToHome += (s, evt) =>
+            {
+                trangChuUser home = new trangChuUser();
+                AddUserControl(home);
+            };
+
+            AddUserControl(uc);
         }
 
         private void btn_profile_Click(object sender, EventArgs e)
@@ -88,6 +106,13 @@ namespace LapStore.View
         public void ShowDetailSanPham(SanPham sp)
         {
             detailSanPham detailPanel = new detailSanPham(sp);
+
+            // Đăng ký sự kiện mua thành công
+            detailPanel.OnMuaThanhCong += (s, e) =>
+            {
+                ShowGioHang();
+            };
+
             AddUserControl(detailPanel);
         }
         private void menu_MouseEnter(object sender, EventArgs e)
@@ -316,6 +341,12 @@ namespace LapStore.View
             {
                 userForm.AddUserControl(uc); // Chuyển sang UserControl danhMuc
             }
+        }
+        private void ShowGioHang()
+        {
+            gioHang uc = new gioHang();
+            uc.OnDatHang += ChuyenSangThanhToan; // Gắn sự kiện luôn
+            AddUserControl(uc);
         }
     }
 }

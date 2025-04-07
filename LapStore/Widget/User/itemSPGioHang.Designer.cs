@@ -34,10 +34,10 @@
             this.txt_giaTien = new System.Windows.Forms.Label();
             this.panelSoLuong = new System.Windows.Forms.Panel();
             this.txtSoLuongMua = new System.Windows.Forms.Label();
+            this.btn_Tang = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_Giam = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txtTongTien = new System.Windows.Forms.Label();
-            this.btn_xoaItem = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_congSoLuong = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btn_truSoLuong = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_xoa = new Guna.UI2.WinForms.Guna2Button();
             this.imageSP = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelSoLuong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSP)).BeginInit();
@@ -61,12 +61,15 @@
             this.check.UncheckedState.BorderRadius = 0;
             this.check.UncheckedState.BorderThickness = 0;
             this.check.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.check.CheckedChanged += new System.EventHandler(this.check_CheckedChanged);
             // 
             // txtTenSp
             // 
-            this.txtTenSp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSp.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSp.ForeColor = System.Drawing.Color.Black;
             this.txtTenSp.Location = new System.Drawing.Point(130, 3);
+            this.txtTenSp.MaximumSize = new System.Drawing.Size(149, 53);
+            this.txtTenSp.MinimumSize = new System.Drawing.Size(149, 53);
             this.txtTenSp.Name = "txtTenSp";
             this.txtTenSp.Size = new System.Drawing.Size(149, 53);
             this.txtTenSp.TabIndex = 2;
@@ -96,8 +99,8 @@
             // panelSoLuong
             // 
             this.panelSoLuong.Controls.Add(this.txtSoLuongMua);
-            this.panelSoLuong.Controls.Add(this.btn_congSoLuong);
-            this.panelSoLuong.Controls.Add(this.btn_truSoLuong);
+            this.panelSoLuong.Controls.Add(this.btn_Tang);
+            this.panelSoLuong.Controls.Add(this.btn_Giam);
             this.panelSoLuong.Location = new System.Drawing.Point(383, 32);
             this.panelSoLuong.Name = "panelSoLuong";
             this.panelSoLuong.Size = new System.Drawing.Size(91, 24);
@@ -113,6 +116,40 @@
             this.txtSoLuongMua.TabIndex = 24;
             this.txtSoLuongMua.Text = "100";
             // 
+            // btn_Tang
+            // 
+            this.btn_Tang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Tang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Tang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Tang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Tang.FillColor = System.Drawing.Color.White;
+            this.btn_Tang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Tang.ForeColor = System.Drawing.Color.White;
+            this.btn_Tang.Image = global::LapStore.Properties.Resources.icons8_add_32;
+            this.btn_Tang.Location = new System.Drawing.Point(68, 2);
+            this.btn_Tang.Name = "btn_Tang";
+            this.btn_Tang.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_Tang.Size = new System.Drawing.Size(20, 20);
+            this.btn_Tang.TabIndex = 22;
+            this.btn_Tang.Click += new System.EventHandler(this.btn_Tang_Click);
+            // 
+            // btn_Giam
+            // 
+            this.btn_Giam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Giam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Giam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Giam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Giam.FillColor = System.Drawing.Color.White;
+            this.btn_Giam.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Giam.ForeColor = System.Drawing.Color.White;
+            this.btn_Giam.Image = global::LapStore.Properties.Resources.icons8_minus_32;
+            this.btn_Giam.Location = new System.Drawing.Point(3, 2);
+            this.btn_Giam.Name = "btn_Giam";
+            this.btn_Giam.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_Giam.Size = new System.Drawing.Size(20, 20);
+            this.btn_Giam.TabIndex = 21;
+            this.btn_Giam.Click += new System.EventHandler(this.btn_Giam_Click);
+            // 
             // txtTongTien
             // 
             this.txtTongTien.AutoSize = true;
@@ -124,52 +161,21 @@
             this.txtTongTien.TabIndex = 24;
             this.txtTongTien.Text = "1.340.658.000₫";
             // 
-            // btn_xoaItem
+            // btn_xoa
             // 
-            this.btn_xoaItem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_xoaItem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_xoaItem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_xoaItem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_xoaItem.FillColor = System.Drawing.Color.Transparent;
-            this.btn_xoaItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_xoaItem.ForeColor = System.Drawing.Color.White;
-            this.btn_xoaItem.Image = global::LapStore.Properties.Resources.icons8_delete_32;
-            this.btn_xoaItem.Location = new System.Drawing.Point(617, 32);
-            this.btn_xoaItem.Name = "btn_xoaItem";
-            this.btn_xoaItem.Size = new System.Drawing.Size(30, 30);
-            this.btn_xoaItem.TabIndex = 25;
-            // 
-            // btn_congSoLuong
-            // 
-            this.btn_congSoLuong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_congSoLuong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_congSoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_congSoLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_congSoLuong.FillColor = System.Drawing.Color.White;
-            this.btn_congSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_congSoLuong.ForeColor = System.Drawing.Color.White;
-            this.btn_congSoLuong.Image = global::LapStore.Properties.Resources.icons8_add_32;
-            this.btn_congSoLuong.Location = new System.Drawing.Point(68, 2);
-            this.btn_congSoLuong.Name = "btn_congSoLuong";
-            this.btn_congSoLuong.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_congSoLuong.Size = new System.Drawing.Size(20, 20);
-            this.btn_congSoLuong.TabIndex = 22;
-            // 
-            // btn_truSoLuong
-            // 
-            this.btn_truSoLuong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_truSoLuong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_truSoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_truSoLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_truSoLuong.FillColor = System.Drawing.Color.White;
-            this.btn_truSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_truSoLuong.ForeColor = System.Drawing.Color.White;
-            this.btn_truSoLuong.Image = global::LapStore.Properties.Resources.icons8_minus_32;
-            this.btn_truSoLuong.Location = new System.Drawing.Point(3, 2);
-            this.btn_truSoLuong.Name = "btn_truSoLuong";
-            this.btn_truSoLuong.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_truSoLuong.Size = new System.Drawing.Size(20, 20);
-            this.btn_truSoLuong.TabIndex = 21;
+            this.btn_xoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_xoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_xoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_xoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_xoa.FillColor = System.Drawing.Color.Transparent;
+            this.btn_xoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_xoa.ForeColor = System.Drawing.Color.White;
+            this.btn_xoa.Image = global::LapStore.Properties.Resources.icons8_delete_32;
+            this.btn_xoa.Location = new System.Drawing.Point(617, 32);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(30, 30);
+            this.btn_xoa.TabIndex = 25;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // imageSP
             // 
@@ -188,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_xoaItem);
+            this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.panelSoLuong);
             this.Controls.Add(this.txt_giaTien);
@@ -215,9 +221,9 @@
         private System.Windows.Forms.Label txt_giaTien;
         private System.Windows.Forms.Panel panelSoLuong;
         private System.Windows.Forms.Label txtSoLuongMua;
-        private Guna.UI2.WinForms.Guna2CircleButton btn_congSoLuong;
-        private Guna.UI2.WinForms.Guna2CircleButton btn_truSoLuong;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_Tang;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_Giam;
         private System.Windows.Forms.Label txtTongTien;
-        private Guna.UI2.WinForms.Guna2Button btn_xoaItem;
+        private Guna.UI2.WinForms.Guna2Button btn_xoa;
     }
 }

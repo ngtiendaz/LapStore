@@ -15,17 +15,22 @@ namespace LapStore.Widget.User
 {
     public partial class detailSanPham : UserControl
     {
+        public event EventHandler OnMuaThanhCong;
         private bool isLiked = false;
         private int soLuong = 1;
+        long GIA;
+        string MSP;
         public detailSanPham(SanPham sp)
         {
             long tietKiem= 5999000;
             InitializeComponent();
             txtMaSP.Text = "Mã SP: "+ sp.MaSp;
+            MSP = sp.MaSp;
             txt_TenSP.Text = sp.TenSp;
             txt_soLuongKho.Text = "*Số lượng còn lại trong kho: "+sp.SoLuong;
             txt_giaCu.Text = (sp.GiaBan + tietKiem).ToString("N0") + "đ";
             txtGia.Text = sp.GiaBan.ToString("N0") + "đ";
+            GIA = sp.GiaBan;
             txt_tietKiem.Text = "Tiết kiệm: "+tietKiem.ToString("N0") + "đ";
             txt_moTa.Text = sp.MoTa;
 
@@ -88,7 +93,34 @@ namespace LapStore.Widget.User
 
         private void btn_mua_Click(object sender, EventArgs e)
         {
-          
+            string MaUser = UserController.CurrentUser.Id;
+            string MaSp = MSP;
+            int SoLuong = int.Parse(txtSoLuongMua.Text);
+            long Gia = GIA;
+
+            if (GioHangController.IsSanPhamTrongGioHang(MaUser, MaSp))
+            {
+                DialogResult result = MessageBox.Show(
+                    "Sản phẩm đã có trong giỏ hàng!\nBạn muốn đi tới giỏ hàng không?",
+                    "Thông báo",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    OnMuaThanhCong?.Invoke(this, EventArgs.Empty); // báo về form cha mở giỏ hàng
+                }
+                // Nếu No thì không làm gì, tiếp tục mua sắm
+            }
+            else
+            {
+                GioHangController.AddToGioHang(MaUser, MaSp, SoLuong, Gia);
+                MessageBox.Show("Đã thêm sản phẩm vào giỏ hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                OnMuaThanhCong?.Invoke(this, EventArgs.Empty);
+            }
         }
+
+
     }
 }
