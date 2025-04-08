@@ -7,15 +7,31 @@
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\user\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\controller\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\user\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +58,70 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "thanhToan.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\thanhToan.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs",
+              "RelativeToolTip": "LapStore\\Widget\\User\\thanhToan.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAvwHQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T02:03:06.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "thanhToan.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\thanhToan.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\User\\thanhToan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T02:02:49.56Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "gioHang.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\gioHang.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\gioHang.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\gioHang.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\User\\gioHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T02:02:48.225Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThongKeController.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\ThongKeController.cs",
+              "RelativeDocumentMoniker": "LapStore\\Controller\\ThongKeController.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\ThongKeController.cs",
+              "RelativeToolTip": "LapStore\\Controller\\ThongKeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T01:54:51.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DonHangController.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\DonHangController.cs",
               "RelativeDocumentMoniker": "LapStore\\Controller\\DonHangController.cs",
               "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\DonHangController.cs",
               "RelativeToolTip": "LapStore\\Controller\\DonHangController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAwwPIAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T21:13:35.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "GioHangController.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\GioHangController.cs",
               "RelativeDocumentMoniker": "LapStore\\Controller\\GioHangController.cs",
@@ -63,12 +129,11 @@
               "RelativeToolTip": "LapStore\\Controller\\GioHangController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T21:13:34.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T21:13:34.426Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "donHang.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\donHang.cs",
               "RelativeDocumentMoniker": "LapStore\\Widget\\User\\donHang.cs",
@@ -81,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "donHang.cs [Design]",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\donHang.cs",
               "RelativeDocumentMoniker": "LapStore\\Widget\\User\\donHang.cs",

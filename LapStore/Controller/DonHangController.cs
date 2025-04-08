@@ -192,7 +192,6 @@ namespace LapStore.Controller
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-             
                 using (SqlTransaction tran = conn.BeginTransaction())
                 {
                     try
@@ -216,12 +215,8 @@ namespace LapStore.Controller
                             }
                         }
 
-                        // 2. Tạo trước các ID thống kê
-                        var listIdThongKe = new List<string>();
-                        for (int i = 0; i < sanPhamList.Count; i++)
-                        {
-                            listIdThongKe.Add(ThongKeController.GenerateNewThongKeId());
-                        }
+                        // 2. Tạo trước danh sách ID thống kê (duy nhất)
+                        var listIdThongKe = ThongKeController.GenerateThongKeIds(sanPhamList.Count);
 
                         // 3. Xử lý từng sản phẩm
                         for (int i = 0; i < sanPhamList.Count; i++)
@@ -269,6 +264,9 @@ namespace LapStore.Controller
                 }
             }
         }
+
+
+
 
         public static void HoanTacDonHangBiHuy(string idDonHang)
         {

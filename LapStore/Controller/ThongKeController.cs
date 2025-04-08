@@ -7,13 +7,11 @@ namespace LapStore.Controller
 {
     internal class ThongKeController
     {
-        public static string GenerateNewThongKeId()
+        public static List<string> GenerateThongKeIds(int soLuong)
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-         
                 string query = "SELECT id FROM THONGKE";
-
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     List<int> existingIds = new List<int>();
@@ -23,7 +21,6 @@ namespace LapStore.Controller
                         while (reader.Read())
                         {
                             string id = reader["id"].ToString();
-                            // Bỏ tiền tố 'TK', chỉ lấy phần số
                             string numberPart = new string(id.SkipWhile(c => !char.IsDigit(c)).ToArray());
 
                             if (int.TryParse(numberPart, out int numericPart))
@@ -33,10 +30,13 @@ namespace LapStore.Controller
                         }
                     }
 
-                    int newIdNumber = (existingIds.Count > 0 ? existingIds.Max() : 0) + 1;
-                    return $"TK{newIdNumber:D3}"; // Format: TK001, TK002, ...
+                    int startId = (existingIds.Count > 0 ? existingIds.Max() : 0) + 1;
+                    return Enumerable.Range(startId, soLuong)
+                                     .Select(i => $"TK{i:D3}")
+                                     .ToList();
                 }
             }
         }
+
     }
 }
