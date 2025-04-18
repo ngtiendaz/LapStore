@@ -75,38 +75,6 @@ namespace LapStore.Controller
                 }
             }
         }
-
-
-
-
-        //public static void CapNhatThongTinDonHang(string idDonHang, string diaChiMoi, string phuongThucMoi, string sdtMoi)
-        //{
-        //    using (SqlConnection conn = Database.GetConnection())
-        //    {
-        //        string query = @"UPDATE DONHANG SET diaChi = @diaChi, phuongThucThanhToan = @pttt, sdt = @sdt WHERE id = @id";
-        //        using (SqlCommand cmd = new SqlCommand(query, conn))
-        //        {
-        //            cmd.Parameters.AddWithValue("@diaChi", diaChiMoi);
-        //            cmd.Parameters.AddWithValue("@pttt", phuongThucMoi);
-        //            cmd.Parameters.AddWithValue("@sdt", sdtMoi);
-        //            cmd.Parameters.AddWithValue("@id", idDonHang);
-        //            cmd.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
-
-        //public static bool HuyDonHang(string idDonHang)
-        //{
-        //    using (SqlConnection conn = Database.GetConnection())
-        //    {
-        //        string query = "DELETE FROM DONHANG WHERE id = @id AND trangThai = N'Chờ thanh toán'";
-        //        using (SqlCommand cmd = new SqlCommand(query, conn))
-        //        {
-        //            cmd.Parameters.AddWithValue("@id", idDonHang);
-        //            return cmd.ExecuteNonQuery() > 0;
-        //        }
-        //    }
-        //}
         public static string GetTrangThaiDonHang(string maDonHang)
         {
             using (SqlConnection conn = Database.GetConnection())

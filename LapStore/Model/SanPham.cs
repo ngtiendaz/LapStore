@@ -9,7 +9,8 @@ namespace LapStore.Model
     public class SanPham
     {
         public string MaSp { get; set; }          // mã sản phẩm (char(10))
-        public string MaDm { get; set; }          // mã danh mục (char(10))
+        public string MaDm { get; set; }
+        public string MaHang { get; set; }  // new
         public string TenSp { get; set; }         // tên sản phẩm (nvarchar(255))
         public string HinhAnh { get; set; }       // hình ảnh (nvarchar(max))
         public string MoTa { get; set; }          // mô tả (nvarchar(max))

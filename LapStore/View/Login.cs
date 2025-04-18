@@ -50,8 +50,6 @@ namespace LapStore.View
                 await Task.Delay(1000);
                 userHome userForm = new userHome();
                 userForm.Show();
-                QuangCao QuangCao = new QuangCao();
-                QuangCao.Show();
                 this.Hide();
             }
             else if (role == "ADMIN")

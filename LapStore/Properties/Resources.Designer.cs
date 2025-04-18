@@ -293,6 +293,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_apple_inc_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-apple-inc-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_arrow_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-arrow-32", resourceCulture);
@@ -346,6 +356,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_arrowR_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-arrowR-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_category_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-category-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -446,6 +466,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_hide_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-hide-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_history_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-history-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -633,6 +663,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_sales_performance_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sales-performance-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_screen_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-screen-32", resourceCulture);
@@ -756,6 +796,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_visibility_321 {
             get {
                 object obj = ResourceManager.GetObject("icons8-visibility-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_voucher_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-voucher-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

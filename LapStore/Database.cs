@@ -8,7 +8,7 @@ namespace LapStore
 {
     public class Database
     {
-        private static readonly string connectionString = "Server=DAZAUGUST;Database=projectLap;Trusted_Connection=True;";
+        private static readonly string connectionString = "Server=Daz;Database=projectLapNew;Trusted_Connection=True;";
 
 
         public static SqlConnection GetConnection()

@@ -42,7 +42,7 @@ namespace LapStore.Widget
 
         private void LoadDanhSachSanPham()
         {
-            List<SanPham> dsSanPham = SanPhamController.GetSanPham();
+            List<SanPham> dsSanPham = SanPhamController.GetSanPhamTheo();
             flowSP.Controls.Clear();
 
             int itemWidth = flowSP.Width / 4 - 20;

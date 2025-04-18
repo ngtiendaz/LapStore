@@ -84,80 +84,11 @@ namespace LapStore
             LapTop uc = new LapTop();
             AddUserControl(uc);
         }
-
-        private void btn_ManHinh_Click(object sender, EventArgs e)
-        {
-            manHinhUserControl uc = new manHinhUserControl();
-            AddUserControl(uc);
-
-        }
-
-        private void btn_PC_Click(object sender, EventArgs e)
-        {
-            pcUserControl uc = new pcUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_phim_Click(object sender, EventArgs e)
-        {
-            phimUserControl uc = new phimUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_chuot_Click(object sender, EventArgs e)
-        {
-            chuotUserControl uc = new chuotUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_taiNghe_Click(object sender, EventArgs e)
-        {
-            taiNgheUserControl uc = new taiNgheUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_mic_Click(object sender, EventArgs e)
-        {
-            micUserControl uc = new micUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_Loa_Click(object sender, EventArgs e)
-        {
-            loaUserControl uc = new loaUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_webCam_Click(object sender, EventArgs e)
-        {
-            webCamUserControl uc = new webCamUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_game_Click(object sender, EventArgs e)
-        {
-            gameUserControl uc = new gameUserControl();
-            AddUserControl(uc);
-        }
-
-        private void btn_phuKien_Click(object sender, EventArgs e)
-        {
-            phuKienUserControl uc = new phuKienUserControl();
-            AddUserControl(uc);
-        }
-
         private void btn_user_Click(object sender, EventArgs e)
         {
             userUserControl uc = new userUserControl();
             AddUserControl(uc);
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            thongKeUserControl uc = new thongKeUserControl();
-            AddUserControl(uc);
-        }
-
         private void adminHome_Load(object sender, EventArgs e)
         {
             if (UserController.CurrentUser != null)
@@ -183,6 +114,48 @@ namespace LapStore
         private void btn_donHang_Click(object sender, EventArgs e)
         {
             donHangAdmin uc = new donHangAdmin();
+            AddUserControl(uc);
+        }
+
+        private void btn_thongKe_Click(object sender, EventArgs e)
+        {
+            thongKeUserControl uc = new thongKeUserControl();
+            AddUserControl(uc);
+        }
+
+        private void btn_danhMuc_Click(object sender, EventArgs e)
+        {
+            danhMucAdmin uc = new danhMucAdmin();
+            AddUserControl(uc);
+        }
+
+        private void btn_hang_Click(object sender, EventArgs e)
+        {
+            hangAdmin uc = new hangAdmin();
+            AddUserControl(uc);
+        }
+
+        private void btn_maGiamGia_Click(object sender, EventArgs e)
+        {
+            maGiamGiaAdmin uc = new maGiamGiaAdmin();
+            AddUserControl(uc);
+        }
+
+        private void btn_doanhThu_Click(object sender, EventArgs e)
+        {
+            doanhThuAdmin uc = new doanhThuAdmin();
+            AddUserControl(uc);
+        }
+
+        private void btn_luotXem_Click(object sender, EventArgs e)
+        {
+            luotXemAdmin uc = new luotXemAdmin();
+            AddUserControl(uc);
+        }
+
+        private void btn_luotMua_Click(object sender, EventArgs e)
+        {
+            luotMuaAdmin uc = new luotMuaAdmin();
             AddUserControl(uc);
         }
     }

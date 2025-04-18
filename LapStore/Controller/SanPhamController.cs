@@ -13,7 +13,7 @@ namespace LapStore
 {
     class SanPhamController
     {
-        public static List<SanPham> GetSanPham(string maDanhMuc = "", int kieuSapXep = 0)
+        public static List<SanPham> GetSanPhamTheo(string maDanhMuc = "", int kieuSapXep = 0)
         {
             List<SanPham> sanPhamList = new List<SanPham>();
 
@@ -79,26 +79,25 @@ namespace LapStore
 
 
 
-
-        // Lấy danh sách sản phẩm theo mã danh mục
-        public static List<SanPham> getSanPhamByMaDm(string maDm)
+        // Lấy tất cả sản phẩm
+        public static List<SanPham> GetAllSanPham()
         {
-            List<SanPham> SanPham = new List<SanPham>();
+            List<SanPham> sanPhamList = new List<SanPham>();
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                string query = "SELECT * FROM SANPHAM WHERE maDm = @maDm";
+                string query = "SELECT * FROM SANPHAM";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@maDm", maDm);
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            SanPham.Add(new SanPham
+                            sanPhamList.Add(new SanPham
                             {
                                 MaSp = reader["maSp"].ToString(),
                                 MaDm = reader["maDm"].ToString(),
+                                MaHang = reader["maHang"].ToString(),
                                 TenSp = reader["tenSp"].ToString(),
                                 HinhAnh = reader["hinhAnh"].ToString(),
                                 MoTa = reader["moTa"].ToString(),
@@ -112,22 +111,21 @@ namespace LapStore
                 }
             }
 
-            return SanPham;
+            return sanPhamList;
         }
-
-
         // Thêm sản phẩm
         public static void AddSanPham(SanPham sanPham)
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                string query = "INSERT INTO SANPHAM(maSp, maDm, tenSp, hinhAnh, moTa, giaNhap, giaBan, soLuong) " +
-                               "VALUES (@maSp, @maDm, @tenSp, @hinhAnh, @moTa, @giaNhap, @giaBan, @soLuong)";
+                string query = "INSERT INTO SANPHAM(maSp, maDm, maHang, tenSp, hinhAnh, moTa, giaNhap, giaBan, soLuong) " +
+                               "VALUES (@maSp, @maDm, @maHang, @tenSp, @hinhAnh, @moTa, @giaNhap, @giaBan, @soLuong)";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@maSp", sanPham.MaSp);
                     cmd.Parameters.AddWithValue("@maDm", sanPham.MaDm);
+                    cmd.Parameters.AddWithValue("@maHang", sanPham.MaHang);
                     cmd.Parameters.AddWithValue("@tenSp", sanPham.TenSp);
                     cmd.Parameters.AddWithValue("@hinhAnh", sanPham.HinhAnh);
                     cmd.Parameters.AddWithValue("@moTa", sanPham.MoTa);
@@ -138,19 +136,21 @@ namespace LapStore
                 }
             }
         }
+
 
         // Cập nhật sản phẩm
         public static void UpdateSanPham(SanPham sanPham)
         {
             using (SqlConnection conn = Database.GetConnection())
             {
-                string query = "UPDATE SANPHAM SET maDm = @maDm, tenSp = @tenSp, hinhAnh = @hinhAnh, moTa = @moTa, " +
-                               "giaNhap = @giaNhap, giaBan = @giaBan, soLuong = @soLuong WHERE maSp = @maSp";
+                string query = "UPDATE SANPHAM SET maDm = @maDm, maHang = @maHang, tenSp = @tenSp, hinhAnh = @hinhAnh, " +
+                               "moTa = @moTa, giaNhap = @giaNhap, giaBan = @giaBan, soLuong = @soLuong WHERE maSp = @maSp";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@maSp", sanPham.MaSp);
                     cmd.Parameters.AddWithValue("@maDm", sanPham.MaDm);
+                    cmd.Parameters.AddWithValue("@maHang", sanPham.MaHang);
                     cmd.Parameters.AddWithValue("@tenSp", sanPham.TenSp);
                     cmd.Parameters.AddWithValue("@hinhAnh", sanPham.HinhAnh);
                     cmd.Parameters.AddWithValue("@moTa", sanPham.MoTa);
@@ -161,6 +161,7 @@ namespace LapStore
                 }
             }
         }
+
 
         // Xóa sản phẩm
         public static void DeleteSanPham(string maSp)
@@ -242,6 +243,7 @@ namespace LapStore
                             {
                                 MaSp = reader["maSp"].ToString(),
                                 MaDm = reader["maDm"].ToString(),
+                                MaHang = reader["mahang"].ToString(),
                                 TenSp = reader["tenSp"].ToString(),
                                 HinhAnh = reader["hinhAnh"].ToString(),
                                 MoTa = reader["moTa"].ToString(),
