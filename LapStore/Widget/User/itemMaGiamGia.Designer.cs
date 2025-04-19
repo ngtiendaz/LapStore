@@ -42,9 +42,9 @@
             // 
             this.guna2PictureBox1.Image = global::LapStore.Properties.Resources.favicon_hacom_2024___Copy;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(70, 100);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(70, 87);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -136,6 +136,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 100);
             this.Name = "itemMaGiamGia";
             this.Size = new System.Drawing.Size(500, 100);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.itemMaGiamGia_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

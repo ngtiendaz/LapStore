@@ -66,6 +66,7 @@
     <Compile Include="Controller\SanPhamController.cs" />
     <Compile Include="Controller\ThongKeController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controller\YeuThichVaLuotXemController.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Model\ChiTietDonHang.cs" />
     <Compile Include="Model\DanhMuc.cs" />
@@ -620,6 +621,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\favicon-hacom-2024 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\false1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-favorite-321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

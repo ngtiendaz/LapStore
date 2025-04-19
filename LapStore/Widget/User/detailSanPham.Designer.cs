@@ -48,7 +48,7 @@
             this.panelMoTa = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_moTa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txt_luotXem = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_TenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -80,7 +80,7 @@
             this.panelTong.Controls.Add(this.txt_giaCu);
             this.panelTong.Controls.Add(this.txtGia);
             this.panelTong.Controls.Add(this.panelMoTa);
-            this.panelTong.Controls.Add(this.guna2HtmlLabel3);
+            this.panelTong.Controls.Add(this.txt_luotXem);
             this.panelTong.Controls.Add(this.guna2HtmlLabel2);
             this.panelTong.Controls.Add(this.txtMaSP);
             this.panelTong.Controls.Add(this.txt_TenSP);
@@ -330,15 +330,15 @@
             this.guna2HtmlLabel4.TabIndex = 6;
             this.guna2HtmlLabel4.Text = "Thông số sản phẩm";
             // 
-            // guna2HtmlLabel3
+            // txt_luotXem
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(885, 81);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(95, 19);
-            this.guna2HtmlLabel3.TabIndex = 4;
-            this.guna2HtmlLabel3.Text = "Lượt xem: 4.046";
+            this.txt_luotXem.BackColor = System.Drawing.Color.Transparent;
+            this.txt_luotXem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_luotXem.Location = new System.Drawing.Point(885, 81);
+            this.txt_luotXem.Name = "txt_luotXem";
+            this.txt_luotXem.Size = new System.Drawing.Size(95, 19);
+            this.txt_luotXem.TabIndex = 4;
+            this.txt_luotXem.Text = "Lượt xem: 4.046";
             // 
             // guna2HtmlLabel2
             // 
@@ -414,6 +414,7 @@
             this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "detailSanPham";
             this.Size = new System.Drawing.Size(1183, 700);
+            this.Load += new System.EventHandler(this.detailSanPham_Load);
             this.panelTong.ResumeLayout(false);
             this.panelTong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
@@ -434,7 +435,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelTong;
         private Guna.UI2.WinForms.Guna2HtmlLabel txt_TenSP;
         private Guna.UI2.WinForms.Guna2PictureBox imageSP;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txt_luotXem;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtMaSP;
         private Guna.UI2.WinForms.Guna2Panel panelMoTa;

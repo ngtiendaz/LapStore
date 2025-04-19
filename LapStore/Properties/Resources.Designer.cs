@@ -263,6 +263,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap false1 {
+            get {
+                object obj = ResourceManager.GetObject("false1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap favicon_hacom_2024 {
             get {
                 object obj = ResourceManager.GetObject("favicon-hacom-2024", resourceCulture);
@@ -436,6 +446,16 @@ namespace LapStore.Properties {
         internal static System.Drawing.Bitmap icons8_favorite_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-favorite-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_favorite_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-favorite-321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

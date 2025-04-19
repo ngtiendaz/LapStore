@@ -47,12 +47,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_sua = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_yeuThich = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_tenUser = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.background = new System.Windows.Forms.Panel();
-            this.btn_maGiamGia = new Guna.UI2.WinForms.Guna2Button();
             this.panelProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageUser)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +58,6 @@
             // panelProfile
             // 
             this.panelProfile.BackColor = System.Drawing.Color.White;
-            this.panelProfile.Controls.Add(this.btn_maGiamGia);
             this.panelProfile.Controls.Add(this.showPass);
             this.panelProfile.Controls.Add(this.imageUser);
             this.panelProfile.Controls.Add(this.label7);
@@ -79,7 +76,6 @@
             this.panelProfile.Controls.Add(this.label3);
             this.panelProfile.Controls.Add(this.label1);
             this.panelProfile.Controls.Add(this.btn_sua);
-            this.panelProfile.Controls.Add(this.btn_yeuThich);
             this.panelProfile.Controls.Add(this.label2);
             this.panelProfile.Controls.Add(this.txt_tenUser);
             this.panelProfile.Controls.Add(this.bunifuSeparator1);
@@ -367,32 +363,13 @@
             this.btn_sua.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_sua.ForeColor = System.Drawing.Color.White;
             this.btn_sua.Image = global::LapStore.Properties.Resources.icons8_pencil_32;
-            this.btn_sua.Location = new System.Drawing.Point(1037, 222);
+            this.btn_sua.Location = new System.Drawing.Point(841, 222);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(40, 45);
+            this.btn_sua.Size = new System.Drawing.Size(236, 45);
             this.btn_sua.TabIndex = 6;
+            this.btn_sua.Text = "Chỉnh sửa thông tin cá nhân";
             this.btn_sua.UseTransparentBackground = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
-            // 
-            // btn_yeuThich
-            // 
-            this.btn_yeuThich.BackColor = System.Drawing.Color.Transparent;
-            this.btn_yeuThich.BorderRadius = 10;
-            this.btn_yeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_yeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_yeuThich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_yeuThich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_yeuThich.FillColor = System.Drawing.Color.Maroon;
-            this.btn_yeuThich.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_yeuThich.ForeColor = System.Drawing.Color.White;
-            this.btn_yeuThich.Image = global::LapStore.Properties.Resources.icons8_favorite22_32;
-            this.btn_yeuThich.Location = new System.Drawing.Point(926, 222);
-            this.btn_yeuThich.Name = "btn_yeuThich";
-            this.btn_yeuThich.Size = new System.Drawing.Size(105, 45);
-            this.btn_yeuThich.TabIndex = 5;
-            this.btn_yeuThich.Text = "Yêu thích";
-            this.btn_yeuThich.UseTransparentBackground = true;
-            this.btn_yeuThich.Click += new System.EventHandler(this.btn_yeuThich_Click);
             // 
             // label2
             // 
@@ -436,26 +413,6 @@
             this.background.TabIndex = 0;
             this.background.Paint += new System.Windows.Forms.PaintEventHandler(this.background_Paint);
             // 
-            // btn_maGiamGia
-            // 
-            this.btn_maGiamGia.BackColor = System.Drawing.Color.Transparent;
-            this.btn_maGiamGia.BorderRadius = 10;
-            this.btn_maGiamGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_maGiamGia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_maGiamGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_maGiamGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_maGiamGia.FillColor = System.Drawing.Color.Maroon;
-            this.btn_maGiamGia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_maGiamGia.ForeColor = System.Drawing.Color.White;
-            this.btn_maGiamGia.Image = global::LapStore.Properties.Resources.icons8_voucher_32;
-            this.btn_maGiamGia.Location = new System.Drawing.Point(799, 222);
-            this.btn_maGiamGia.Name = "btn_maGiamGia";
-            this.btn_maGiamGia.Size = new System.Drawing.Size(121, 45);
-            this.btn_maGiamGia.TabIndex = 24;
-            this.btn_maGiamGia.Text = "Mã giảm giá";
-            this.btn_maGiamGia.UseTransparentBackground = true;
-            this.btn_maGiamGia.Click += new System.EventHandler(this.btn_maGiamGia_Click);
-            // 
             // profileUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,7 +441,6 @@
         private System.Windows.Forms.Label txt_tenUser;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Guna.UI2.WinForms.Guna2Button btn_sua;
-        private Guna.UI2.WinForms.Guna2Button btn_yeuThich;
         private Guna.UI2.WinForms.Guna2TextBox txt_sdt;
         private Guna.UI2.WinForms.Guna2TextBox txt_pass;
         private Guna.UI2.WinForms.Guna2TextBox txt_diaChi;
@@ -501,6 +457,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2CircleButton showPass;
-        private Guna.UI2.WinForms.Guna2Button btn_maGiamGia;
     }
 }

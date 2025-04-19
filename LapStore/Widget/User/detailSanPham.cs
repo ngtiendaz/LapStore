@@ -17,6 +17,7 @@ namespace LapStore.Widget.User
     {
         public event EventHandler OnMuaThanhCong;
         private bool isLiked = false;
+        private string MaUser = UserController.CurrentUser.Id;
         private int soLuong = 1;
         long GIA;
         string MSP;
@@ -78,9 +79,19 @@ namespace LapStore.Widget.User
 
         private void btn_like_Click(object sender, EventArgs e)
         {
-            isLiked = !isLiked;
-            string imageName = isLiked ? "icons8-favorite-32" : "icons8-nofavorite-32";
-            SetHeartIcon(imageName);
+            if (isLiked)
+            {
+                YeuThichVaLuotXemController.XoaYeuThich(MaUser, MSP);
+                isLiked = false;
+                SetHeartIcon("icons8-nofavorite-32");
+            }
+            else
+            {
+                YeuThichVaLuotXemController.ThemYeuThich(MaUser, MSP);
+                isLiked = true;
+                SetHeartIcon("icons8-favorite-32");
+            }
+
         }
         private void SetHeartIcon(string resourceName)
         {
@@ -121,6 +132,13 @@ namespace LapStore.Widget.User
             }
         }
 
-
+        private void detailSanPham_Load(object sender, EventArgs e)
+        {
+            isLiked = YeuThichVaLuotXemController.IsSanPhamYeuThich(MaUser, MSP);
+            SetHeartIcon(isLiked ? "icons8-favorite-32" : "icons8-nofavorite-32");
+            YeuThichVaLuotXemController.TangLuotXem(MSP);
+            int luotXem = YeuThichVaLuotXemController.GetSoLuotXem(MSP);
+            txt_luotXem.Text = "Lượt xem: "+ luotXem;
+        }
     }
 }

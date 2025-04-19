@@ -354,5 +354,11 @@ namespace LapStore.View
             donHang uc = new donHang();
             AddUserControl(uc);
         }
+
+        private void btn_yeuThich_Click(object sender, EventArgs e)
+        {
+            yeuThich uc = new yeuThich();
+            AddUserControl(uc);
+        }
     }
 }

@@ -29,15 +29,8 @@
         private void InitializeComponent()
         {
             this.menuUser = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
             this.panelChuyen = new System.Windows.Forms.Panel();
-            this.btn_timKiem = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btn_logOut = new Guna.UI2.WinForms.Guna2Button();
             this.txt_timKiem = new Guna.UI2.WinForms.Guna2TextBox();
-            this.logo = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_profile = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_cart = new Guna.UI2.WinForms.Guna2Button();
-            this.menu = new Guna.UI2.WinForms.Guna2Button();
             this.chuyen = new System.Windows.Forms.Panel();
             this.panelDanhMuc = new System.Windows.Forms.Panel();
             this.btn_mic = new Guna.UI2.WinForms.Guna2Button();
@@ -51,6 +44,14 @@
             this.btn_phim = new Guna.UI2.WinForms.Guna2Button();
             this.btn_ManHinh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Laptop = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_yeuThich = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_timKiem = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_logOut = new Guna.UI2.WinForms.Guna2Button();
+            this.logo = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_profile = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_cart = new Guna.UI2.WinForms.Guna2Button();
+            this.menu = new Guna.UI2.WinForms.Guna2Button();
             this.menuUser.SuspendLayout();
             this.chuyen.SuspendLayout();
             this.panelDanhMuc.SuspendLayout();
@@ -59,6 +60,7 @@
             // menuUser
             // 
             this.menuUser.BackColor = System.Drawing.Color.White;
+            this.menuUser.Controls.Add(this.btn_yeuThich);
             this.menuUser.Controls.Add(this.btn_donHang);
             this.menuUser.Controls.Add(this.panelChuyen);
             this.menuUser.Controls.Add(this.btn_timKiem);
@@ -75,24 +77,6 @@
             this.menuUser.Size = new System.Drawing.Size(1200, 50);
             this.menuUser.TabIndex = 0;
             // 
-            // btn_donHang
-            // 
-            this.btn_donHang.BackColor = System.Drawing.Color.Transparent;
-            this.btn_donHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_donHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_donHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_donHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_donHang.FillColor = System.Drawing.Color.Transparent;
-            this.btn_donHang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_donHang.ForeColor = System.Drawing.Color.White;
-            this.btn_donHang.Image = global::LapStore.Properties.Resources.icons8_delivery_truck_32;
-            this.btn_donHang.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_donHang.Location = new System.Drawing.Point(900, 1);
-            this.btn_donHang.Name = "btn_donHang";
-            this.btn_donHang.Size = new System.Drawing.Size(64, 45);
-            this.btn_donHang.TabIndex = 8;
-            this.btn_donHang.Click += new System.EventHandler(this.btn_donHang_Click);
-            // 
             // panelChuyen
             // 
             this.panelChuyen.Location = new System.Drawing.Point(0, 52);
@@ -101,43 +85,6 @@
             this.panelChuyen.Name = "panelChuyen";
             this.panelChuyen.Size = new System.Drawing.Size(1200, 700);
             this.panelChuyen.TabIndex = 1;
-            // 
-            // btn_timKiem
-            // 
-            this.btn_timKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btn_timKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_timKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_timKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_timKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_timKiem.FillColor = System.Drawing.Color.Brown;
-            this.btn_timKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_timKiem.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_timKiem.Image = global::LapStore.Properties.Resources.icons8_find_32;
-            this.btn_timKiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_timKiem.Location = new System.Drawing.Point(761, 9);
-            this.btn_timKiem.Name = "btn_timKiem";
-            this.btn_timKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_timKiem.Size = new System.Drawing.Size(37, 37);
-            this.btn_timKiem.TabIndex = 7;
-            this.btn_timKiem.Click += new System.EventHandler(this.btn_timKiem_Click);
-            // 
-            // btn_logOut
-            // 
-            this.btn_logOut.BackColor = System.Drawing.Color.Transparent;
-            this.btn_logOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_logOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_logOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_logOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_logOut.FillColor = System.Drawing.Color.Transparent;
-            this.btn_logOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_logOut.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_logOut.Image = global::LapStore.Properties.Resources.icons8_sign_out_32black;
-            this.btn_logOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_logOut.Location = new System.Drawing.Point(1109, 2);
-            this.btn_logOut.Name = "btn_logOut";
-            this.btn_logOut.Size = new System.Drawing.Size(64, 45);
-            this.btn_logOut.TabIndex = 6;
-            this.btn_logOut.Click += new System.EventHandler(this.btn_logOut_Click);
             // 
             // txt_timKiem
             // 
@@ -159,79 +106,6 @@
             this.txt_timKiem.SelectedText = "";
             this.txt_timKiem.Size = new System.Drawing.Size(413, 37);
             this.txt_timKiem.TabIndex = 5;
-            // 
-            // logo
-            // 
-            this.logo.BackColor = System.Drawing.Color.Transparent;
-            this.logo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logo.FillColor = System.Drawing.Color.Transparent;
-            this.logo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.logo.ForeColor = System.Drawing.Color.White;
-            this.logo.Image = global::LapStore.Properties.Resources.favicon_hacom_2024;
-            this.logo.ImageSize = new System.Drawing.Size(100, 100);
-            this.logo.Location = new System.Drawing.Point(83, 3);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(129, 43);
-            this.logo.TabIndex = 4;
-            this.logo.Click += new System.EventHandler(this.logo_Click);
-            // 
-            // btn_profile
-            // 
-            this.btn_profile.BackColor = System.Drawing.Color.Transparent;
-            this.btn_profile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_profile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_profile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_profile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_profile.FillColor = System.Drawing.Color.Transparent;
-            this.btn_profile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_profile.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_profile.Image = global::LapStore.Properties.Resources.icons8_user_32black;
-            this.btn_profile.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_profile.Location = new System.Drawing.Point(1040, 2);
-            this.btn_profile.Name = "btn_profile";
-            this.btn_profile.Size = new System.Drawing.Size(64, 45);
-            this.btn_profile.TabIndex = 2;
-            this.btn_profile.Click += new System.EventHandler(this.btn_profile_Click);
-            // 
-            // btn_cart
-            // 
-            this.btn_cart.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_cart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_cart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_cart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_cart.FillColor = System.Drawing.Color.Transparent;
-            this.btn_cart.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_cart.ForeColor = System.Drawing.Color.White;
-            this.btn_cart.Image = global::LapStore.Properties.Resources.icons8_shopping_cart_32black;
-            this.btn_cart.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_cart.Location = new System.Drawing.Point(970, 2);
-            this.btn_cart.Name = "btn_cart";
-            this.btn_cart.Size = new System.Drawing.Size(64, 45);
-            this.btn_cart.TabIndex = 1;
-            this.btn_cart.Click += new System.EventHandler(this.btn_cart_Click);
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.Transparent;
-            this.menu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.menu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.menu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.menu.FillColor = System.Drawing.Color.Transparent;
-            this.menu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.menu.ForeColor = System.Drawing.Color.White;
-            this.menu.Image = global::LapStore.Properties.Resources.icons8_menu_32;
-            this.menu.ImageSize = new System.Drawing.Size(30, 30);
-            this.menu.Location = new System.Drawing.Point(13, 3);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(64, 45);
-            this.menu.TabIndex = 0;
-            this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
-            this.menu.MouseLeave += new System.EventHandler(this.menu_MouseLeave);
             // 
             // chuyen
             // 
@@ -498,6 +372,152 @@
             this.btn_Laptop.TextFormatNoPrefix = true;
             this.btn_Laptop.Click += new System.EventHandler(this.btn_Laptop_Click);
             // 
+            // btn_yeuThich
+            // 
+            this.btn_yeuThich.BackColor = System.Drawing.Color.Transparent;
+            this.btn_yeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_yeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_yeuThich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_yeuThich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_yeuThich.FillColor = System.Drawing.Color.Transparent;
+            this.btn_yeuThich.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_yeuThich.ForeColor = System.Drawing.Color.White;
+            this.btn_yeuThich.Image = global::LapStore.Properties.Resources.icons8_favorite_321;
+            this.btn_yeuThich.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_yeuThich.Location = new System.Drawing.Point(900, 3);
+            this.btn_yeuThich.Name = "btn_yeuThich";
+            this.btn_yeuThich.Size = new System.Drawing.Size(64, 45);
+            this.btn_yeuThich.TabIndex = 9;
+            this.btn_yeuThich.Click += new System.EventHandler(this.btn_yeuThich_Click);
+            // 
+            // btn_donHang
+            // 
+            this.btn_donHang.BackColor = System.Drawing.Color.Transparent;
+            this.btn_donHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_donHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_donHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_donHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_donHang.FillColor = System.Drawing.Color.Transparent;
+            this.btn_donHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_donHang.ForeColor = System.Drawing.Color.White;
+            this.btn_donHang.Image = global::LapStore.Properties.Resources.icons8_delivery_truck_32;
+            this.btn_donHang.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_donHang.Location = new System.Drawing.Point(830, 1);
+            this.btn_donHang.Name = "btn_donHang";
+            this.btn_donHang.Size = new System.Drawing.Size(64, 45);
+            this.btn_donHang.TabIndex = 8;
+            this.btn_donHang.Click += new System.EventHandler(this.btn_donHang_Click);
+            // 
+            // btn_timKiem
+            // 
+            this.btn_timKiem.BackColor = System.Drawing.Color.Transparent;
+            this.btn_timKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_timKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_timKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_timKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_timKiem.FillColor = System.Drawing.Color.Brown;
+            this.btn_timKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_timKiem.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_timKiem.Image = global::LapStore.Properties.Resources.icons8_find_32;
+            this.btn_timKiem.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_timKiem.Location = new System.Drawing.Point(761, 9);
+            this.btn_timKiem.Name = "btn_timKiem";
+            this.btn_timKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_timKiem.Size = new System.Drawing.Size(37, 37);
+            this.btn_timKiem.TabIndex = 7;
+            this.btn_timKiem.Click += new System.EventHandler(this.btn_timKiem_Click);
+            // 
+            // btn_logOut
+            // 
+            this.btn_logOut.BackColor = System.Drawing.Color.Transparent;
+            this.btn_logOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_logOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_logOut.FillColor = System.Drawing.Color.Transparent;
+            this.btn_logOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_logOut.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_logOut.Image = global::LapStore.Properties.Resources.icons8_sign_out_32black;
+            this.btn_logOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_logOut.Location = new System.Drawing.Point(1109, 2);
+            this.btn_logOut.Name = "btn_logOut";
+            this.btn_logOut.Size = new System.Drawing.Size(64, 45);
+            this.btn_logOut.TabIndex = 6;
+            this.btn_logOut.Click += new System.EventHandler(this.btn_logOut_Click);
+            // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logo.FillColor = System.Drawing.Color.Transparent;
+            this.logo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.logo.ForeColor = System.Drawing.Color.White;
+            this.logo.Image = global::LapStore.Properties.Resources.favicon_hacom_2024;
+            this.logo.ImageSize = new System.Drawing.Size(100, 100);
+            this.logo.Location = new System.Drawing.Point(83, 3);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(129, 43);
+            this.logo.TabIndex = 4;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
+            // 
+            // btn_profile
+            // 
+            this.btn_profile.BackColor = System.Drawing.Color.Transparent;
+            this.btn_profile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_profile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_profile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_profile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_profile.FillColor = System.Drawing.Color.Transparent;
+            this.btn_profile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_profile.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_profile.Image = global::LapStore.Properties.Resources.icons8_user_32black;
+            this.btn_profile.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_profile.Location = new System.Drawing.Point(1040, 2);
+            this.btn_profile.Name = "btn_profile";
+            this.btn_profile.Size = new System.Drawing.Size(64, 45);
+            this.btn_profile.TabIndex = 2;
+            this.btn_profile.Click += new System.EventHandler(this.btn_profile_Click);
+            // 
+            // btn_cart
+            // 
+            this.btn_cart.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_cart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_cart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_cart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_cart.FillColor = System.Drawing.Color.Transparent;
+            this.btn_cart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_cart.ForeColor = System.Drawing.Color.White;
+            this.btn_cart.Image = global::LapStore.Properties.Resources.icons8_shopping_cart_32black;
+            this.btn_cart.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_cart.Location = new System.Drawing.Point(970, 2);
+            this.btn_cart.Name = "btn_cart";
+            this.btn_cart.Size = new System.Drawing.Size(64, 45);
+            this.btn_cart.TabIndex = 1;
+            this.btn_cart.Click += new System.EventHandler(this.btn_cart_Click);
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.Transparent;
+            this.menu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.menu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.menu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.menu.FillColor = System.Drawing.Color.Transparent;
+            this.menu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menu.ForeColor = System.Drawing.Color.White;
+            this.menu.Image = global::LapStore.Properties.Resources.icons8_menu_32;
+            this.menu.ImageSize = new System.Drawing.Size(30, 30);
+            this.menu.Location = new System.Drawing.Point(13, 3);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(64, 45);
+            this.menu.TabIndex = 0;
+            this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
+            this.menu.MouseLeave += new System.EventHandler(this.menu_MouseLeave);
+            // 
             // userHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,5 +565,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_ManHinh;
         private Guna.UI2.WinForms.Guna2Button btn_Laptop;
         private Guna.UI2.WinForms.Guna2Button btn_donHang;
+        private Guna.UI2.WinForms.Guna2Button btn_yeuThich;
     }
 }
