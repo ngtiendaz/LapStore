@@ -188,6 +188,14 @@ namespace LapStore.Widget.User
             Load1();
         }
 
+        private void btn_yeuThich_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btn_maGiamGia_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

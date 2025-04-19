@@ -21,16 +21,17 @@ namespace LapStore.Widget.User
         private List<GioHang> danhSachSanPham;
         private string maUser;
         private long TONG;
+        private string idMaGiamGia;
         public thanhToan()
         {
             InitializeComponent();
         }
-        public void HienThiThongTin(List<GioHang> danhSach, long tongTien, int soLuong)
+        public void HienThiThongTin(List<GioHang> danhSach, long tongTien, int soLuong, MaGiamGia maGiamGia )
         {
             maUser = UserController.CurrentUser.Id;
             danhSachSanPham = danhSach;
             TONG = tongTien;
-
+            idMaGiamGia = maGiamGia.Id;
             txtTongTien.Text = tongTien.ToString("N0") + "đ";
             count.Text = soLuong.ToString() + " sản phẩm";
         }
@@ -124,6 +125,7 @@ namespace LapStore.Widget.User
 
             // Nếu đến đây thì mọi thứ đều OK
             MessageBox.Show("🎉 Đặt hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MaGiamGiaController.TruSoLuongMaGiamGia(idMaGiamGia);
             OnBackToHome?.Invoke(this, EventArgs.Empty);
         }
 

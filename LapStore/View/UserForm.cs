@@ -82,7 +82,7 @@ namespace LapStore.View
         private void ChuyenSangThanhToan(object sender, DatHangEventArgs e)
         {
             thanhToan uc = new thanhToan();
-            uc.HienThiThongTin(e.SanPhamDaChon, e.TongTien, e.TongSoLuong);
+            uc.HienThiThongTin(e.SanPhamDaChon, e.TongTien, e.TongSoLuong, e.MaGiamGiaDaChon);
 
             // Lắng nghe sự kiện trở về từ thanh toán
             uc.OnBackToGioHang += (s, evt) =>

@@ -185,54 +185,52 @@ namespace LapStore
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                // Danh sách điều kiện WHERE
                 List<string> conditions = new List<string>();
 
+                // Nếu có từ khóa thì thêm điều kiện tìm kiếm
+                if (!string.IsNullOrEmpty(searchValue))
+                {
+                    conditions.Add("(maSp LIKE @search OR tenSp LIKE @search OR moTa LIKE @search)");
+                }
+
+                // Nếu có mã danh mục thì thêm điều kiện lọc danh mục
                 if (!string.IsNullOrEmpty(maDm))
                 {
                     conditions.Add("maDm = @maDm");
                 }
-                if (!string.IsNullOrEmpty(searchValue))
-                {
-                    conditions.Add("(maSp LIKE @search OR tenSp LIKE @search OR moTa LIKE @search OR tenSp LIKE @search)");
-                }
 
-                // Xây dựng WHERE từ điều kiện
+                // Tạo phần WHERE nếu có điều kiện
                 string whereClause = conditions.Count > 0 ? "WHERE " + string.Join(" AND ", conditions) : "";
 
-                // Xây dựng chuỗi ORDER BY theo kiểu sắp xếp
+                // Tạo ORDER BY nếu có kiểu sắp xếp hợp lệ
                 string orderBy = "";
                 switch (kieuSapXep)
                 {
                     case 1:
-                        orderBy = "ORDER BY giaBan ASC"; // Giá tăng dần
+                        orderBy = "ORDER BY giaBan ASC";
                         break;
                     case 2:
-                        orderBy = "ORDER BY giaBan DESC"; // Giá giảm dần
+                        orderBy = "ORDER BY giaBan DESC";
                         break;
                     case 3:
-                        orderBy = "ORDER BY tenSp ASC"; // Theo chữ cái A-Z
+                        orderBy = "ORDER BY tenSp ASC";
                         break;
                     case 4:
-                        orderBy = "ORDER BY created_at DESC"; // Sản phẩm mới nhất
-                        break;
-                    default:
-                        orderBy = ""; // Không sắp xếp nếu không có kiểu sắp xếp
+                        orderBy = "ORDER BY created_at DESC";
                         break;
                 }
 
-                // Xây dựng câu truy vấn SQL
                 string query = $"SELECT * FROM SANPHAM {whereClause} {orderBy}";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    if (!string.IsNullOrEmpty(maDm))
-                    {
-                        cmd.Parameters.AddWithValue("@maDm", maDm);
-                    }
                     if (!string.IsNullOrEmpty(searchValue))
                     {
                         cmd.Parameters.AddWithValue("@search", "%" + searchValue + "%");
+                    }
+                    if (!string.IsNullOrEmpty(maDm))
+                    {
+                        cmd.Parameters.AddWithValue("@maDm", maDm);
                     }
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -259,6 +257,7 @@ namespace LapStore
 
             return SanPhams;
         }
+
 
 
         // Tạo mã sản phẩm mới tự động

@@ -289,7 +289,7 @@ namespace LapStore.Widget
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             string keyword = txtTimKiem.Text.Trim();
-            string maDm = cbb_danhMuc.SelectedValue.ToString();
+            string maDm = "";
 
             List<SanPham> SanPhams = SanPhamController.SearchSanPham(keyword, maDm);
             dgvSP.Rows.Clear();

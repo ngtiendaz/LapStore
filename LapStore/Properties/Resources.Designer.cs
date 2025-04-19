@@ -273,6 +273,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap favicon_hacom_2024___Copy {
+            get {
+                object obj = ResourceManager.GetObject("favicon-hacom-2024 - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-32", resourceCulture);

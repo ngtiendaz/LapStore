@@ -32,3 +32,6 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.hangAdmin.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.luotMuaAdmin.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.luotXemAdmin.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.maGiamGiaAdmin.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.yeuThich.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.MaGiamGiaForm.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.itemMaGiamGia.resources

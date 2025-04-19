@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.scroll = new System.Windows.Forms.Panel();
             this.txtHienThi = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -35,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbb_sapXep = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowSP = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.scroll.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -124,6 +126,12 @@
             this.flowSP.Size = new System.Drawing.Size(1050, 1233);
             this.flowSP.TabIndex = 0;
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // danhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +159,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbb_sapXep;
         private System.Windows.Forms.Label txtHienThi;
         private Guna.UI2.WinForms.Guna2Button btnLoc;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

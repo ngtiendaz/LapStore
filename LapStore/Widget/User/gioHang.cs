@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using LapStore.Controller;
 using LapStore.Model;
+using LapStore.View;
 
 namespace LapStore.Widget.User
 {
@@ -11,12 +12,14 @@ namespace LapStore.Widget.User
     {
         private List<GioHang> _danhSachSP = new List<GioHang>();
         public event EventHandler<DatHangEventArgs> OnDatHang;
-
+        private MaGiamGia _maGiamGia;
+        long TONGTIEN=0;
         public class DatHangEventArgs : EventArgs
         {
             public List<GioHang> SanPhamDaChon { get; set; }
             public long TongTien { get; set; }
             public int TongSoLuong { get; set; }
+            public MaGiamGia MaGiamGiaDaChon { get; set; }
         }
         public gioHang()
         {
@@ -54,16 +57,40 @@ namespace LapStore.Widget.User
             long tamTinh = 0;
             foreach (var sp in _danhSachSP)
             {
-                if (sp.IsChecked) // Chỉ tính nếu được check
+                if (sp.IsChecked)
                     tamTinh += sp.Gia * sp.SoLuong;
             }
 
             txt_tamTinh.Text = tamTinh.ToString("N0") + "đ";
-            txtTongTien.Text = tamTinh.ToString("N0") + "đ";
+
+            long tienGiam = 0;
+            long tongTien = tamTinh;
+
+            if (_maGiamGia != null)
+            {
+                if (tamTinh >= _maGiamGia.DieuKienApDung)
+                {
+                    tienGiam = tamTinh * _maGiamGia.PhanTramGiam / 100;
+                    tongTien = tamTinh - tienGiam;
+                    TONGTIEN = tongTien;
+                }
+                else
+                {
+                    MessageBox.Show("Giá trị đơn hàng chưa đủ điều kiện áp dụng mã giảm giá.");
+                    _maGiamGia = null;
+                    txt_maGiamGia.Text = "";
+                }
+            }
+
+            txt_giaGiam.Text = "-" + tienGiam.ToString("N0") + "đ";
+            txtTongTien.Text = tongTien.ToString("N0") + "đ";
         }
+
+
 
         private void gioHang_Load(object sender, EventArgs e)
         {
+            txt_maGiamGia.ReadOnly = true;
             LoadDanhSachSanPham();
         }
 
@@ -91,16 +118,44 @@ namespace LapStore.Widget.User
                 return;
             }
 
-            long tongTien = spDuocChon.Sum(sp => sp.Gia * sp.SoLuong);
+            long tongTien = TONGTIEN;
             int tongSoLuong = spDuocChon.Sum(sp => sp.SoLuong);
 
             // Gọi sự kiện gửi dữ liệu
             OnDatHang?.Invoke(this, new DatHangEventArgs
             {
+
+                MaGiamGiaDaChon = _maGiamGia, // Gán mã giảm giá đã chọn
                 SanPhamDaChon = spDuocChon,
                 TongTien = tongTien,
                 TongSoLuong = tongSoLuong
             });
+        }
+
+        private void btn_chonMa_Click(object sender, EventArgs e)
+        {
+            var form = new MaGiamGiaForm();
+            form.MaGiamGiaDaChon += (s, mgg) =>
+            {
+                _maGiamGia = mgg;
+                txt_maGiamGia.Text = mgg.TenMa;
+                CapNhatTongTien();
+            };
+            form.ShowDialog();
+        }
+
+        private void txt_maGiamGia_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_maGiamGia.Text))
+            {
+                _maGiamGia = null;
+                CapNhatTongTien();
+            }
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+            txt_maGiamGia.Clear();
         }
     }
 }

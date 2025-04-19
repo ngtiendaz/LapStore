@@ -32,9 +32,11 @@
             this.txtHienThi = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_chonMa = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_maGiamGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_datHang = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txt_giaGiam = new System.Windows.Forms.Label();
             this.txt_tamTinh = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,13 +44,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btn_xoaAll = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbCount = new System.Windows.Forms.Label();
             this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.flowSP = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_xoaAll = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.scroll.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -94,9 +97,12 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel1.Controls.Add(this.btn_chonMa);
+            this.guna2Panel1.Controls.Add(this.txt_maGiamGia);
             this.guna2Panel1.Controls.Add(this.btn_datHang);
             this.guna2Panel1.Controls.Add(this.bunifuSeparator1);
-            this.guna2Panel1.Controls.Add(this.label10);
+            this.guna2Panel1.Controls.Add(this.txt_giaGiam);
             this.guna2Panel1.Controls.Add(this.txt_tamTinh);
             this.guna2Panel1.Controls.Add(this.bunifuSeparator2);
             this.guna2Panel1.Controls.Add(this.label8);
@@ -106,8 +112,48 @@
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Location = new System.Drawing.Point(674, 35);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(304, 298);
+            this.guna2Panel1.Size = new System.Drawing.Size(304, 386);
             this.guna2Panel1.TabIndex = 27;
+            // 
+            // btn_chonMa
+            // 
+            this.btn_chonMa.BorderRadius = 10;
+            this.btn_chonMa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_chonMa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_chonMa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_chonMa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_chonMa.FillColor = System.Drawing.Color.Navy;
+            this.btn_chonMa.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_chonMa.ForeColor = System.Drawing.Color.White;
+            this.btn_chonMa.Location = new System.Drawing.Point(229, 3);
+            this.btn_chonMa.Name = "btn_chonMa";
+            this.btn_chonMa.Size = new System.Drawing.Size(72, 40);
+            this.btn_chonMa.TabIndex = 35;
+            this.btn_chonMa.Text = "Chọn";
+            this.btn_chonMa.Click += new System.EventHandler(this.btn_chonMa_Click);
+            // 
+            // txt_maGiamGia
+            // 
+            this.txt_maGiamGia.BorderColor = System.Drawing.Color.Gray;
+            this.txt_maGiamGia.BorderRadius = 10;
+            this.txt_maGiamGia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_maGiamGia.DefaultText = "";
+            this.txt_maGiamGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_maGiamGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_maGiamGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_maGiamGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_maGiamGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_maGiamGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_maGiamGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_maGiamGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_maGiamGia.Location = new System.Drawing.Point(23, 3);
+            this.txt_maGiamGia.Name = "txt_maGiamGia";
+            this.txt_maGiamGia.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_maGiamGia.PlaceholderText = "Mã giảm giá/ quà tặng";
+            this.txt_maGiamGia.SelectedText = "";
+            this.txt_maGiamGia.Size = new System.Drawing.Size(200, 40);
+            this.txt_maGiamGia.TabIndex = 34;
+            this.txt_maGiamGia.TextChanged += new System.EventHandler(this.txt_maGiamGia_TextChanged);
             // 
             // btn_datHang
             // 
@@ -119,7 +165,7 @@
             this.btn_datHang.FillColor = System.Drawing.Color.Navy;
             this.btn_datHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_datHang.ForeColor = System.Drawing.Color.White;
-            this.btn_datHang.Location = new System.Drawing.Point(22, 212);
+            this.btn_datHang.Location = new System.Drawing.Point(23, 253);
             this.btn_datHang.Name = "btn_datHang";
             this.btn_datHang.Size = new System.Drawing.Size(278, 45);
             this.btn_datHang.TabIndex = 33;
@@ -131,7 +177,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(22, 104);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(23, 145);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(278, 14);
@@ -139,23 +185,22 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // label10
+            // txt_giaGiam
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(277, 83);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 17);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "0đ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.txt_giaGiam.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_giaGiam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_giaGiam.Location = new System.Drawing.Point(149, 124);
+            this.txt_giaGiam.Name = "txt_giaGiam";
+            this.txt_giaGiam.Size = new System.Drawing.Size(152, 17);
+            this.txt_giaGiam.TabIndex = 30;
+            this.txt_giaGiam.Text = "0đ";
+            this.txt_giaGiam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_tamTinh
             // 
             this.txt_tamTinh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tamTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_tamTinh.Location = new System.Drawing.Point(145, 34);
+            this.txt_tamTinh.Location = new System.Drawing.Point(146, 75);
             this.txt_tamTinh.Name = "txt_tamTinh";
             this.txt_tamTinh.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_tamTinh.Size = new System.Drawing.Size(155, 17);
@@ -168,7 +213,7 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(22, 55);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(23, 96);
             this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(278, 14);
@@ -181,7 +226,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(142, 168);
+            this.label8.Location = new System.Drawing.Point(143, 209);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(158, 17);
             this.label8.TabIndex = 26;
@@ -191,7 +236,7 @@
             // 
             this.txtTongTien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtTongTien.Location = new System.Drawing.Point(145, 136);
+            this.txtTongTien.Location = new System.Drawing.Point(146, 177);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTongTien.Size = new System.Drawing.Size(155, 14);
@@ -204,7 +249,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(19, 136);
+            this.label7.Location = new System.Drawing.Point(20, 177);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 8;
@@ -215,7 +260,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(19, 83);
+            this.label6.Location = new System.Drawing.Point(20, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 17);
             this.label6.TabIndex = 7;
@@ -226,11 +271,27 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(19, 34);
+            this.label5.Location = new System.Drawing.Point(20, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Tạm tính";
+            // 
+            // btn_xoaAll
+            // 
+            this.btn_xoaAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_xoaAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_xoaAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_xoaAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_xoaAll.FillColor = System.Drawing.Color.Transparent;
+            this.btn_xoaAll.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_xoaAll.ForeColor = System.Drawing.Color.White;
+            this.btn_xoaAll.Image = global::LapStore.Properties.Resources.icons8_delete_32;
+            this.btn_xoaAll.Location = new System.Drawing.Point(623, 35);
+            this.btn_xoaAll.Name = "btn_xoaAll";
+            this.btn_xoaAll.Size = new System.Drawing.Size(30, 30);
+            this.btn_xoaAll.TabIndex = 26;
+            this.btn_xoaAll.Click += new System.EventHandler(this.btn_xoaAll_Click);
             // 
             // label4
             // 
@@ -303,21 +364,16 @@
             this.flowSP.Size = new System.Drawing.Size(650, 731);
             this.flowSP.TabIndex = 0;
             // 
-            // btn_xoaAll
+            // guna2HtmlLabel1
             // 
-            this.btn_xoaAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_xoaAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_xoaAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_xoaAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_xoaAll.FillColor = System.Drawing.Color.Transparent;
-            this.btn_xoaAll.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_xoaAll.ForeColor = System.Drawing.Color.White;
-            this.btn_xoaAll.Image = global::LapStore.Properties.Resources.icons8_delete_32;
-            this.btn_xoaAll.Location = new System.Drawing.Point(623, 35);
-            this.btn_xoaAll.Name = "btn_xoaAll";
-            this.btn_xoaAll.Size = new System.Drawing.Size(30, 30);
-            this.btn_xoaAll.TabIndex = 26;
-            this.btn_xoaAll.Click += new System.EventHandler(this.btn_xoaAll_Click);
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(202, 11);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(12, 19);
+            this.guna2HtmlLabel1.TabIndex = 28;
+            this.guna2HtmlLabel1.Text = "X";
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // gioHang
             // 
@@ -360,8 +416,11 @@
         private System.Windows.Forms.Label txtTongTien;
         private Guna.UI2.WinForms.Guna2Button btn_datHang;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label txt_giaGiam;
         private System.Windows.Forms.Label txt_tamTinh;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+        private Guna.UI2.WinForms.Guna2Button btn_chonMa;
+        private Guna.UI2.WinForms.Guna2TextBox txt_maGiamGia;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

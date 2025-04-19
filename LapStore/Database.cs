@@ -213,6 +213,85 @@ namespace LapStore
 
             return true; // ID hợp lệ (chưa tồn tại)
         }
+        public static bool KiemTraMaDanhMuc(string maDm)
+        {
+            if (string.IsNullOrWhiteSpace(maDm))
+            {
+                MessageBox.Show("Mã danh mục không được để trống!");
+                return false;
+            }
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT COUNT(*) FROM DANHMUC WHERE id = @maDm";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maDm", maDm);
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Mã danh mục đã tồn tại trong hệ thống!");
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+        public static bool KiemTraMaHang(string maHang)
+        {
+            if (string.IsNullOrWhiteSpace(maHang))
+            {
+                MessageBox.Show("Mã hãng không được để trống!");
+                return false;
+            }
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT COUNT(*) FROM HANG WHERE id = @maHang";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maHang", maHang);
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Mã hãng đã tồn tại trong hệ thống!");
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+        public static bool KiemTraMaGiamGia(string maGiamGia)
+        {
+            if (string.IsNullOrWhiteSpace(maGiamGia))
+            {
+                MessageBox.Show("Mã giảm giá không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT COUNT(*) FROM MAGIAMGIA WHERE id = @maGiamGia";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maGiamGia", maGiamGia);
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Mã giảm giá đã tồn tại trong hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
 
 
     }
