@@ -13,14 +13,26 @@ namespace LapStore
 {
     class SanPhamController
     {
-        public static List<SanPham> GetSanPhamTheo(string maDanhMuc = "", int kieuSapXep = 0)
+        public static List<SanPham> GetSanPhamTheo(string maDanhMuc = "", string maHang = "", int kieuSapXep = 0)
         {
             List<SanPham> sanPhamList = new List<SanPham>();
 
             using (SqlConnection conn = Database.GetConnection())
             {
-                // Xây dựng điều kiện WHERE (nếu có mã danh mục)
-                string whereClause = string.IsNullOrEmpty(maDanhMuc) ? "" : "WHERE maDm = @maDanhMuc";
+                // Mở kết nối
+
+                // Xây dựng điều kiện WHERE
+                List<string> conditions = new List<string>();
+                if (!string.IsNullOrEmpty(maDanhMuc))
+                {
+                    conditions.Add("maDm = @maDanhMuc");
+                }
+                if (!string.IsNullOrEmpty(maHang))
+                {
+                    conditions.Add("maHang = @maHang");
+                }
+
+                string whereClause = conditions.Count > 0 ? "WHERE " + string.Join(" AND ", conditions) : "";
 
                 // Xây dựng chuỗi ORDER BY theo kiểu sắp xếp
                 string orderBy;
@@ -48,9 +60,13 @@ namespace LapStore
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    if (!string.IsNullOrEmpty(maDanhMuc)) // Nếu có mã danh mục, thêm tham số vào câu lệnh
+                    if (!string.IsNullOrEmpty(maDanhMuc))
                     {
                         cmd.Parameters.AddWithValue("@maDanhMuc", maDanhMuc);
+                    }
+                    if (!string.IsNullOrEmpty(maHang))
+                    {
+                        cmd.Parameters.AddWithValue("@maHang", maHang);
                     }
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -61,6 +77,7 @@ namespace LapStore
                             {
                                 MaSp = reader["maSp"].ToString(),
                                 MaDm = reader["maDm"].ToString(),
+                                MaHang = reader["maHang"].ToString(),
                                 TenSp = reader["tenSp"].ToString(),
                                 HinhAnh = reader["hinhAnh"].ToString(),
                                 MoTa = reader["moTa"].ToString(),
@@ -76,6 +93,7 @@ namespace LapStore
 
             return sanPhamList;
         }
+
 
 
 

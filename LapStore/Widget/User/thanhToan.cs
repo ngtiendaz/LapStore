@@ -21,7 +21,7 @@ namespace LapStore.Widget.User
         private List<GioHang> danhSachSanPham;
         private string maUser;
         private long TONG;
-        private string idMaGiamGia;
+        private string idMaGiamGia ;
         public thanhToan()
         {
             InitializeComponent();
@@ -31,7 +31,8 @@ namespace LapStore.Widget.User
             maUser = UserController.CurrentUser.Id;
             danhSachSanPham = danhSach;
             TONG = tongTien;
-            idMaGiamGia = maGiamGia.Id;
+            // Kiểm tra nếu maGiamGia là null trước khi truy cập Id
+            idMaGiamGia = maGiamGia?.Id; // Sử dụng null-conditional operator
             txtTongTien.Text = tongTien.ToString("N0") + "đ";
             count.Text = soLuong.ToString() + " sản phẩm";
         }

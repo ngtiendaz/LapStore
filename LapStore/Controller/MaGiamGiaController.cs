@@ -116,6 +116,12 @@ namespace LapStore.Controller
         }
         public static bool TruSoLuongMaGiamGia(string maGiamGiaId)
         {
+            // Kiểm tra nếu maGiamGiaId là null hoặc rỗng
+            if (string.IsNullOrEmpty(maGiamGiaId))
+            {
+                return false; // Không thực hiện trừ và trả về false
+            }
+
             using (SqlConnection conn = Database.GetConnection())
             {
                 string query = "UPDATE MAGIAMGIA SET soLuong = soLuong - 1 WHERE id = @id AND soLuong > 0";
@@ -123,7 +129,7 @@ namespace LapStore.Controller
                 {
                     cmd.Parameters.AddWithValue("@id", maGiamGiaId);
                     int rowsAffected = cmd.ExecuteNonQuery();
-                    return rowsAffected > 0; // Trả về true nếu có ít nhất một dòng bị ảnh hưởng (số lượng đã được trừ)
+                    return rowsAffected > 0; // Trả về true nếu có ít nhất một dòng bị ảnh hưởng
                 }
             }
         }

@@ -39,12 +39,12 @@ namespace LapStore.Widget.User
         private void donHang_Load(object sender, EventArgs e)
         {
             LoadTrangThaiToComboBox();
-            LoadDonHangTheoTrangThai(cbb_trangThai.Text);
+            LoadDonHangTheoTrangThai(cbb_trangThai.Text,UserController.CurrentUser.Id);
             dgvDonHang.DefaultCellStyle.ForeColor = Color.Black;
         }
-        private void LoadDonHangTheoTrangThai(string trangThai)
+        private void LoadDonHangTheoTrangThai(string trangThai,string id)
         {
-            var donHangList = DonHangController.GetDonHangTheoTrangThai(trangThai);
+            var donHangList = DonHangController.GetDonHangTheoTrangThai(trangThai, UserController.CurrentUser.Id);
 
             dgvDonHang.Rows.Clear(); // Xóa dữ liệu cũ (nếu bạn không dùng `DataSource`)
 
@@ -65,7 +65,7 @@ namespace LapStore.Widget.User
         private void btnLoc_Click(object sender, EventArgs e)
         {
             string selectedTrangThai = cbb_trangThai.Text;
-            LoadDonHangTheoTrangThai(selectedTrangThai);
+            LoadDonHangTheoTrangThai(selectedTrangThai, UserController.CurrentUser.Id);
         }
 
         private void btn_huy_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace LapStore.Widget.User
                     MessageBox.Show("✅ Đã gửi yêu cầu hủy cho người bán!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Load lại danh sách đơn hàng
-                    LoadDonHangTheoTrangThai(cbb_trangThai.Text);
+                    LoadDonHangTheoTrangThai(cbb_trangThai.Text, UserController.CurrentUser.Id);
                 }
                 catch (Exception ex)
                 {

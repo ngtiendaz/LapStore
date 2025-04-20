@@ -37,6 +37,7 @@
             this.cbb_sapXep = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowSP = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.cbb_hang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.scroll.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cbb_hang);
             this.panel1.Controls.Add(this.btnLoc);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cbb_sapXep);
@@ -85,7 +87,7 @@
             this.btnLoc.FillColor = System.Drawing.Color.Maroon;
             this.btnLoc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLoc.ForeColor = System.Drawing.Color.White;
-            this.btnLoc.Location = new System.Drawing.Point(236, 61);
+            this.btnLoc.Location = new System.Drawing.Point(384, 61);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(104, 36);
             this.btnLoc.TabIndex = 3;
@@ -132,6 +134,22 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // cbb_hang
+            // 
+            this.cbb_hang.BackColor = System.Drawing.Color.Transparent;
+            this.cbb_hang.BorderRadius = 10;
+            this.cbb_hang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbb_hang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_hang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_hang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbb_hang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbb_hang.ForeColor = System.Drawing.Color.Black;
+            this.cbb_hang.ItemHeight = 30;
+            this.cbb_hang.Location = new System.Drawing.Point(230, 61);
+            this.cbb_hang.Name = "cbb_hang";
+            this.cbb_hang.Size = new System.Drawing.Size(127, 36);
+            this.cbb_hang.TabIndex = 4;
+            // 
             // danhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,5 +178,6 @@
         private System.Windows.Forms.Label txtHienThi;
         private Guna.UI2.WinForms.Guna2Button btnLoc;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbb_hang;
     }
 }

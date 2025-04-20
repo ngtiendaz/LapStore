@@ -72,14 +72,19 @@ namespace LapStore.Widget.User
                 {
                     tienGiam = tamTinh * _maGiamGia.PhanTramGiam / 100;
                     tongTien = tamTinh - tienGiam;
-                    TONGTIEN = tongTien;
+                    TONGTIEN = tongTien; // Cập nhật TONGTIEN khi có mã giảm giá hợp lệ
                 }
                 else
                 {
                     MessageBox.Show("Giá trị đơn hàng chưa đủ điều kiện áp dụng mã giảm giá.");
                     _maGiamGia = null;
                     txt_maGiamGia.Text = "";
+                    TONGTIEN = tamTinh; // Cập nhật TONGTIEN về giá tạm tính khi mã không hợp lệ
                 }
+            }
+            else
+            {
+                TONGTIEN = tamTinh; // Cập nhật TONGTIEN bằng giá tạm tính khi không có mã giảm giá
             }
 
             txt_giaGiam.Text = "-" + tienGiam.ToString("N0") + "đ";
@@ -118,16 +123,15 @@ namespace LapStore.Widget.User
                 return;
             }
 
-            long tongTien = TONGTIEN;
+            long tongTien = TONGTIEN; // Sử dụng giá trị TONGTIEN đã được cập nhật
             int tongSoLuong = spDuocChon.Sum(sp => sp.SoLuong);
 
             // Gọi sự kiện gửi dữ liệu
             OnDatHang?.Invoke(this, new DatHangEventArgs
             {
-
-                MaGiamGiaDaChon = _maGiamGia, // Gán mã giảm giá đã chọn
+                MaGiamGiaDaChon = _maGiamGia, // Vẫn truyền cả mã giảm giá
                 SanPhamDaChon = spDuocChon,
-                TongTien = tongTien,
+                TongTien = tongTien, // Truyền tổng tiền cuối cùng
                 TongSoLuong = tongSoLuong
             });
         }
@@ -138,7 +142,7 @@ namespace LapStore.Widget.User
             form.MaGiamGiaDaChon += (s, mgg) =>
             {
                 _maGiamGia = mgg;
-                txt_maGiamGia.Text = mgg.TenMa;
+                txt_maGiamGia.Text = mgg?.TenMa ?? ""; // Hiển thị tên mã hoặc chuỗi rỗng nếu null
                 CapNhatTongTien();
             };
             form.ShowDialog();

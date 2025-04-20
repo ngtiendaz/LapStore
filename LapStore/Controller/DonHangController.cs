@@ -124,15 +124,31 @@ namespace LapStore.Controller
 
 
 
-        public static List<DonHang> GetDonHangTheoTrangThai(string trangThai)
+        public static List<DonHang> GetDonHangTheoTrangThai(string trangThai, string idUser = "")
         {
             List<DonHang> list = new List<DonHang>();
             using (SqlConnection conn = Database.GetConnection())
             {
+                // Xây dựng câu truy vấn SQL với điều kiện lọc
                 string query = "SELECT * FROM DONHANG WHERE trangThai = @trangThai";
+
+                // Nếu có idUser, thêm điều kiện lọc theo idUser
+                if (!string.IsNullOrEmpty(idUser))
+                {
+                    query += " AND maUser = @idUser";
+                }
+
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    // Thêm tham số trang thái vào câu lệnh SQL
                     cmd.Parameters.AddWithValue("@trangThai", trangThai);
+
+                    // Nếu có idUser, thêm tham số idUser vào câu lệnh SQL
+                    if (!string.IsNullOrEmpty(idUser))
+                    {
+                        cmd.Parameters.AddWithValue("@idUser", idUser);
+                    }
+
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -155,6 +171,7 @@ namespace LapStore.Controller
 
             return list;
         }
+
 
         public static void XuLyDonHangSauKhiTao(string idDonHang)
         {

@@ -54,6 +54,7 @@
             this.txt_TenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.imageSP = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_trangChu = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_hang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelTong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.panelSoLuong.SuspendLayout();
@@ -69,6 +70,7 @@
             this.panelTong.BackColor = System.Drawing.Color.White;
             this.panelTong.BorderColor = System.Drawing.Color.Black;
             this.panelTong.BorderRadius = 15;
+            this.panelTong.Controls.Add(this.txt_hang);
             this.panelTong.Controls.Add(this.guna2PictureBox3);
             this.panelTong.Controls.Add(this.txt_soLuongKho);
             this.panelTong.Controls.Add(this.panelSoLuong);
@@ -92,12 +94,13 @@
             this.panelTong.Name = "panelTong";
             this.panelTong.Size = new System.Drawing.Size(1030, 1450);
             this.panelTong.TabIndex = 0;
+            this.panelTong.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTong_Paint);
             // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.Image = global::LapStore.Properties.Resources.Screenshot_2025_03_29_191332;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(710, 81);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(770, 81);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(97, 19);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -332,19 +335,21 @@
             // 
             // txt_luotXem
             // 
+            this.txt_luotXem.AutoSize = false;
             this.txt_luotXem.BackColor = System.Drawing.Color.Transparent;
             this.txt_luotXem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_luotXem.Location = new System.Drawing.Point(885, 81);
+            this.txt_luotXem.Location = new System.Drawing.Point(873, 81);
             this.txt_luotXem.Name = "txt_luotXem";
-            this.txt_luotXem.Size = new System.Drawing.Size(95, 19);
+            this.txt_luotXem.Size = new System.Drawing.Size(107, 19);
             this.txt_luotXem.TabIndex = 4;
             this.txt_luotXem.Text = "Lượt xem: 4.046";
+            this.txt_luotXem.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(646, 81);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(706, 81);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(58, 19);
             this.guna2HtmlLabel2.TabIndex = 3;
@@ -402,6 +407,16 @@
             this.btn_trangChu.TabIndex = 17;
             this.btn_trangChu.Text = "Trang Chủ";
             // 
+            // txt_hang
+            // 
+            this.txt_hang.BackColor = System.Drawing.Color.Transparent;
+            this.txt_hang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_hang.Location = new System.Drawing.Point(618, 81);
+            this.txt_hang.Name = "txt_hang";
+            this.txt_hang.Size = new System.Drawing.Size(63, 19);
+            this.txt_hang.TabIndex = 25;
+            this.txt_hang.Text = "Hãng: Dell";
+            // 
             // detailSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,5 +472,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btn_like;
         private System.Windows.Forms.Label txt_soLuongKho;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txt_hang;
     }
 }

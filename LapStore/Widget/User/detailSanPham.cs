@@ -27,6 +27,7 @@ namespace LapStore.Widget.User
             InitializeComponent();
             txtMaSP.Text = "Mã SP: "+ sp.MaSp;
             MSP = sp.MaSp;
+            txt_hang.Text = "Hãng: " + HangController.GetTenHangById(sp.MaHang);
             txt_TenSP.Text = sp.TenSp;
             txt_soLuongKho.Text = "*Số lượng còn lại trong kho: "+sp.SoLuong;
             txt_giaCu.Text = (sp.GiaBan + tietKiem).ToString("N0") + "đ";
@@ -139,6 +140,11 @@ namespace LapStore.Widget.User
             YeuThichVaLuotXemController.TangLuotXem(MSP);
             int luotXem = YeuThichVaLuotXemController.GetSoLuotXem(MSP);
             txt_luotXem.Text = "Lượt xem: "+ luotXem;
+        }
+
+        private void panelTong_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

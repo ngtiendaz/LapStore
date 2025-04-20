@@ -16,10 +16,16 @@ namespace LapStore.Widget
         public event Action<SanPham> OnSanPhamClick; // Sự kiện để truyền dữ liệu sản phẩm
 
         private SanPham sanPham;
+        private string _maHang;
         public string MaSp
         {
             get => txtMaSp.Text;
             set => txtMaSp.Text ="Mã:"+value.Trim();
+        }
+        public string MaHang
+        {
+            get => _maHang;
+            set => _maHang = value?.Trim(); // Loại bỏ khoảng trắng nếu có
         }
 
         public string TenSp
@@ -97,6 +103,7 @@ namespace LapStore.Widget
             GiaBan = sp.GiaBan;
             HinhAnh = sp.HinhAnh;
             SoLuong = sp.SoLuong;
+            MaHang = sp.MaHang;
 
             this.Click += ItemSanPham_Click;
             foreach (Control control in this.Controls)

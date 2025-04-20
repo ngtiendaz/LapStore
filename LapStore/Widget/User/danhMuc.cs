@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LapStore.Controller;
 using LapStore.Model;
 using LapStore.View;
 
@@ -23,7 +24,7 @@ namespace LapStore.Widget.User
         {
             MADANHMUC = maDanhMuc; // Cập nhật mã danh mục
             txtHienThi.Text = tenDanhMuc;
-            LoadDanhSachSanPham(MADANHMUC, 0);
+            LoadDanhSachSanPham(MADANHMUC,null, 0);
         }
         public static void LoadComboBoxSapXep(ComboBox comboBox)
         {
@@ -43,9 +44,9 @@ namespace LapStore.Widget.User
             comboBox.ValueMember = "Key"; // Lấy giá trị số tương ứng
         }
 
-        private void LoadDanhSachSanPham(string maDm , int sapXep)
+        private void LoadDanhSachSanPham(string maDm ,string maHang, int sapXep)
         {
-            List<SanPham> dsSanPham = SanPhamController.GetSanPhamTheo(maDm,sapXep);
+            List<SanPham> dsSanPham = SanPhamController.GetSanPhamTheo(maDm,maHang,sapXep);
             flowSP.Controls.Clear();
 
             int itemWidth = flowSP.Width / 4 - 20;
@@ -76,15 +77,17 @@ namespace LapStore.Widget.User
             scroll.AutoScroll = true;
             flowSP.WrapContents = true;
             flowSP.FlowDirection = FlowDirection.LeftToRight;
-            LoadDanhSachSanPham(MADANHMUC,0);
+            LoadDanhSachSanPham(MADANHMUC,null, 0);
+            HangController.LoadHangToComboBox(cbb_hang);
         }
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
             int kieuSapXep = (int)cbb_sapXep.SelectedValue;
+            string maHang = cbb_hang.SelectedValue?.ToString();
 
             // Gọi lại hàm LoadDanhSachSanPham để cập nhật danh sách sản phẩm
-            LoadDanhSachSanPham(MADANHMUC, kieuSapXep);
+            LoadDanhSachSanPham(MADANHMUC,maHang ,kieuSapXep);
         }
     }
 }

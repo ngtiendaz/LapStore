@@ -118,5 +118,21 @@ namespace LapStore.Controller
                 }
             }
         }
+        public static string GetTenHangById(string id)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            { 
+
+                string query = "SELECT tenHang FROM HANG WHERE id = @id";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id); // Gắn tham số đúng
+
+                    object result = cmd.ExecuteScalar(); // Lấy 1 giá trị
+                    return result != null ? result.ToString() : null;
+                }
+            }
+        }
+
     }
 }
