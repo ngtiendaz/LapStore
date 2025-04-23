@@ -13,6 +13,7 @@ namespace LapStore.Widget.User
         private List<GioHang> _danhSachSP = new List<GioHang>();
         public event EventHandler<DatHangEventArgs> OnDatHang;
         private MaGiamGia _maGiamGia;
+        private PhieuBaoHanh _phieuBaoHanh;
         long TONGTIEN=0;
         public class DatHangEventArgs : EventArgs
         {
@@ -20,6 +21,7 @@ namespace LapStore.Widget.User
             public long TongTien { get; set; }
             public int TongSoLuong { get; set; }
             public MaGiamGia MaGiamGiaDaChon { get; set; }
+            public PhieuBaoHanh PhieuBaoHanhDaChon { get; set; }
         }
         public gioHang()
         {
@@ -65,37 +67,47 @@ namespace LapStore.Widget.User
 
             long tienGiam = 0;
             long tongTien = tamTinh;
+            long tienPhieuBaoHanh = 0;
 
+            // Áp dụng mã giảm giá nếu có
             if (_maGiamGia != null)
             {
                 if (tamTinh >= _maGiamGia.DieuKienApDung)
                 {
                     tienGiam = tamTinh * _maGiamGia.PhanTramGiam / 100;
-                    tongTien = tamTinh - tienGiam;
-                    TONGTIEN = tongTien; // Cập nhật TONGTIEN khi có mã giảm giá hợp lệ
+                    tongTien -= tienGiam;
                 }
                 else
                 {
                     MessageBox.Show("Giá trị đơn hàng chưa đủ điều kiện áp dụng mã giảm giá.");
                     _maGiamGia = null;
                     txt_maGiamGia.Text = "";
-                    TONGTIEN = tamTinh; // Cập nhật TONGTIEN về giá tạm tính khi mã không hợp lệ
+                    tienGiam = 0;
                 }
             }
-            else
+
+            // Cộng thêm giá phiếu bảo hành nếu có
+            if (_phieuBaoHanh != null)
             {
-                TONGTIEN = tamTinh; // Cập nhật TONGTIEN bằng giá tạm tính khi không có mã giảm giá
+                tongTien += _phieuBaoHanh.Gia;
+                tienPhieuBaoHanh = _phieuBaoHanh.Gia;
             }
 
+            // Cập nhật tổng tiền cuối cùng
+            TONGTIEN = tongTien;
+
             txt_giaGiam.Text = "-" + tienGiam.ToString("N0") + "đ";
+            txtGiaBaoHanh.Text = "+" + tienPhieuBaoHanh.ToString("N0") + "đ";
             txtTongTien.Text = tongTien.ToString("N0") + "đ";
         }
+
 
 
 
         private void gioHang_Load(object sender, EventArgs e)
         {
             txt_maGiamGia.ReadOnly = true;
+            txt_phieuBaoHanh.ReadOnly = true;
             LoadDanhSachSanPham();
         }
 
@@ -128,7 +140,7 @@ namespace LapStore.Widget.User
 
             // Gọi sự kiện gửi dữ liệu
             OnDatHang?.Invoke(this, new DatHangEventArgs
-            {
+            {  PhieuBaoHanhDaChon = _phieuBaoHanh, // Vẫn truyền cả phiếu bảo hành
                 MaGiamGiaDaChon = _maGiamGia, // Vẫn truyền cả mã giảm giá
                 SanPhamDaChon = spDuocChon,
                 TongTien = tongTien, // Truyền tổng tiền cuối cùng
@@ -160,6 +172,32 @@ namespace LapStore.Widget.User
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
             txt_maGiamGia.Clear();
+        }
+
+        private void btn_chonPhieu_Click(object sender, EventArgs e)
+        {
+            var form = new PhieuBaoHanhForm();
+            form.PhieuBaoHanhDaChon += (s, pbh) =>
+            {
+                _phieuBaoHanh = pbh;
+                txt_phieuBaoHanh.Text = pbh?.TenPhieu ?? ""; // Hiển thị tên mã hoặc chuỗi rỗng nếu null
+                CapNhatTongTien();
+            };
+            form.ShowDialog();
+        }
+
+        private void txt_phieuBaoHanh_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_phieuBaoHanh.Text))
+            {
+                _phieuBaoHanh = null;
+                CapNhatTongTien();
+            }
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+            txt_phieuBaoHanh.Clear();
         }
     }
 }

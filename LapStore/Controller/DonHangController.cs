@@ -319,6 +319,88 @@ namespace LapStore.Controller
                 }
             }
         }
+        public static List<DonHang> GetDonHangTheoThang(int thang, string idUser = "")
+        {
+            List<DonHang> list = new List<DonHang>();
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                // Xây dựng câu truy vấn SQL với điều kiện lọc
+                string query = "SELECT * FROM DONHANG WHERE MONTH(created_at) = @thang";
+
+                // Nếu có idUser, thêm điều kiện lọc theo idUser
+                if (!string.IsNullOrEmpty(idUser))
+                {
+                    query += " AND maUser = @idUser";
+                }
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Thêm tham số thang vào câu lệnh SQL
+                    cmd.Parameters.AddWithValue("@thang", thang);
+
+                    // Nếu có idUser, thêm tham số idUser vào câu lệnh SQL
+                    if (!string.IsNullOrEmpty(idUser))
+                    {
+                        cmd.Parameters.AddWithValue("@idUser", idUser);
+                    }
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new DonHang
+                            {
+                                Id = reader["id"].ToString(),
+                                MaUser = reader["maUser"].ToString(),
+                                DiaChi = reader["diaChi"].ToString(),
+                                TongTien = Convert.ToInt64(reader["tongTien"]),
+                                PhuongThucThanhToan = reader["phuongThucThanhToan"].ToString(),
+                                TrangThai = reader["trangThai"].ToString(),
+                                CreatedAt = Convert.ToDateTime(reader["created_at"]),
+                                Sdt = reader["sdt"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            return list;
+        }
+        public static List<DonHang> TimKiemDonHang(string tuKhoa)
+        {
+            List<DonHang> list = new List<DonHang>();
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                // Xây dựng câu truy vấn SQL với điều kiện lọc theo từ khóa
+                string query = "SELECT * FROM DONHANG WHERE id LIKE @tuKhoa OR sdt LIKE @tuKhoa OR diaChi LIKE @tuKhoa";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Thêm tham số vào câu lệnh SQL
+                    cmd.Parameters.AddWithValue("@tuKhoa", "%" + tuKhoa + "%");
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new DonHang
+                            {
+                                Id = reader["id"].ToString(),
+                                Sdt = reader["sdt"].ToString(),
+                                DiaChi = reader["diaChi"].ToString(),
+                                TongTien = Convert.ToInt64(reader["tongTien"]),
+                                PhuongThucThanhToan = reader["phuongThucThanhToan"].ToString(),
+                                TrangThai = reader["trangThai"].ToString(),
+                                CreatedAt = Convert.ToDateTime(reader["created_at"])
+                            });
+                        }
+                    }
+                }
+            }
+
+            return list;
+        }
+
 
 
     }

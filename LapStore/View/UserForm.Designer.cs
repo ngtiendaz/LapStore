@@ -44,6 +44,7 @@
             this.btn_phim = new Guna.UI2.WinForms.Guna2Button();
             this.btn_ManHinh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Laptop = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_showRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btn_yeuThich = new Guna.UI2.WinForms.Guna2Button();
             this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_timKiem = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -60,6 +61,7 @@
             // menuUser
             // 
             this.menuUser.BackColor = System.Drawing.Color.White;
+            this.menuUser.Controls.Add(this.btn_showRoom);
             this.menuUser.Controls.Add(this.btn_yeuThich);
             this.menuUser.Controls.Add(this.btn_donHang);
             this.menuUser.Controls.Add(this.panelChuyen);
@@ -100,11 +102,11 @@
             this.txt_timKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_timKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_timKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_timKiem.Location = new System.Drawing.Point(342, 9);
+            this.txt_timKiem.Location = new System.Drawing.Point(218, 9);
             this.txt_timKiem.Name = "txt_timKiem";
             this.txt_timKiem.PlaceholderText = "";
             this.txt_timKiem.SelectedText = "";
-            this.txt_timKiem.Size = new System.Drawing.Size(413, 37);
+            this.txt_timKiem.Size = new System.Drawing.Size(288, 37);
             this.txt_timKiem.TabIndex = 5;
             // 
             // chuyen
@@ -372,6 +374,24 @@
             this.btn_Laptop.TextFormatNoPrefix = true;
             this.btn_Laptop.Click += new System.EventHandler(this.btn_Laptop_Click);
             // 
+            // btn_showRoom
+            // 
+            this.btn_showRoom.BackColor = System.Drawing.Color.Transparent;
+            this.btn_showRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_showRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_showRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_showRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_showRoom.FillColor = System.Drawing.Color.Transparent;
+            this.btn_showRoom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_showRoom.ForeColor = System.Drawing.Color.White;
+            this.btn_showRoom.Image = global::LapStore.Properties.Resources.icons8_store22_32;
+            this.btn_showRoom.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_showRoom.Location = new System.Drawing.Point(760, 2);
+            this.btn_showRoom.Name = "btn_showRoom";
+            this.btn_showRoom.Size = new System.Drawing.Size(64, 45);
+            this.btn_showRoom.TabIndex = 10;
+            this.btn_showRoom.Click += new System.EventHandler(this.btn_showRoom_Click);
+            // 
             // btn_yeuThich
             // 
             this.btn_yeuThich.BackColor = System.Drawing.Color.Transparent;
@@ -420,10 +440,10 @@
             this.btn_timKiem.ForeColor = System.Drawing.Color.Transparent;
             this.btn_timKiem.Image = global::LapStore.Properties.Resources.icons8_find_32;
             this.btn_timKiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_timKiem.Location = new System.Drawing.Point(761, 9);
+            this.btn_timKiem.Location = new System.Drawing.Point(512, 9);
             this.btn_timKiem.Name = "btn_timKiem";
             this.btn_timKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_timKiem.Size = new System.Drawing.Size(37, 37);
+            this.btn_timKiem.Size = new System.Drawing.Size(38, 37);
             this.btn_timKiem.TabIndex = 7;
             this.btn_timKiem.Click += new System.EventHandler(this.btn_timKiem_Click);
             // 
@@ -566,5 +586,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_Laptop;
         private Guna.UI2.WinForms.Guna2Button btn_donHang;
         private Guna.UI2.WinForms.Guna2Button btn_yeuThich;
+        private Guna.UI2.WinForms.Guna2Button btn_showRoom;
     }
 }

@@ -275,6 +275,38 @@ namespace LapStore.Widget.Admin
             }
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                LoadMaGiamGia(); // Nếu không nhập gì thì load lại toàn bộ
+                return;
+            }
+
+            List<MaGiamGia> ketQua = MaGiamGiaController.SearchMaGiamGia(keyword);
+            dgvMaGiamGia.Rows.Clear();
+
+            foreach (MaGiamGia mgg in ketQua)
+            {
+                dgvMaGiamGia.Rows.Add(
+                    mgg.Id,
+                    mgg.TenMa,
+                    mgg.PhanTramGiam,
+                    mgg.SoLuong,
+                    mgg.NgayBatDau.ToString("dd/MM/yyyy"),
+                    mgg.NgayKetThuc.ToString("dd/MM/yyyy"),
+                    mgg.DieuKienApDung
+                );
+            }
+
+            if (ketQua.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy mã giảm giá phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
     }
 }
 

@@ -117,6 +117,34 @@ CREATE TABLE BINHLUAN (
     FOREIGN KEY (maUser) REFERENCES USERS(id),
     FOREIGN KEY (maSp) REFERENCES SANPHAM(maSp)
 );
+CREATE TABLE PHIEUBAOHANH (
+    id CHAR(10) PRIMARY KEY,
+    tenPhieu NVARCHAR(50) UNIQUE,   
+    gia BIGINT CHECK (gia >= 0),           -- Giá tiền bảo hành
+    soLuong INT CHECK (soLuong >= 0),      -- Số lượng phiếu có thể dùng
+    thoiHanThang INT CHECK (thoiHanThang > 0) -- Thời gian bảo hành (tháng)
+);
+CREATE TABLE HETHONGCUAHANG (
+    id CHAR(10) PRIMARY KEY,
+    tenCuaHang NVARCHAR(255),
+    diaChi NVARCHAR(MAX),
+    soDienThoai CHAR(10),
+    email VARCHAR(255),
+    gioMoCua TIME,
+    gioDongCua TIME
+);
+CREATE TABLE CT_PHIEUBAOHANH (
+    id CHAR(10) PRIMARY KEY,
+    maDonHang CHAR(10),
+    maPhieuBaoHanh CHAR(10),
+    thoiGianBatDau DATETIME,
+    thoiGianKetThuc DATETIME,
+    
+    FOREIGN KEY (maDonHang) REFERENCES DONHANG(id),
+    FOREIGN KEY (maPhieuBaoHanh) REFERENCES PHIEUBAOHANH(id)
+);
+
+
 
 
 

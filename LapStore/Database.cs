@@ -291,7 +291,21 @@ namespace LapStore
 
             return true;
         }
+        public static void LoadThangToComboBox(ComboBox comboBox)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ThangSo", typeof(int));        // Giá trị thực sự
+            dt.Columns.Add("TenThang", typeof(string));    // Hiển thị
 
+            for (int i = 1; i <= 12; i++)
+            {
+                dt.Rows.Add(i, $"Tháng {i}");              // Thêm hàng: Value = i (int), Display = "Tháng i"
+            }
+
+            comboBox.DataSource = dt;
+            comboBox.DisplayMember = "TenThang";           // Hiển thị "Tháng 1", "Tháng 2", ...
+            comboBox.ValueMember = "ThangSo";              // Giá trị thực là số nguyên 1, 2, ..., 12
+        }
 
 
     }

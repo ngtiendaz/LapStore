@@ -89,5 +89,10 @@ namespace LapStore.Widget.User
             // Gọi lại hàm LoadDanhSachSanPham để cập nhật danh sách sản phẩm
             LoadDanhSachSanPham(MADANHMUC,maHang ,kieuSapXep);
         }
+
+        private void cbb_sapXep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

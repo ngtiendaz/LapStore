@@ -133,5 +133,42 @@ namespace LapStore.Controller
                 }
             }
         }
+        public static List<MaGiamGia> SearchMaGiamGia(string keyword)
+        {
+            List<MaGiamGia> result = new List<MaGiamGia>();
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = @"
+            SELECT * 
+            FROM MAGIAMGIA
+            WHERE tenMa LIKE @keyword OR id LIKE @keyword";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            result.Add(new MaGiamGia
+                            {
+                                Id = reader["id"].ToString(),
+                                TenMa = reader["tenMa"].ToString(),
+                                PhanTramGiam = Convert.ToInt32(reader["phanTramGiam"]),
+                                SoLuong = Convert.ToInt32(reader["soLuong"]),
+                                NgayBatDau = Convert.ToDateTime(reader["ngayBatDau"]),
+                                NgayKetThuc = Convert.ToDateTime(reader["ngayKetThuc"]),
+                                DieuKienApDung = Convert.ToInt64(reader["dieuKienApDung"])
+                            });
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+
     }
 }

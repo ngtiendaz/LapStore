@@ -22,11 +22,12 @@ namespace LapStore.Widget.User
         private string maUser;
         private long TONG;
         private string idMaGiamGia ;
+        private string idPhieuBaohanh;
         public thanhToan()
         {
             InitializeComponent();
         }
-        public void HienThiThongTin(List<GioHang> danhSach, long tongTien, int soLuong, MaGiamGia maGiamGia )
+        public void HienThiThongTin(List<GioHang> danhSach, long tongTien, int soLuong, MaGiamGia maGiamGia, PhieuBaoHanh phieuBaoHanh )
         {
             maUser = UserController.CurrentUser.Id;
             danhSachSanPham = danhSach;
@@ -35,6 +36,7 @@ namespace LapStore.Widget.User
             idMaGiamGia = maGiamGia?.Id; // Sử dụng null-conditional operator
             txtTongTien.Text = tongTien.ToString("N0") + "đ";
             count.Text = soLuong.ToString() + " sản phẩm";
+            idPhieuBaohanh = phieuBaoHanh?.Id;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -127,6 +129,11 @@ namespace LapStore.Widget.User
             // Nếu đến đây thì mọi thứ đều OK
             MessageBox.Show("🎉 Đặt hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MaGiamGiaController.TruSoLuongMaGiamGia(idMaGiamGia);
+            if(idPhieuBaohanh != null)
+            {
+                PhieuBaoHanhController.AddChiTietPhieuBaoHanh(newId, idPhieuBaohanh); 
+            }    
+            PhieuBaoHanhController.TruSoLuongPhieu(idPhieuBaohanh);
             OnBackToHome?.Invoke(this, EventArgs.Empty);
         }
 

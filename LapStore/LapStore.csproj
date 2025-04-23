@@ -62,8 +62,11 @@
     <Compile Include="Controller\DonHangController.cs" />
     <Compile Include="Controller\GioHangController.cs" />
     <Compile Include="Controller\HangController.cs" />
+    <Compile Include="Controller\LuotXemController.cs" />
     <Compile Include="Controller\MaGiamGiaController.cs" />
+    <Compile Include="Controller\PhieuBaoHanhController.cs" />
     <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Controller\ShowRoomController.cs" />
     <Compile Include="Controller\ThongKeController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Controller\YeuThichVaLuotXemController.cs" />
@@ -74,6 +77,8 @@
     <Compile Include="Model\GioHang.cs" />
     <Compile Include="Model\Hang.cs" />
     <Compile Include="Model\MaGiamGia.cs" />
+    <Compile Include="Model\PhieuBaoHanh.cs" />
+    <Compile Include="Model\ShowRoom.cs" />
     <Compile Include="Model\ThongKe.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="View\AdminForm.cs">
@@ -97,11 +102,23 @@
     <Compile Include="View\MaGiamGiaForm.Designer.cs">
       <DependentUpon>MaGiamGiaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PhieuBaoHanhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PhieuBaoHanhForm.Designer.cs">
+      <DependentUpon>PhieuBaoHanhForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Admin\baoHanhAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\baoHanhAdmin.Designer.cs">
+      <DependentUpon>baoHanhAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\Admin\danhMucAdmin.cs">
       <SubType>UserControl</SubType>
@@ -175,6 +192,12 @@
     <Compile Include="Widget\User\itemMaGiamGia.Designer.cs">
       <DependentUpon>itemMaGiamGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\User\itemPhieuBaoHanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\itemPhieuBaoHanh.Designer.cs">
+      <DependentUpon>itemPhieuBaoHanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\User\itemSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -205,6 +228,12 @@
     <Compile Include="Widget\User\profileUser.Designer.cs">
       <DependentUpon>profileUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\User\showRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\showRoom.Designer.cs">
+      <DependentUpon>showRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\User\thanhToan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -216,6 +245,12 @@
     </Compile>
     <Compile Include="Widget\User\timKiemSanPham.Designer.cs">
       <DependentUpon>timKiemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\User\traCuuBaoHanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\User\traCuuBaoHanh.Designer.cs">
+      <DependentUpon>traCuuBaoHanh.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\User\trangChuUser.cs">
       <SubType>UserControl</SubType>
@@ -254,8 +289,14 @@
     <EmbeddedResource Include="View\MaGiamGiaForm.resx">
       <DependentUpon>MaGiamGiaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\PhieuBaoHanhForm.resx">
+      <DependentUpon>PhieuBaoHanhForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\baoHanhAdmin.resx">
+      <DependentUpon>baoHanhAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\Admin\danhMucAdmin.resx">
       <DependentUpon>danhMucAdmin.cs</DependentUpon>
@@ -293,6 +334,9 @@
     <EmbeddedResource Include="Widget\User\itemMaGiamGia.resx">
       <DependentUpon>itemMaGiamGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\itemPhieuBaoHanh.resx">
+      <DependentUpon>itemPhieuBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\itemSanPham.resx">
       <DependentUpon>itemSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,11 +352,17 @@
     <EmbeddedResource Include="Widget\User\profileUser.resx">
       <DependentUpon>profileUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\showRoom.resx">
+      <DependentUpon>showRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\thanhToan.resx">
       <DependentUpon>thanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\timKiemSanPham.resx">
       <DependentUpon>timKiemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\User\traCuuBaoHanh.resx">
+      <DependentUpon>traCuuBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\trangChuUser.resx">
       <DependentUpon>trangChuUser.cs</DependentUpon>
@@ -627,6 +677,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-favorite-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-store-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-32r21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-store22-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-04-24 023543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guarantee-321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

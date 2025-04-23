@@ -29,11 +29,18 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.Panel();
+            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_tenAdmin = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelChuyen = new System.Windows.Forms.Panel();
+            this.btn_showRoom = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_baoHanh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_thongKe = new Guna.UI2.WinForms.Guna2Button();
             this.btn_luotMua = new Guna.UI2.WinForms.Guna2Button();
             this.btn_dangXuat = new Guna.UI2.WinForms.Guna2Button();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_user = new Guna.UI2.WinForms.Guna2Button();
             this.btn_luotXem = new Guna.UI2.WinForms.Guna2Button();
             this.btn_doanhThu = new Guna.UI2.WinForms.Guna2Button();
@@ -41,12 +48,7 @@
             this.btn_maGiamGia = new Guna.UI2.WinForms.Guna2Button();
             this.btn_danhMuc = new Guna.UI2.WinForms.Guna2Button();
             this.btn_sanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_tenAdmin = new System.Windows.Forms.Label();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.imageAdmin = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelChuyen = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageAdmin)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +56,8 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.SystemColors.MenuText;
+            this.menu.Controls.Add(this.btn_showRoom);
+            this.menu.Controls.Add(this.btn_baoHanh);
             this.menu.Controls.Add(this.btn_donHang);
             this.menu.Controls.Add(this.btn_thongKe);
             this.menu.Controls.Add(this.btn_luotMua);
@@ -80,6 +84,122 @@
             this.menu.TabIndex = 0;
             this.menu.Paint += new System.Windows.Forms.PaintEventHandler(this.menu_Paint);
             // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 623);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(230, 17);
+            this.bunifuSeparator2.TabIndex = 11;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(80, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Admin";
+            // 
+            // txt_tenAdmin
+            // 
+            this.txt_tenAdmin.AutoSize = true;
+            this.txt_tenAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.txt_tenAdmin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tenAdmin.ForeColor = System.Drawing.Color.White;
+            this.txt_tenAdmin.Location = new System.Drawing.Point(80, 25);
+            this.txt_tenAdmin.Name = "txt_tenAdmin";
+            this.txt_tenAdmin.Size = new System.Drawing.Size(113, 17);
+            this.txt_tenAdmin.TabIndex = 1;
+            this.txt_tenAdmin.Text = "Nguyễn Tiến Đạt";
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 82);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(227, 20);
+            this.bunifuSeparator1.TabIndex = 1;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Location = new System.Drawing.Point(237, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(0, 0);
+            this.panel2.TabIndex = 1;
+            // 
+            // panelChuyen
+            // 
+            this.panelChuyen.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelChuyen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelChuyen.Location = new System.Drawing.Point(229, 0);
+            this.panelChuyen.MaximumSize = new System.Drawing.Size(970, 750);
+            this.panelChuyen.MinimumSize = new System.Drawing.Size(970, 750);
+            this.panelChuyen.Name = "panelChuyen";
+            this.panelChuyen.Size = new System.Drawing.Size(970, 750);
+            this.panelChuyen.TabIndex = 2;
+            // 
+            // btn_showRoom
+            // 
+            this.btn_showRoom.BackColor = System.Drawing.Color.Transparent;
+            this.btn_showRoom.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_showRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_showRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_showRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_showRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_showRoom.FillColor = System.Drawing.Color.Transparent;
+            this.btn_showRoom.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_showRoom.ForeColor = System.Drawing.Color.White;
+            this.btn_showRoom.Image = global::LapStore.Properties.Resources.icons8_store_32;
+            this.btn_showRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_showRoom.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_showRoom.Location = new System.Drawing.Point(11, 311);
+            this.btn_showRoom.Name = "btn_showRoom";
+            this.btn_showRoom.Size = new System.Drawing.Size(203, 26);
+            this.btn_showRoom.TabIndex = 19;
+            this.btn_showRoom.Text = "Hệ thống của hàng";
+            this.btn_showRoom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_showRoom.Click += new System.EventHandler(this.btn_showRoom_Click);
+            // 
+            // btn_baoHanh
+            // 
+            this.btn_baoHanh.BackColor = System.Drawing.Color.Transparent;
+            this.btn_baoHanh.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_baoHanh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_baoHanh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_baoHanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_baoHanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_baoHanh.FillColor = System.Drawing.Color.Transparent;
+            this.btn_baoHanh.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_baoHanh.ForeColor = System.Drawing.Color.White;
+            this.btn_baoHanh.Image = global::LapStore.Properties.Resources.icons8_guarantee_321;
+            this.btn_baoHanh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_baoHanh.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_baoHanh.Location = new System.Drawing.Point(11, 268);
+            this.btn_baoHanh.Name = "btn_baoHanh";
+            this.btn_baoHanh.Size = new System.Drawing.Size(203, 26);
+            this.btn_baoHanh.TabIndex = 18;
+            this.btn_baoHanh.Text = "Phiếu bảo hành";
+            this.btn_baoHanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_baoHanh.Click += new System.EventHandler(this.btn_baoHanh_Click);
+            // 
             // btn_donHang
             // 
             this.btn_donHang.BackColor = System.Drawing.Color.Transparent;
@@ -94,7 +214,7 @@
             this.btn_donHang.Image = global::LapStore.Properties.Resources.icons8_delivery_truck_3222;
             this.btn_donHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_donHang.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_donHang.Location = new System.Drawing.Point(12, 384);
+            this.btn_donHang.Location = new System.Drawing.Point(12, 356);
             this.btn_donHang.Name = "btn_donHang";
             this.btn_donHang.Size = new System.Drawing.Size(203, 26);
             this.btn_donHang.TabIndex = 17;
@@ -116,11 +236,11 @@
             this.btn_thongKe.Image = global::LapStore.Properties.Resources.icons8_analytics_32;
             this.btn_thongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_thongKe.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_thongKe.Location = new System.Drawing.Point(12, 467);
+            this.btn_thongKe.Location = new System.Drawing.Point(12, 401);
             this.btn_thongKe.Name = "btn_thongKe";
             this.btn_thongKe.Size = new System.Drawing.Size(203, 26);
             this.btn_thongKe.TabIndex = 16;
-            this.btn_thongKe.Text = "Thống kê";
+            this.btn_thongKe.Text = "Thống kê ";
             this.btn_thongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_thongKe.Click += new System.EventHandler(this.btn_thongKe_Click);
             // 
@@ -138,11 +258,11 @@
             this.btn_luotMua.Image = global::LapStore.Properties.Resources.icons8_history_32;
             this.btn_luotMua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_luotMua.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_luotMua.Location = new System.Drawing.Point(11, 342);
+            this.btn_luotMua.Location = new System.Drawing.Point(12, 530);
             this.btn_luotMua.Name = "btn_luotMua";
             this.btn_luotMua.Size = new System.Drawing.Size(203, 26);
             this.btn_luotMua.TabIndex = 14;
-            this.btn_luotMua.Text = "Lượt mua ";
+            this.btn_luotMua.Text = "Lượt mua gần đây";
             this.btn_luotMua.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_luotMua.Click += new System.EventHandler(this.btn_luotMua_Click);
             // 
@@ -160,26 +280,13 @@
             this.btn_dangXuat.Image = global::LapStore.Properties.Resources.icons8_sign_out_32;
             this.btn_dangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_dangXuat.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_dangXuat.Location = new System.Drawing.Point(12, 540);
+            this.btn_dangXuat.Location = new System.Drawing.Point(12, 647);
             this.btn_dangXuat.Name = "btn_dangXuat";
             this.btn_dangXuat.Size = new System.Drawing.Size(181, 51);
             this.btn_dangXuat.TabIndex = 12;
             this.btn_dangXuat.Text = "Đăng xuất";
             this.btn_dangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 516);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(230, 17);
-            this.bunifuSeparator2.TabIndex = 11;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = false;
             // 
             // btn_user
             // 
@@ -195,11 +302,11 @@
             this.btn_user.Image = global::LapStore.Properties.Resources.icons8_user_32__1_;
             this.btn_user.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_user.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_user.Location = new System.Drawing.Point(12, 426);
+            this.btn_user.Location = new System.Drawing.Point(12, 573);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(203, 26);
             this.btn_user.TabIndex = 10;
-            this.btn_user.Text = "User";
+            this.btn_user.Text = "Người dùng";
             this.btn_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
             // 
@@ -217,7 +324,7 @@
             this.btn_luotXem.Image = global::LapStore.Properties.Resources.icons8_visibility_321;
             this.btn_luotXem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_luotXem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_luotXem.Location = new System.Drawing.Point(12, 304);
+            this.btn_luotXem.Location = new System.Drawing.Point(12, 489);
             this.btn_luotXem.Name = "btn_luotXem";
             this.btn_luotXem.Size = new System.Drawing.Size(203, 26);
             this.btn_luotXem.TabIndex = 6;
@@ -239,11 +346,11 @@
             this.btn_doanhThu.Image = global::LapStore.Properties.Resources.icons8_sales_performance_32;
             this.btn_doanhThu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_doanhThu.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_doanhThu.Location = new System.Drawing.Point(12, 265);
+            this.btn_doanhThu.Location = new System.Drawing.Point(12, 445);
             this.btn_doanhThu.Name = "btn_doanhThu";
             this.btn_doanhThu.Size = new System.Drawing.Size(203, 26);
             this.btn_doanhThu.TabIndex = 2;
-            this.btn_doanhThu.Text = "Doanh thu";
+            this.btn_doanhThu.Text = "Doanh thu tháng";
             this.btn_doanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_doanhThu.Click += new System.EventHandler(this.btn_doanhThu_Click);
             // 
@@ -336,46 +443,6 @@
             this.btn_sanPham.TextFormatNoPrefix = true;
             this.btn_sanPham.Click += new System.EventHandler(this.btn_Laptop_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(80, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Admin";
-            // 
-            // txt_tenAdmin
-            // 
-            this.txt_tenAdmin.AutoSize = true;
-            this.txt_tenAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.txt_tenAdmin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tenAdmin.ForeColor = System.Drawing.Color.White;
-            this.txt_tenAdmin.Location = new System.Drawing.Point(80, 25);
-            this.txt_tenAdmin.Name = "txt_tenAdmin";
-            this.txt_tenAdmin.Size = new System.Drawing.Size(113, 17);
-            this.txt_tenAdmin.TabIndex = 1;
-            this.txt_tenAdmin.Text = "Nguyễn Tiến Đạt";
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 82);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(227, 20);
-            this.bunifuSeparator1.TabIndex = 1;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
             // imageAdmin
             // 
             this.imageAdmin.BackColor = System.Drawing.Color.Transparent;
@@ -390,25 +457,6 @@
             this.imageAdmin.TabIndex = 1;
             this.imageAdmin.TabStop = false;
             this.imageAdmin.UseTransparentBackground = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Location = new System.Drawing.Point(237, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 0);
-            this.panel2.TabIndex = 1;
-            // 
-            // panelChuyen
-            // 
-            this.panelChuyen.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelChuyen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelChuyen.Location = new System.Drawing.Point(229, 0);
-            this.panelChuyen.MaximumSize = new System.Drawing.Size(970, 750);
-            this.panelChuyen.MinimumSize = new System.Drawing.Size(970, 750);
-            this.panelChuyen.Name = "panelChuyen";
-            this.panelChuyen.Size = new System.Drawing.Size(970, 750);
-            this.panelChuyen.TabIndex = 2;
             // 
             // adminHome
             // 
@@ -455,6 +503,8 @@
         private Guna.UI2.WinForms.Guna2Button btn_luotMua;
         private Guna.UI2.WinForms.Guna2Button btn_thongKe;
         private Guna.UI2.WinForms.Guna2Button btn_donHang;
+        private Guna.UI2.WinForms.Guna2Button btn_showRoom;
+        private Guna.UI2.WinForms.Guna2Button btn_baoHanh;
     }
 }
 

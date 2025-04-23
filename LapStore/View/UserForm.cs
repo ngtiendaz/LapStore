@@ -82,7 +82,7 @@ namespace LapStore.View
         private void ChuyenSangThanhToan(object sender, DatHangEventArgs e)
         {
             thanhToan uc = new thanhToan();
-            uc.HienThiThongTin(e.SanPhamDaChon, e.TongTien, e.TongSoLuong, e.MaGiamGiaDaChon);
+            uc.HienThiThongTin(e.SanPhamDaChon, e.TongTien, e.TongSoLuong, e.MaGiamGiaDaChon,e.PhieuBaoHanhDaChon);
 
             // Lắng nghe sự kiện trở về từ thanh toán
             uc.OnBackToGioHang += (s, evt) =>
@@ -353,11 +353,18 @@ namespace LapStore.View
         {
             donHang uc = new donHang();
             AddUserControl(uc);
+            
         }
 
         private void btn_yeuThich_Click(object sender, EventArgs e)
         {
             yeuThich uc = new yeuThich();
+            AddUserControl(uc);
+        }
+
+        private void btn_showRoom_Click(object sender, EventArgs e)
+        {
+            showRoom uc = new showRoom();
             AddUserControl(uc);
         }
     }

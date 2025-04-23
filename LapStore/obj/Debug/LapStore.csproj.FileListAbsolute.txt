@@ -35,3 +35,8 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.maGiamGiaAdmin.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.yeuThich.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.MaGiamGiaForm.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.itemMaGiamGia.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.baoHanhAdmin.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.showRoom.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.itemPhieuBaoHanh.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.PhieuBaoHanhForm.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.traCuuBaoHanh.resources

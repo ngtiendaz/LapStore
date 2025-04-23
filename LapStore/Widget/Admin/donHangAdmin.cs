@@ -146,6 +146,41 @@ namespace LapStore.Widget.Admin
             }
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string tuKhoa = txtTimKiem.Text.Trim();
+
+            // Kiểm tra nếu không nhập gì thì load toàn bộ
+            if (string.IsNullOrEmpty(tuKhoa))
+            {
+                LoadDonHangTheoTrangThai(cbb_timTheoTT.Text); // Nếu không nhập gì thì load lại danh sách theo trạng thái hiện tại
+                return;
+            }
+
+            // Tìm kiếm đơn hàng theo từ khóa (mã đơn hàng hoặc số điện thoại)
+            var donHangList = DonHangController.TimKiemDonHang(tuKhoa);
+
+            dgvDonHang.Rows.Clear(); // Xóa dữ liệu cũ
+
+            foreach (var dh in donHangList)
+            {
+                dgvDonHang.Rows.Add(
+                    dh.Id,
+                    dh.Sdt,
+                    dh.DiaChi,
+                    dh.TongTien.ToString("N0") + "đ",
+                    dh.PhuongThucThanhToan,
+                    dh.TrangThai,
+                    dh.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                );
+            }
+
+            if (donHangList.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy đơn hàng nào thỏa mãn yêu cầu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
 
     }
 }

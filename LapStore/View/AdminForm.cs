@@ -158,5 +158,18 @@ namespace LapStore
             luotMuaAdmin uc = new luotMuaAdmin();
             AddUserControl(uc);
         }
+
+        private void btn_baoHanh_Click(object sender, EventArgs e)
+        {
+            baoHanhAdmin uc = new baoHanhAdmin();
+            AddUserControl(uc);
+
+        }
+
+        private void btn_showRoom_Click(object sender, EventArgs e)
+        {
+            //showRoomAdmin uc = new ();
+            //AddUserControl(uc);
+        }
     }
 }

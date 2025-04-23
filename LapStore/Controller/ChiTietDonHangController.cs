@@ -144,6 +144,47 @@ namespace LapStore.Controller
                 }
             }
         }
+        public static List<SanPham> GetSanPhamTrongDonHang(string maDonHang)
+        {
+            List<SanPham> sanPhamList = new List<SanPham>();
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = @"
+            SELECT sp.*
+            FROM CHITIETDONHANG ct
+            JOIN SANPHAM sp ON ct.maSp = sp.maSp
+            WHERE ct.maDonHang = @maDonHang";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maDonHang", maDonHang);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            SanPham sp = new SanPham
+                            {
+                                MaSp = reader["maSp"].ToString(),
+                                MaDm = reader["maDm"].ToString(),
+                                MaHang = reader["maHang"].ToString(),
+                                TenSp = reader["tenSp"].ToString(),
+                                HinhAnh = reader["hinhAnh"].ToString(),
+                                MoTa = reader["moTa"].ToString(),
+                                GiaNhap = Convert.ToInt64(reader["giaNhap"]),
+                                GiaBan = Convert.ToInt64(reader["giaBan"]),
+                                SoLuong = Convert.ToInt32(reader["soLuong"]),
+                                CreatedAt = Convert.ToDateTime(reader["created_at"])
+                            };
+                            sanPhamList.Add(sp);
+                        }
+                    }
+                }
+            }
+
+            return sanPhamList;
+        }
 
 
 
