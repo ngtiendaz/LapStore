@@ -29,18 +29,13 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.Panel();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_tenAdmin = new System.Windows.Forms.Label();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelChuyen = new System.Windows.Forms.Panel();
             this.btn_showRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btn_baoHanh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_thongKe = new Guna.UI2.WinForms.Guna2Button();
             this.btn_luotMua = new Guna.UI2.WinForms.Guna2Button();
             this.btn_dangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_user = new Guna.UI2.WinForms.Guna2Button();
             this.btn_luotXem = new Guna.UI2.WinForms.Guna2Button();
             this.btn_doanhThu = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +43,12 @@
             this.btn_maGiamGia = new Guna.UI2.WinForms.Guna2Button();
             this.btn_danhMuc = new Guna.UI2.WinForms.Guna2Button();
             this.btn_sanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_tenAdmin = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.imageAdmin = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelChuyen = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageAdmin)).BeginInit();
             this.SuspendLayout();
@@ -83,78 +83,6 @@
             this.menu.Size = new System.Drawing.Size(230, 750);
             this.menu.TabIndex = 0;
             this.menu.Paint += new System.Windows.Forms.PaintEventHandler(this.menu_Paint);
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 623);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(230, 17);
-            this.bunifuSeparator2.TabIndex = 11;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(80, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Admin";
-            // 
-            // txt_tenAdmin
-            // 
-            this.txt_tenAdmin.AutoSize = true;
-            this.txt_tenAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.txt_tenAdmin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tenAdmin.ForeColor = System.Drawing.Color.White;
-            this.txt_tenAdmin.Location = new System.Drawing.Point(80, 25);
-            this.txt_tenAdmin.Name = "txt_tenAdmin";
-            this.txt_tenAdmin.Size = new System.Drawing.Size(113, 17);
-            this.txt_tenAdmin.TabIndex = 1;
-            this.txt_tenAdmin.Text = "Nguyễn Tiến Đạt";
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 82);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(227, 20);
-            this.bunifuSeparator1.TabIndex = 1;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Location = new System.Drawing.Point(237, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 0);
-            this.panel2.TabIndex = 1;
-            // 
-            // panelChuyen
-            // 
-            this.panelChuyen.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelChuyen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelChuyen.Location = new System.Drawing.Point(229, 0);
-            this.panelChuyen.MaximumSize = new System.Drawing.Size(970, 750);
-            this.panelChuyen.MinimumSize = new System.Drawing.Size(970, 750);
-            this.panelChuyen.Name = "panelChuyen";
-            this.panelChuyen.Size = new System.Drawing.Size(970, 750);
-            this.panelChuyen.TabIndex = 2;
             // 
             // btn_showRoom
             // 
@@ -287,6 +215,19 @@
             this.btn_dangXuat.Text = "Đăng xuất";
             this.btn_dangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 623);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(230, 17);
+            this.bunifuSeparator2.TabIndex = 11;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
             // 
             // btn_user
             // 
@@ -443,6 +384,46 @@
             this.btn_sanPham.TextFormatNoPrefix = true;
             this.btn_sanPham.Click += new System.EventHandler(this.btn_Laptop_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(80, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Admin";
+            // 
+            // txt_tenAdmin
+            // 
+            this.txt_tenAdmin.AutoSize = true;
+            this.txt_tenAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.txt_tenAdmin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tenAdmin.ForeColor = System.Drawing.Color.White;
+            this.txt_tenAdmin.Location = new System.Drawing.Point(80, 25);
+            this.txt_tenAdmin.Name = "txt_tenAdmin";
+            this.txt_tenAdmin.Size = new System.Drawing.Size(113, 17);
+            this.txt_tenAdmin.TabIndex = 1;
+            this.txt_tenAdmin.Text = "Nguyễn Tiến Đạt";
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 82);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(227, 20);
+            this.bunifuSeparator1.TabIndex = 1;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
             // imageAdmin
             // 
             this.imageAdmin.BackColor = System.Drawing.Color.Transparent;
@@ -457,6 +438,25 @@
             this.imageAdmin.TabIndex = 1;
             this.imageAdmin.TabStop = false;
             this.imageAdmin.UseTransparentBackground = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Location = new System.Drawing.Point(237, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(0, 0);
+            this.panel2.TabIndex = 1;
+            // 
+            // panelChuyen
+            // 
+            this.panelChuyen.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelChuyen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelChuyen.Location = new System.Drawing.Point(229, 0);
+            this.panelChuyen.MaximumSize = new System.Drawing.Size(970, 750);
+            this.panelChuyen.MinimumSize = new System.Drawing.Size(970, 750);
+            this.panelChuyen.Name = "panelChuyen";
+            this.panelChuyen.Size = new System.Drawing.Size(970, 750);
+            this.panelChuyen.TabIndex = 2;
             // 
             // adminHome
             // 

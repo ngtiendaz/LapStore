@@ -168,8 +168,8 @@ namespace LapStore
 
         private void btn_showRoom_Click(object sender, EventArgs e)
         {
-            //showRoomAdmin uc = new ();
-            //AddUserControl(uc);
+            showRoomControl uc = new showRoomControl();
+            AddUserControl(uc);
         }
     }
 }
