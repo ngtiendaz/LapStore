@@ -162,6 +162,12 @@
     <Compile Include="Widget\Admin\maGiamGiaAdmin.Designer.cs">
       <DependentUpon>maGiamGiaAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\Admin\showRoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\showRoomControl.Designer.cs">
+      <DependentUpon>showRoomControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\User\donHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\Admin\maGiamGiaAdmin.resx">
       <DependentUpon>maGiamGiaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\showRoomControl.resx">
+      <DependentUpon>showRoomControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\donHang.resx">
       <DependentUpon>donHang.cs</DependentUpon>
