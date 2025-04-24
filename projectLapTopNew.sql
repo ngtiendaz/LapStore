@@ -89,6 +89,15 @@ CREATE TABLE MAGIAMGIA (
     ngayKetThuc DATETIME,
     dieuKienApDung BIGINT DEFAULT 0  -- Ví dụ: đơn hàng từ 500000 mới dùng được
 );
+CREATE TABLE MAGIAMGIA_DONHANG (
+    id INT IDENTITY PRIMARY KEY,
+    maDonHang CHAR(10) NOT NULL,             -- Khóa ngoại đến DONHANG
+    maGiamGia CHAR(10) NOT NULL,             -- Khóa ngoại đến MAGIAMGIA
+    soTienGiam BIGINT NOT NULL,              -- Số tiền được giảm trong đơn hàng
+    FOREIGN KEY (maDonHang) REFERENCES DONHANG(id),
+    FOREIGN KEY (maGiamGia) REFERENCES MAGIAMGIA(id)
+);
+
 
 
 CREATE TABLE YEUTHICH (
