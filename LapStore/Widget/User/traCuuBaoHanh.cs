@@ -20,8 +20,8 @@ namespace LapStore.Widget.User
 
         private void btn_traCuu_Click(object sender, EventArgs e)
         {
-            string ketQua = PhieuBaoHanhController.TraCuuThoiGianBaoHanh("DH001");
-           txt_hetHan.Text = ketQua;
+            string ketQua = PhieuBaoHanhController.TraCuuThoiGianBaoHanh(txt_traCuu.Text);
+            txt_hetHan.Text = ketQua;
         }
     }
 }

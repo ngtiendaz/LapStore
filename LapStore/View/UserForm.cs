@@ -367,5 +367,11 @@ namespace LapStore.View
             showRoom uc = new showRoom();
             AddUserControl(uc);
         }
+
+        private void btn_traBaoHanh_Click(object sender, EventArgs e)
+        {
+            traCuuBaoHanh uc = new traCuuBaoHanh();
+            AddUserControl(uc);
+        }
     }
 }

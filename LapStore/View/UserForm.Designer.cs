@@ -44,6 +44,7 @@
             this.btn_phim = new Guna.UI2.WinForms.Guna2Button();
             this.btn_ManHinh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Laptop = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_traBaoHanh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_showRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btn_yeuThich = new Guna.UI2.WinForms.Guna2Button();
             this.btn_donHang = new Guna.UI2.WinForms.Guna2Button();
@@ -61,6 +62,7 @@
             // menuUser
             // 
             this.menuUser.BackColor = System.Drawing.Color.White;
+            this.menuUser.Controls.Add(this.btn_traBaoHanh);
             this.menuUser.Controls.Add(this.btn_showRoom);
             this.menuUser.Controls.Add(this.btn_yeuThich);
             this.menuUser.Controls.Add(this.btn_donHang);
@@ -72,20 +74,22 @@
             this.menuUser.Controls.Add(this.btn_profile);
             this.menuUser.Controls.Add(this.btn_cart);
             this.menuUser.Controls.Add(this.menu);
-            this.menuUser.Location = new System.Drawing.Point(2, 3);
-            this.menuUser.MaximumSize = new System.Drawing.Size(1200, 50);
-            this.menuUser.MinimumSize = new System.Drawing.Size(1200, 50);
+            this.menuUser.Location = new System.Drawing.Point(3, 4);
+            this.menuUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuUser.MaximumSize = new System.Drawing.Size(1600, 62);
+            this.menuUser.MinimumSize = new System.Drawing.Size(1600, 62);
             this.menuUser.Name = "menuUser";
-            this.menuUser.Size = new System.Drawing.Size(1200, 50);
+            this.menuUser.Size = new System.Drawing.Size(1600, 62);
             this.menuUser.TabIndex = 0;
             // 
             // panelChuyen
             // 
-            this.panelChuyen.Location = new System.Drawing.Point(0, 52);
-            this.panelChuyen.MaximumSize = new System.Drawing.Size(1200, 700);
-            this.panelChuyen.MinimumSize = new System.Drawing.Size(1200, 700);
+            this.panelChuyen.Location = new System.Drawing.Point(0, 64);
+            this.panelChuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelChuyen.MaximumSize = new System.Drawing.Size(1600, 862);
+            this.panelChuyen.MinimumSize = new System.Drawing.Size(1600, 862);
             this.panelChuyen.Name = "panelChuyen";
-            this.panelChuyen.Size = new System.Drawing.Size(1200, 700);
+            this.panelChuyen.Size = new System.Drawing.Size(1600, 862);
             this.panelChuyen.TabIndex = 1;
             // 
             // txt_timKiem
@@ -102,22 +106,24 @@
             this.txt_timKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_timKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_timKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_timKiem.Location = new System.Drawing.Point(218, 9);
+            this.txt_timKiem.Location = new System.Drawing.Point(291, 11);
+            this.txt_timKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_timKiem.Name = "txt_timKiem";
             this.txt_timKiem.PlaceholderText = "";
             this.txt_timKiem.SelectedText = "";
-            this.txt_timKiem.Size = new System.Drawing.Size(288, 37);
+            this.txt_timKiem.Size = new System.Drawing.Size(384, 46);
             this.txt_timKiem.TabIndex = 5;
             // 
             // chuyen
             // 
             this.chuyen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.chuyen.Controls.Add(this.panelDanhMuc);
-            this.chuyen.Location = new System.Drawing.Point(-1, 56);
-            this.chuyen.MaximumSize = new System.Drawing.Size(1200, 700);
-            this.chuyen.MinimumSize = new System.Drawing.Size(1200, 700);
+            this.chuyen.Location = new System.Drawing.Point(-1, 69);
+            this.chuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chuyen.MaximumSize = new System.Drawing.Size(1600, 862);
+            this.chuyen.MinimumSize = new System.Drawing.Size(1600, 862);
             this.chuyen.Name = "chuyen";
-            this.chuyen.Size = new System.Drawing.Size(1200, 700);
+            this.chuyen.Size = new System.Drawing.Size(1600, 862);
             this.chuyen.TabIndex = 1;
             // 
             // panelDanhMuc
@@ -134,9 +140,10 @@
             this.panelDanhMuc.Controls.Add(this.btn_phim);
             this.panelDanhMuc.Controls.Add(this.btn_ManHinh);
             this.panelDanhMuc.Controls.Add(this.btn_Laptop);
-            this.panelDanhMuc.Location = new System.Drawing.Point(13, 3);
+            this.panelDanhMuc.Location = new System.Drawing.Point(17, 4);
+            this.panelDanhMuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDanhMuc.Name = "panelDanhMuc";
-            this.panelDanhMuc.Size = new System.Drawing.Size(165, 369);
+            this.panelDanhMuc.Size = new System.Drawing.Size(220, 454);
             this.panelDanhMuc.TabIndex = 0;
             this.panelDanhMuc.Visible = false;
             this.panelDanhMuc.MouseEnter += new System.EventHandler(this.panelDanhMuc_MouseEnter);
@@ -155,9 +162,10 @@
             this.btn_mic.ForeColor = System.Drawing.Color.White;
             this.btn_mic.Image = global::LapStore.Properties.Resources.icons8_microphone_32;
             this.btn_mic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_mic.Location = new System.Drawing.Point(5, 205);
+            this.btn_mic.Location = new System.Drawing.Point(7, 252);
+            this.btn_mic.Margin = new System.Windows.Forms.Padding(4);
             this.btn_mic.Name = "btn_mic";
-            this.btn_mic.Size = new System.Drawing.Size(157, 26);
+            this.btn_mic.Size = new System.Drawing.Size(209, 32);
             this.btn_mic.TabIndex = 25;
             this.btn_mic.Text = "Microphone";
             this.btn_mic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -176,9 +184,10 @@
             this.btn_game.ForeColor = System.Drawing.Color.White;
             this.btn_game.Image = global::LapStore.Properties.Resources.icons8_playstation_portable_32;
             this.btn_game.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_game.Location = new System.Drawing.Point(5, 301);
+            this.btn_game.Location = new System.Drawing.Point(7, 370);
+            this.btn_game.Margin = new System.Windows.Forms.Padding(4);
             this.btn_game.Name = "btn_game";
-            this.btn_game.Size = new System.Drawing.Size(157, 26);
+            this.btn_game.Size = new System.Drawing.Size(209, 32);
             this.btn_game.TabIndex = 24;
             this.btn_game.Text = "Máy chơi game";
             this.btn_game.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -197,9 +206,10 @@
             this.btn_webCam.ForeColor = System.Drawing.Color.White;
             this.btn_webCam.Image = global::LapStore.Properties.Resources.icons8_webcam_32;
             this.btn_webCam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_webCam.Location = new System.Drawing.Point(5, 269);
+            this.btn_webCam.Location = new System.Drawing.Point(7, 331);
+            this.btn_webCam.Margin = new System.Windows.Forms.Padding(4);
             this.btn_webCam.Name = "btn_webCam";
-            this.btn_webCam.Size = new System.Drawing.Size(157, 26);
+            this.btn_webCam.Size = new System.Drawing.Size(209, 32);
             this.btn_webCam.TabIndex = 23;
             this.btn_webCam.Text = "Webcam";
             this.btn_webCam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -218,9 +228,10 @@
             this.btn_Loa.ForeColor = System.Drawing.Color.White;
             this.btn_Loa.Image = global::LapStore.Properties.Resources.icons8_portable_speaker_32;
             this.btn_Loa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Loa.Location = new System.Drawing.Point(5, 237);
+            this.btn_Loa.Location = new System.Drawing.Point(7, 292);
+            this.btn_Loa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Loa.Name = "btn_Loa";
-            this.btn_Loa.Size = new System.Drawing.Size(157, 26);
+            this.btn_Loa.Size = new System.Drawing.Size(209, 32);
             this.btn_Loa.TabIndex = 22;
             this.btn_Loa.Text = "Loa";
             this.btn_Loa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -239,9 +250,10 @@
             this.btn_phuKien.ForeColor = System.Drawing.Color.White;
             this.btn_phuKien.Image = global::LapStore.Properties.Resources.icons8_ssd_32;
             this.btn_phuKien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_phuKien.Location = new System.Drawing.Point(5, 333);
+            this.btn_phuKien.Location = new System.Drawing.Point(7, 410);
+            this.btn_phuKien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_phuKien.Name = "btn_phuKien";
-            this.btn_phuKien.Size = new System.Drawing.Size(157, 26);
+            this.btn_phuKien.Size = new System.Drawing.Size(209, 32);
             this.btn_phuKien.TabIndex = 21;
             this.btn_phuKien.Text = "Phụ kiện";
             this.btn_phuKien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -260,9 +272,10 @@
             this.btn_taiNghe.ForeColor = System.Drawing.Color.White;
             this.btn_taiNghe.Image = global::LapStore.Properties.Resources.icons8_headphones_32;
             this.btn_taiNghe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_taiNghe.Location = new System.Drawing.Point(5, 173);
+            this.btn_taiNghe.Location = new System.Drawing.Point(7, 213);
+            this.btn_taiNghe.Margin = new System.Windows.Forms.Padding(4);
             this.btn_taiNghe.Name = "btn_taiNghe";
-            this.btn_taiNghe.Size = new System.Drawing.Size(157, 26);
+            this.btn_taiNghe.Size = new System.Drawing.Size(209, 32);
             this.btn_taiNghe.TabIndex = 20;
             this.btn_taiNghe.Text = "Tai nghe";
             this.btn_taiNghe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -281,9 +294,10 @@
             this.btn_chuot.ForeColor = System.Drawing.Color.White;
             this.btn_chuot.Image = global::LapStore.Properties.Resources.icons8_computer_mouse_32;
             this.btn_chuot.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_chuot.Location = new System.Drawing.Point(5, 141);
+            this.btn_chuot.Location = new System.Drawing.Point(7, 174);
+            this.btn_chuot.Margin = new System.Windows.Forms.Padding(4);
             this.btn_chuot.Name = "btn_chuot";
-            this.btn_chuot.Size = new System.Drawing.Size(157, 26);
+            this.btn_chuot.Size = new System.Drawing.Size(209, 32);
             this.btn_chuot.TabIndex = 16;
             this.btn_chuot.Text = "Chuột";
             this.btn_chuot.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -302,9 +316,10 @@
             this.btn_PC.ForeColor = System.Drawing.Color.White;
             this.btn_PC.Image = global::LapStore.Properties.Resources.icons8_pc_32;
             this.btn_PC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_PC.Location = new System.Drawing.Point(5, 77);
+            this.btn_PC.Location = new System.Drawing.Point(7, 95);
+            this.btn_PC.Margin = new System.Windows.Forms.Padding(4);
             this.btn_PC.Name = "btn_PC";
-            this.btn_PC.Size = new System.Drawing.Size(157, 26);
+            this.btn_PC.Size = new System.Drawing.Size(209, 32);
             this.btn_PC.TabIndex = 19;
             this.btn_PC.Text = "PC";
             this.btn_PC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -323,9 +338,10 @@
             this.btn_phim.ForeColor = System.Drawing.Color.White;
             this.btn_phim.Image = global::LapStore.Properties.Resources.icons8_keyboard_32;
             this.btn_phim.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_phim.Location = new System.Drawing.Point(5, 109);
+            this.btn_phim.Location = new System.Drawing.Point(7, 134);
+            this.btn_phim.Margin = new System.Windows.Forms.Padding(4);
             this.btn_phim.Name = "btn_phim";
-            this.btn_phim.Size = new System.Drawing.Size(157, 26);
+            this.btn_phim.Size = new System.Drawing.Size(209, 32);
             this.btn_phim.TabIndex = 18;
             this.btn_phim.Text = "Phím";
             this.btn_phim.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -344,9 +360,10 @@
             this.btn_ManHinh.ForeColor = System.Drawing.Color.White;
             this.btn_ManHinh.Image = global::LapStore.Properties.Resources.icons8_screen_32;
             this.btn_ManHinh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_ManHinh.Location = new System.Drawing.Point(5, 45);
+            this.btn_ManHinh.Location = new System.Drawing.Point(7, 55);
+            this.btn_ManHinh.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ManHinh.Name = "btn_ManHinh";
-            this.btn_ManHinh.Size = new System.Drawing.Size(157, 26);
+            this.btn_ManHinh.Size = new System.Drawing.Size(209, 32);
             this.btn_ManHinh.TabIndex = 17;
             this.btn_ManHinh.Text = "Màn hình";
             this.btn_ManHinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -365,14 +382,34 @@
             this.btn_Laptop.ForeColor = System.Drawing.Color.White;
             this.btn_Laptop.Image = global::LapStore.Properties.Resources.icons8_laptop_242;
             this.btn_Laptop.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Laptop.Location = new System.Drawing.Point(5, 13);
+            this.btn_Laptop.Location = new System.Drawing.Point(7, 16);
+            this.btn_Laptop.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Laptop.Name = "btn_Laptop";
-            this.btn_Laptop.Size = new System.Drawing.Size(157, 26);
+            this.btn_Laptop.Size = new System.Drawing.Size(209, 32);
             this.btn_Laptop.TabIndex = 15;
             this.btn_Laptop.Text = "Laptop";
             this.btn_Laptop.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Laptop.TextFormatNoPrefix = true;
             this.btn_Laptop.Click += new System.EventHandler(this.btn_Laptop_Click);
+            // 
+            // btn_traBaoHanh
+            // 
+            this.btn_traBaoHanh.BackColor = System.Drawing.Color.Transparent;
+            this.btn_traBaoHanh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_traBaoHanh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_traBaoHanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_traBaoHanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_traBaoHanh.FillColor = System.Drawing.Color.Transparent;
+            this.btn_traBaoHanh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_traBaoHanh.ForeColor = System.Drawing.Color.White;
+            this.btn_traBaoHanh.Image = global::LapStore.Properties.Resources.icons8_guarantee222_32;
+            this.btn_traBaoHanh.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_traBaoHanh.Location = new System.Drawing.Point(920, 4);
+            this.btn_traBaoHanh.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_traBaoHanh.Name = "btn_traBaoHanh";
+            this.btn_traBaoHanh.Size = new System.Drawing.Size(85, 55);
+            this.btn_traBaoHanh.TabIndex = 11;
+            this.btn_traBaoHanh.Click += new System.EventHandler(this.btn_traBaoHanh_Click);
             // 
             // btn_showRoom
             // 
@@ -386,9 +423,10 @@
             this.btn_showRoom.ForeColor = System.Drawing.Color.White;
             this.btn_showRoom.Image = global::LapStore.Properties.Resources.icons8_store22_32;
             this.btn_showRoom.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_showRoom.Location = new System.Drawing.Point(760, 2);
+            this.btn_showRoom.Location = new System.Drawing.Point(1013, 2);
+            this.btn_showRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btn_showRoom.Name = "btn_showRoom";
-            this.btn_showRoom.Size = new System.Drawing.Size(64, 45);
+            this.btn_showRoom.Size = new System.Drawing.Size(85, 55);
             this.btn_showRoom.TabIndex = 10;
             this.btn_showRoom.Click += new System.EventHandler(this.btn_showRoom_Click);
             // 
@@ -404,9 +442,10 @@
             this.btn_yeuThich.ForeColor = System.Drawing.Color.White;
             this.btn_yeuThich.Image = global::LapStore.Properties.Resources.icons8_favorite_321;
             this.btn_yeuThich.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_yeuThich.Location = new System.Drawing.Point(900, 3);
+            this.btn_yeuThich.Location = new System.Drawing.Point(1200, 4);
+            this.btn_yeuThich.Margin = new System.Windows.Forms.Padding(4);
             this.btn_yeuThich.Name = "btn_yeuThich";
-            this.btn_yeuThich.Size = new System.Drawing.Size(64, 45);
+            this.btn_yeuThich.Size = new System.Drawing.Size(85, 55);
             this.btn_yeuThich.TabIndex = 9;
             this.btn_yeuThich.Click += new System.EventHandler(this.btn_yeuThich_Click);
             // 
@@ -422,9 +461,10 @@
             this.btn_donHang.ForeColor = System.Drawing.Color.White;
             this.btn_donHang.Image = global::LapStore.Properties.Resources.icons8_delivery_truck_32;
             this.btn_donHang.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_donHang.Location = new System.Drawing.Point(830, 1);
+            this.btn_donHang.Location = new System.Drawing.Point(1107, 1);
+            this.btn_donHang.Margin = new System.Windows.Forms.Padding(4);
             this.btn_donHang.Name = "btn_donHang";
-            this.btn_donHang.Size = new System.Drawing.Size(64, 45);
+            this.btn_donHang.Size = new System.Drawing.Size(85, 55);
             this.btn_donHang.TabIndex = 8;
             this.btn_donHang.Click += new System.EventHandler(this.btn_donHang_Click);
             // 
@@ -440,10 +480,11 @@
             this.btn_timKiem.ForeColor = System.Drawing.Color.Transparent;
             this.btn_timKiem.Image = global::LapStore.Properties.Resources.icons8_find_32;
             this.btn_timKiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_timKiem.Location = new System.Drawing.Point(512, 9);
+            this.btn_timKiem.Location = new System.Drawing.Point(683, 11);
+            this.btn_timKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_timKiem.Name = "btn_timKiem";
             this.btn_timKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_timKiem.Size = new System.Drawing.Size(38, 37);
+            this.btn_timKiem.Size = new System.Drawing.Size(51, 46);
             this.btn_timKiem.TabIndex = 7;
             this.btn_timKiem.Click += new System.EventHandler(this.btn_timKiem_Click);
             // 
@@ -459,9 +500,10 @@
             this.btn_logOut.ForeColor = System.Drawing.Color.Transparent;
             this.btn_logOut.Image = global::LapStore.Properties.Resources.icons8_sign_out_32black;
             this.btn_logOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_logOut.Location = new System.Drawing.Point(1109, 2);
+            this.btn_logOut.Location = new System.Drawing.Point(1479, 2);
+            this.btn_logOut.Margin = new System.Windows.Forms.Padding(4);
             this.btn_logOut.Name = "btn_logOut";
-            this.btn_logOut.Size = new System.Drawing.Size(64, 45);
+            this.btn_logOut.Size = new System.Drawing.Size(85, 55);
             this.btn_logOut.TabIndex = 6;
             this.btn_logOut.Click += new System.EventHandler(this.btn_logOut_Click);
             // 
@@ -477,9 +519,10 @@
             this.logo.ForeColor = System.Drawing.Color.White;
             this.logo.Image = global::LapStore.Properties.Resources.favicon_hacom_2024;
             this.logo.ImageSize = new System.Drawing.Size(100, 100);
-            this.logo.Location = new System.Drawing.Point(83, 3);
+            this.logo.Location = new System.Drawing.Point(111, 4);
+            this.logo.Margin = new System.Windows.Forms.Padding(4);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(129, 43);
+            this.logo.Size = new System.Drawing.Size(172, 53);
             this.logo.TabIndex = 4;
             this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
@@ -495,9 +538,10 @@
             this.btn_profile.ForeColor = System.Drawing.Color.Transparent;
             this.btn_profile.Image = global::LapStore.Properties.Resources.icons8_user_32black;
             this.btn_profile.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_profile.Location = new System.Drawing.Point(1040, 2);
+            this.btn_profile.Location = new System.Drawing.Point(1387, 2);
+            this.btn_profile.Margin = new System.Windows.Forms.Padding(4);
             this.btn_profile.Name = "btn_profile";
-            this.btn_profile.Size = new System.Drawing.Size(64, 45);
+            this.btn_profile.Size = new System.Drawing.Size(85, 55);
             this.btn_profile.TabIndex = 2;
             this.btn_profile.Click += new System.EventHandler(this.btn_profile_Click);
             // 
@@ -513,9 +557,10 @@
             this.btn_cart.ForeColor = System.Drawing.Color.White;
             this.btn_cart.Image = global::LapStore.Properties.Resources.icons8_shopping_cart_32black;
             this.btn_cart.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_cart.Location = new System.Drawing.Point(970, 2);
+            this.btn_cart.Location = new System.Drawing.Point(1293, 2);
+            this.btn_cart.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cart.Name = "btn_cart";
-            this.btn_cart.Size = new System.Drawing.Size(64, 45);
+            this.btn_cart.Size = new System.Drawing.Size(85, 55);
             this.btn_cart.TabIndex = 1;
             this.btn_cart.Click += new System.EventHandler(this.btn_cart_Click);
             // 
@@ -531,24 +576,26 @@
             this.menu.ForeColor = System.Drawing.Color.White;
             this.menu.Image = global::LapStore.Properties.Resources.icons8_menu_32;
             this.menu.ImageSize = new System.Drawing.Size(30, 30);
-            this.menu.Location = new System.Drawing.Point(13, 3);
+            this.menu.Location = new System.Drawing.Point(17, 4);
+            this.menu.Margin = new System.Windows.Forms.Padding(4);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(64, 45);
+            this.menu.Size = new System.Drawing.Size(85, 55);
             this.menu.TabIndex = 0;
             this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
             this.menu.MouseLeave += new System.EventHandler(this.menu_MouseLeave);
             // 
             // userHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 750);
+            this.ClientSize = new System.Drawing.Size(1600, 923);
             this.Controls.Add(this.chuyen);
             this.Controls.Add(this.menuUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1200, 750);
-            this.MinimumSize = new System.Drawing.Size(1200, 750);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1600, 923);
+            this.MinimumSize = new System.Drawing.Size(1600, 923);
             this.Name = "userHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
@@ -587,5 +634,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_donHang;
         private Guna.UI2.WinForms.Guna2Button btn_yeuThich;
         private Guna.UI2.WinForms.Guna2Button btn_showRoom;
+        private Guna.UI2.WinForms.Guna2Button btn_traBaoHanh;
     }
 }

@@ -513,6 +513,16 @@ namespace LapStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_guarantee222_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-guarantee222-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_headphones_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-headphones-32", resourceCulture);

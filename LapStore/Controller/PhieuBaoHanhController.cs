@@ -222,8 +222,7 @@ namespace LapStore.Controller
         public static string TraCuuThoiGianBaoHanh(string maDonHang)
         {
             using (SqlConnection conn = Database.GetConnection())
-            {
-                conn.Open();
+            {  
 
                 // 1. Kiểm tra trạng thái đơn hàng
                 string checkTrangThaiQuery = "SELECT trangThai FROM DONHANG WHERE id = @maDonHang";
