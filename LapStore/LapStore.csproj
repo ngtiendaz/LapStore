@@ -46,6 +46,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -168,6 +169,12 @@
     <Compile Include="Widget\Admin\showRoomControl.Designer.cs">
       <DependentUpon>showRoomControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widget\Admin\thongKeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Admin\thongKeUserControl.Designer.cs">
+      <DependentUpon>thongKeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget\User\donHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,12 +222,6 @@
     </Compile>
     <Compile Include="Widget\Admin\sanPhamUserControl.Designer.cs">
       <DependentUpon>sanPhamUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Widget\Admin\thongKeUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Widget\Admin\thongKeUserControl.Designer.cs">
-      <DependentUpon>thongKeUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Widget\User\itemSPGioHang.cs">
       <SubType>UserControl</SubType>
@@ -328,6 +329,9 @@
     <EmbeddedResource Include="Widget\Admin\showRoomControl.resx">
       <DependentUpon>showRoomControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Admin\thongKeUserControl.resx">
+      <DependentUpon>thongKeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\donHang.resx">
       <DependentUpon>donHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,9 +355,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\Admin\sanPhamUserControl.resx">
       <DependentUpon>sanPhamUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Widget\Admin\thongKeUserControl.resx">
-      <DependentUpon>thongKeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widget\User\itemSPGioHang.resx">
       <DependentUpon>itemSPGioHang.cs</DependentUpon>

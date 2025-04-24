@@ -10,7 +10,6 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.csproj.Up2Date
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.exe
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.pdb
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.LapTop.resources
-D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.thongKeUserControl.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.userUserControl.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.adminHome.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.userHome.resources
@@ -41,3 +40,4 @@ D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.itemPhieuBaoHanh.resource
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.View.PhieuBaoHanhForm.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.User.traCuuBaoHanh.resources
 D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.Admin.showRoomControl.resources
+D:\C#\LapStore\LapStore\obj\Debug\LapStore.Widget.thongKeUserControl.resources

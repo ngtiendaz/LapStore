@@ -141,7 +141,76 @@ namespace LapStore.Controller
 
             return (doanhThu, tienVon, loiNhuan, tienBaoHanh);
         }
+        public static List<SanPham> getSanPhamDaBanHet()
+        {
+            List<SanPham> danhSachSanPham = new List<SanPham>();
 
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = @"
+            SELECT maSp, maDm, tenSp, hinhAnh, moTa, giaNhap, giaBan, soLuong, created_at
+            FROM SANPHAM
+            WHERE soLuong = 0
+        ";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            danhSachSanPham.Add(new SanPham
+                            {
+                                MaSp = reader["maSp"].ToString(),
+                                MaDm = reader["maDm"].ToString(),
+                                TenSp = reader["tenSp"].ToString(),
+                                HinhAnh = reader["hinhAnh"] != DBNull.Value ? reader["hinhAnh"].ToString() : null,
+                                MoTa = reader["moTa"] != DBNull.Value ? reader["moTa"].ToString() : null,
+                                GiaNhap = Convert.ToInt64(reader["giaNhap"]),
+                                GiaBan = Convert.ToInt64(reader["giaBan"]),
+                                SoLuong = Convert.ToInt32(reader["soLuong"]),
+                                CreatedAt = reader["created_at"] != DBNull.Value ? Convert.ToDateTime(reader["created_at"]) : DateTime.MinValue
+                            });
+                        }
+                    }
+                }
+            }
+
+            return danhSachSanPham;
+        }
+
+        public static List<(string TenSp, int TongBan)> GetTop5SanPham()
+        {
+            List<(string TenSp, int TongBan)> topSanPham = new List<(string TenSp, int TongBan)>();
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = @"
+            SELECT TOP 5 
+                SP.tenSp, SUM(TK.soLuong) AS TongBan
+            FROM SANPHAM SP
+            INNER JOIN THONGKE TK ON SP.maSp = TK.maSp
+            GROUP BY SP.tenSp
+            ORDER BY SUM(TK.soLuong) DESC
+        ";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string tenSp = reader["tenSp"].ToString();
+                            int tongBan = reader["TongBan"] != DBNull.Value ? Convert.ToInt32(reader["TongBan"]) : 0;
+
+                            topSanPham.Add((tenSp, tongBan));
+                        }
+                    }
+                }
+            }
+
+            return topSanPham;
+        }
 
 
 

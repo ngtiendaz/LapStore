@@ -55,9 +55,10 @@ namespace LapStore.Widget.Admin
                 // Hiển thị lên giao diện (giả sử có các Label: lbl_doanhThu, lbl_tienVon, lbl_loiNhuan)
                 txt_doanhThu.Text = $"{tongDoanhThu:N0} VND";
                 txt_von.Text = $"{tienVon:N0} VND";
+                loiNhuan = tongDoanhThu - tienVon -tongTienGiamGia + tongTienBaoHanh;
                 txt_loiNhuan.Text = $"{loiNhuan:N0} VND";
-                txt_tongTienDaGiam.Text = $"{tongTienGiamGia:N0} VND";
-                txt_tienBaoHanh.Text = $"{tongTienBaoHanh:N0} VND";
+                txt_tongTienDaGiam.Text = $"-{tongTienGiamGia:N0} VND";
+                txt_tienBaoHanh.Text = $"+{tongTienBaoHanh:N0} VND";
             }
             else
             {
@@ -98,13 +99,14 @@ namespace LapStore.Widget.Admin
         private void LoadChiTet(string maDonHang)
         {
             var (tongDoanhThu, tienVon, loiNhuan, tienBaoHanh) = ThongKeController.LayThongKeTheoDonHang(maDonHang);
-
+            long tienGiamGia = MaGiamGiaController.LaySoTienDaGiam(maDonHang);
+            loiNhuan = tongDoanhThu - tienVon - tienGiamGia + tienBaoHanh;
             // Hiển thị lên giao diện (giả sử có các Label: lbl_doanhThu, lbl_tienVon, lbl_loiNhuan)
             txt_doanhThuChiTiet.Text = $"{tongDoanhThu:N0} VND";
             txt_vonChiTiet.Text = $"{tienVon:N0} VND";
             txt_loiNhuanChiTiet.Text = $"{loiNhuan:N0} VND";
-            txt_tiemGiamGiaChiTiet.Text = $"{MaGiamGiaController.LaySoTienDaGiam(maDonHang):N0} VND";
-            txt_tienBaoHanhChiTiet.Text = $"{tienBaoHanh:N0} VND";
+            txt_tiemGiamGiaChiTiet.Text = $"-{tienGiamGia:N0} VND";
+            txt_tienBaoHanhChiTiet.Text = $"+{tienBaoHanh:N0} VND";
         }
     }
 }
