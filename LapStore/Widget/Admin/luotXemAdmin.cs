@@ -123,5 +123,20 @@ namespace LapStore.Widget.Admin
                 e.Graphics.FillRectangle(brush, rect);
             }
         }
+
+        private void btn_xuatExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Workbook|*.xlsx";
+            saveFileDialog.Title = "Chọn nơi lưu file thống kê";
+            saveFileDialog.FileName = "SanPham_LuotXem_SapXep.xlsx";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                XuatExcelController.XuatExcelSanPhamLuotXemTheoThuTu(filePath);
+                MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

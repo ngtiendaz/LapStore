@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LapStore.Controller;
+using LapStore.Model;
 
 namespace LapStore.Widget.User
 {
@@ -126,7 +127,26 @@ namespace LapStore.Widget.User
 
         private void btn_xemChiTiet_Click(object sender, EventArgs e)
         {
+            if (MADONHANG != null)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Workbook|*.xlsx";
+                saveFileDialog.Title = "Chọn nơi lưu file hóa đơn";
+                saveFileDialog.FileName = "Hóa đơn " + MADONHANG + ".xlsx";
 
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    XuatExcelController.XuatHoaDonChiTietExcel(MADONHANG, filePath);
+
+                    MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn đơn hàng để xuất excel!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

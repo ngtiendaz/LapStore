@@ -259,5 +259,35 @@ namespace LapStore.Widget
 
             
         }
+
+        private void thongKeUserControl_Paint(object sender, PaintEventArgs e)
+        {
+            // Lấy kích thước của control
+            Rectangle rect = this.ClientRectangle;
+
+            // Tạo brush gradient từ xanh đen (#2C3E50) sang xanh lục nhạt (#4CA1AF)
+            using (System.Drawing.Drawing2D.LinearGradientBrush brush = new System.Drawing.Drawing2D.LinearGradientBrush(
+                rect,
+                ColorTranslator.FromHtml("#000000"),
+                ColorTranslator.FromHtml("#434343"),   // Màu 2
+                45f))                                  // Góc gradient (90 độ)
+            {
+                // Vẽ nền với gradient
+                e.Graphics.FillRectangle(brush, rect);
+            }
+        }
+
+        private void btn_xuat_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Files|*.xlsx";
+            saveFileDialog.Title = "Top 5 sản phẩm bán chạy nhất 2025";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                XuatExcelController.XuatExcelTop5SanPham(filePath);
+            }
+        }
     }
 }

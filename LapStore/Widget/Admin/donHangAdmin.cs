@@ -13,6 +13,7 @@ namespace LapStore.Widget.Admin
 {
     public partial class donHangAdmin : UserControl
     {
+        string trangThai;
         public donHangAdmin()
         {
             InitializeComponent();
@@ -181,6 +182,24 @@ namespace LapStore.Widget.Admin
             }
         }
 
+        private void btn_xuat_Click(object sender, EventArgs e)
+        {
+            trangThai = cbb_timTheoTT.SelectedItem.ToString(); // Lấy trạng thái từ ComboBox
+            string idUser = ""; // hoặc từ người dùng nhập vào nếu muốn lọc theo user
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "Excel Files (*.xlsx)|*.xlsx";
+                sfd.Title = "Xuất danh sách đơn hàng";
+                sfd.FileName = "Danh_Sach_Don_Hang_"+ trangThai + ".xlsx";
 
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    
+
+                    XuatExcelController.XuatExcelDonHangTheoTrangThai(sfd.FileName, trangThai, idUser);
+                    MessageBox.Show("Xuất Excel đơn hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using ClosedXML.Excel;
 using LapStore.Model;
 
 namespace LapStore.Controller
@@ -211,6 +212,91 @@ namespace LapStore.Controller
 
             return topSanPham;
         }
+
+
+
+public static void XuatThongKeDonHangRaExcel(string maDonHang, string filePath)
+    {
+        var thongKe = LayThongKeTheoDonHangExcel(maDonHang);
+
+        using (var workbook = new XLWorkbook())
+        {
+            var worksheet = workbook.Worksheets.Add("ThongKeDonHang");
+
+            // Header
+            worksheet.Cell("A1").Value = "Mã Đơn Hàng";
+            worksheet.Cell("B1").Value = "Tên Khách Hàng";
+            worksheet.Cell("C1").Value = "Phương Thức Thanh Toán";
+            worksheet.Cell("D1").Value = "Doanh Thu";
+            worksheet.Cell("E1").Value = "Tiền Vốn";
+            worksheet.Cell("F1").Value = "Lợi Nhuận";
+            worksheet.Cell("G1").Value = "Tiền Bảo Hành";
+
+            // Data
+            worksheet.Cell("A2").Value = maDonHang;
+            worksheet.Cell("B2").Value = thongKe.TenKhachHang;
+            worksheet.Cell("C2").Value = thongKe.PhuongThucThanhToan;
+            worksheet.Cell("D2").Value = thongKe.DoanhThu;
+            worksheet.Cell("E2").Value = thongKe.TienVon;
+            worksheet.Cell("F2").Value = thongKe.LoiNhuan;
+            worksheet.Cell("G2").Value = thongKe.TienBaoHanh;
+
+            // Format tự điều chỉnh độ rộng
+            worksheet.Columns().AdjustToContents();
+
+            // Lưu file
+            workbook.SaveAs(filePath);
+        }
+    }
+
+        public static ThongKeDonHangModel LayThongKeTheoDonHangExcel(string maDonHang)
+        {
+            var result = new ThongKeDonHangModel();
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = @"
+            SELECT
+                SUM(TK.doanhThu) AS DoanhThu,
+                SUM(TK.loiNhuan) AS LoiNhuan,
+                ISNULL((SELECT PBH.gia
+                        FROM CT_PHIEUBAOHANH CT
+                        JOIN PHIEUBAOHANH PBH ON CT.maPhieuBaoHanh = PBH.id
+                        WHERE CT.maDonHang = @maDonHang), 0) AS TienBaoHanh,
+                ND.hoTen AS TenKhachHang,
+                DH.phuongThucThanhToan
+            FROM THONGKE TK
+            JOIN DONHANG DH ON TK.maDonHang = DH.id
+            JOIN USERS ND ON DH.maUser = ND.id
+            WHERE TK.maDonHang = @maDonHang
+            AND DH.trangThai != N'Đã hủy'
+            GROUP BY ND.hoTen, DH.phuongThucThanhToan;
+        ";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maDonHang", maDonHang);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            result.DoanhThu = reader["DoanhThu"] != DBNull.Value ? Convert.ToInt64(reader["DoanhThu"]) : 0;
+                            result.LoiNhuan = reader["LoiNhuan"] != DBNull.Value ? Convert.ToInt64(reader["LoiNhuan"]) : 0;
+                            result.TienBaoHanh = reader["TienBaoHanh"] != DBNull.Value ? Convert.ToInt64(reader["TienBaoHanh"]) : 0;
+                            result.TenKhachHang = reader["TenKhachHang"]?.ToString();
+                            result.PhuongThucThanhToan = reader["phuongThucThanhToan"]?.ToString();
+                        }
+                    }
+                }
+            }
+
+            // Tính Tiền Vốn
+            result.TienVon = result.DoanhThu - result.LoiNhuan;
+
+            return result;
+        }
+
 
 
 

@@ -102,7 +102,7 @@
             this.dgvDoanhThu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDoanhThu.GridColor = System.Drawing.Color.Black;
             this.dgvDoanhThu.Location = new System.Drawing.Point(607, 2);
-            this.dgvDoanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDoanhThu.MultiSelect = false;
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.ReadOnly = true;
@@ -176,7 +176,7 @@
             this.btn_traCuu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_traCuu.ForeColor = System.Drawing.Color.White;
             this.btn_traCuu.Location = new System.Drawing.Point(434, 121);
-            this.btn_traCuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_traCuu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_traCuu.Name = "btn_traCuu";
             this.btn_traCuu.Size = new System.Drawing.Size(107, 44);
             this.btn_traCuu.TabIndex = 40;
@@ -190,7 +190,7 @@
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 17);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(525, 39);
             this.guna2HtmlLabel1.TabIndex = 39;
@@ -208,7 +208,7 @@
             this.cbb_thang.ForeColor = System.Drawing.Color.Black;
             this.cbb_thang.ItemHeight = 30;
             this.cbb_thang.Location = new System.Drawing.Point(129, 121);
-            this.cbb_thang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbb_thang.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_thang.Name = "cbb_thang";
             this.cbb_thang.Size = new System.Drawing.Size(288, 36);
             this.cbb_thang.TabIndex = 49;
@@ -303,11 +303,12 @@
             this.btn_xuatE.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btn_xuatE.ForeColor = System.Drawing.Color.White;
             this.btn_xuatE.Location = new System.Drawing.Point(406, 839);
-            this.btn_xuatE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_xuatE.Margin = new System.Windows.Forms.Padding(4);
             this.btn_xuatE.Name = "btn_xuatE";
             this.btn_xuatE.Size = new System.Drawing.Size(136, 46);
             this.btn_xuatE.TabIndex = 56;
             this.btn_xuatE.Text = "Xuất excel";
+            this.btn_xuatE.Click += new System.EventHandler(this.btn_xuatE_Click);
             // 
             // txt_vonChiTiet
             // 
@@ -578,7 +579,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_traCuu);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1293, 923);
             this.MinimumSize = new System.Drawing.Size(1293, 923);
             this.Name = "doanhThuAdmin";

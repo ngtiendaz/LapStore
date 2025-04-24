@@ -14,7 +14,7 @@ namespace LapStore.Widget.Admin
 {
     public partial class doanhThuAdmin : UserControl
     {
-        string MDH = ""; // Mã đơn hàng
+        string MDH; // Mã đơn hàng
         public doanhThuAdmin()
         {
             InitializeComponent();
@@ -108,5 +108,31 @@ namespace LapStore.Widget.Admin
             txt_tiemGiamGiaChiTiet.Text = $"-{tienGiamGia:N0} VND";
             txt_tienBaoHanhChiTiet.Text = $"+{tienBaoHanh:N0} VND";
         }
+
+        private void btn_xuatE_Click(object sender, EventArgs e)
+        {
+            string maDonHang = MDH;
+            if (MDH != null)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Workbook|*.xlsx";
+                saveFileDialog.Title = "Chọn nơi lưu file thống kê";
+                saveFileDialog.FileName = "ThongKe_" + maDonHang + ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    ThongKeController.XuatThongKeDonHangRaExcel(maDonHang, filePath);
+
+                    MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn đơn hàng để xuất excel!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
+        }
+
     }
 }

@@ -364,5 +364,23 @@ namespace LapStore.Widget
                 btn_themMoi.Text = "Thêm Mới";
             }
         }
+
+        private void btn_xuat_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Xuất tất cả sản phẩm";
+                saveFileDialog.FileName = "DanhSachSanPham.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    XuatExcelController.XuatExcelTatCaSanPham(saveFileDialog.FileName);
+                    MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+
+        }
     }
 }
