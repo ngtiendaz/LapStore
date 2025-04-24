@@ -169,6 +169,48 @@ namespace LapStore.Controller
 
             return result;
         }
+        public static long LaySoTienDaGiam(string maDonHang)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = @"
+            SELECT soTienGiam
+            FROM MAGIAMGIA_DONHANG
+            WHERE maDonHang = @maDonHang";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maDonHang", maDonHang);
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        return Convert.ToInt64(result);
+                    }
+                    else
+                    {
+                        return 0; // Không có mã giảm giá hoặc không có giảm giá
+                    }
+                }
+            }
+        }
+        public static void AddMaGiamGiaDonHang(string maDonHang, string maGiamGia, long soTienGiam)
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string insertQuery = @"
+            INSERT INTO MAGIAMGIA_DONHANG (maDonHang, maGiamGia, soTienGiam)
+            VALUES (@maDonHang, @maGiamGia, @soTienGiam)";
+
+                using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maDonHang", maDonHang);
+                    cmd.Parameters.AddWithValue("@maGiamGia", maGiamGia);
+                    cmd.Parameters.AddWithValue("@soTienGiam", soTienGiam);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
     }
 }

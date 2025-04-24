@@ -15,13 +15,20 @@ namespace LapStore.Widget.User
         private MaGiamGia _maGiamGia;
         private PhieuBaoHanh _phieuBaoHanh;
         long TONGTIEN=0;
+        private long _tienGiamTuMa = 0;
+    
+
         public class DatHangEventArgs : EventArgs
         {
             public List<GioHang> SanPhamDaChon { get; set; }
             public long TongTien { get; set; }
             public int TongSoLuong { get; set; }
             public MaGiamGia MaGiamGiaDaChon { get; set; }
+        
             public PhieuBaoHanh PhieuBaoHanhDaChon { get; set; }
+            public long TienGiamTuMa { get; set; }
+
+
         }
         public gioHang()
         {
@@ -56,6 +63,7 @@ namespace LapStore.Widget.User
 
         private void CapNhatTongTien()
         {
+
             long tamTinh = 0;
             foreach (var sp in _danhSachSP)
             {
@@ -64,8 +72,7 @@ namespace LapStore.Widget.User
             }
 
             txt_tamTinh.Text = tamTinh.ToString("N0") + "đ";
-
-            long tienGiam = 0;
+            _tienGiamTuMa = 0;
             long tongTien = tamTinh;
             long tienPhieuBaoHanh = 0;
 
@@ -74,15 +81,15 @@ namespace LapStore.Widget.User
             {
                 if (tamTinh >= _maGiamGia.DieuKienApDung)
                 {
-                    tienGiam = tamTinh * _maGiamGia.PhanTramGiam / 100;
-                    tongTien -= tienGiam;
+                    _tienGiamTuMa = tamTinh * _maGiamGia.PhanTramGiam / 100;
+                    tongTien -= _tienGiamTuMa;
                 }
                 else
                 {
                     MessageBox.Show("Giá trị đơn hàng chưa đủ điều kiện áp dụng mã giảm giá.");
                     _maGiamGia = null;
                     txt_maGiamGia.Text = "";
-                    tienGiam = 0;
+                    _tienGiamTuMa = 0;
                 }
             }
 
@@ -96,7 +103,7 @@ namespace LapStore.Widget.User
             // Cập nhật tổng tiền cuối cùng
             TONGTIEN = tongTien;
 
-            txt_giaGiam.Text = "-" + tienGiam.ToString("N0") + "đ";
+            txt_giaGiam.Text = "-" + _tienGiamTuMa.ToString("N0") + "đ";
             txtGiaBaoHanh.Text = "+" + tienPhieuBaoHanh.ToString("N0") + "đ";
             txtTongTien.Text = tongTien.ToString("N0") + "đ";
         }
@@ -140,11 +147,13 @@ namespace LapStore.Widget.User
 
             // Gọi sự kiện gửi dữ liệu
             OnDatHang?.Invoke(this, new DatHangEventArgs
-            {  PhieuBaoHanhDaChon = _phieuBaoHanh, // Vẫn truyền cả phiếu bảo hành
-                MaGiamGiaDaChon = _maGiamGia, // Vẫn truyền cả mã giảm giá
+            {
+                PhieuBaoHanhDaChon = _phieuBaoHanh,
+                MaGiamGiaDaChon = _maGiamGia,
                 SanPhamDaChon = spDuocChon,
-                TongTien = tongTien, // Truyền tổng tiền cuối cùng
-                TongSoLuong = tongSoLuong
+                TongTien = tongTien,
+                TongSoLuong = tongSoLuong,
+                TienGiamTuMa = _tienGiamTuMa
             });
         }
 

@@ -14,6 +14,7 @@ namespace LapStore.Widget.Admin
 {
     public partial class doanhThuAdmin : UserControl
     {
+        string MDH = ""; // Mã đơn hàng
         public doanhThuAdmin()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace LapStore.Widget.Admin
             Database.LoadThangToComboBox(cbb_thang);
             dgvDoanhThu.DefaultCellStyle.ForeColor = Color.Black;
         }
+
 
         private void btn_traCuu_Click(object sender, EventArgs e)
         {
@@ -48,12 +50,14 @@ namespace LapStore.Widget.Admin
                 }
 
                 // Lấy tổng doanh thu, tiền vốn và lợi nhuận từ bảng THONGKE
-                var (tongDoanhThu, tienVon, loiNhuan) = ThongKeController.LayThongKeTheoThang(thang);
+                var (tongDoanhThu, tienVon, loiNhuan,tongTienGiamGia, tongTienBaoHanh) = ThongKeController.LayThongKeTheoThang(thang);
 
                 // Hiển thị lên giao diện (giả sử có các Label: lbl_doanhThu, lbl_tienVon, lbl_loiNhuan)
                 txt_doanhThu.Text = $"{tongDoanhThu:N0} VND";
                 txt_von.Text = $"{tienVon:N0} VND";
                 txt_loiNhuan.Text = $"{loiNhuan:N0} VND";
+                txt_tongTienDaGiam.Text = $"{tongTienGiamGia:N0} VND";
+                txt_tienBaoHanh.Text = $"{tongTienBaoHanh:N0} VND";
             }
             else
             {
@@ -77,6 +81,30 @@ namespace LapStore.Widget.Admin
                 // Vẽ nền với gradient
                 e.Graphics.FillRectangle(brush, rect);
             }
+        }
+
+        private void dgvDoanhThu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvDoanhThu.Rows[e.RowIndex];
+
+                // Gán dữ liệu từ dòng được chọn vào các textbox
+                MDH = row.Cells["maDonHang"].Value?.ToString().Trim();
+                LoadChiTet(MDH);
+
+            }
+        }
+        private void LoadChiTet(string maDonHang)
+        {
+            var (tongDoanhThu, tienVon, loiNhuan, tienBaoHanh) = ThongKeController.LayThongKeTheoDonHang(maDonHang);
+
+            // Hiển thị lên giao diện (giả sử có các Label: lbl_doanhThu, lbl_tienVon, lbl_loiNhuan)
+            txt_doanhThuChiTiet.Text = $"{tongDoanhThu:N0} VND";
+            txt_vonChiTiet.Text = $"{tienVon:N0} VND";
+            txt_loiNhuanChiTiet.Text = $"{loiNhuan:N0} VND";
+            txt_tiemGiamGiaChiTiet.Text = $"{MaGiamGiaController.LaySoTienDaGiam(maDonHang):N0} VND";
+            txt_tienBaoHanhChiTiet.Text = $"{tienBaoHanh:N0} VND";
         }
     }
 }

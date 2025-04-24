@@ -77,7 +77,7 @@
             this.menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menu.ForeColor = System.Drawing.Color.White;
             this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu.Margin = new System.Windows.Forms.Padding(4);
             this.menu.MaximumSize = new System.Drawing.Size(307, 923);
             this.menu.MinimumSize = new System.Drawing.Size(307, 923);
             this.menu.Name = "menu";
@@ -100,7 +100,7 @@
             this.btn_showRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_showRoom.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_showRoom.Location = new System.Drawing.Point(15, 383);
-            this.btn_showRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_showRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btn_showRoom.Name = "btn_showRoom";
             this.btn_showRoom.Size = new System.Drawing.Size(271, 32);
             this.btn_showRoom.TabIndex = 19;
@@ -123,7 +123,7 @@
             this.btn_baoHanh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_baoHanh.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_baoHanh.Location = new System.Drawing.Point(15, 330);
-            this.btn_baoHanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_baoHanh.Margin = new System.Windows.Forms.Padding(4);
             this.btn_baoHanh.Name = "btn_baoHanh";
             this.btn_baoHanh.Size = new System.Drawing.Size(271, 32);
             this.btn_baoHanh.TabIndex = 18;
@@ -146,7 +146,7 @@
             this.btn_donHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_donHang.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_donHang.Location = new System.Drawing.Point(16, 438);
-            this.btn_donHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_donHang.Margin = new System.Windows.Forms.Padding(4);
             this.btn_donHang.Name = "btn_donHang";
             this.btn_donHang.Size = new System.Drawing.Size(271, 32);
             this.btn_donHang.TabIndex = 17;
@@ -169,7 +169,7 @@
             this.btn_thongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_thongKe.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_thongKe.Location = new System.Drawing.Point(16, 494);
-            this.btn_thongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_thongKe.Margin = new System.Windows.Forms.Padding(4);
             this.btn_thongKe.Name = "btn_thongKe";
             this.btn_thongKe.Size = new System.Drawing.Size(271, 32);
             this.btn_thongKe.TabIndex = 16;
@@ -192,7 +192,7 @@
             this.btn_luotMua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_luotMua.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_luotMua.Location = new System.Drawing.Point(16, 652);
-            this.btn_luotMua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_luotMua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luotMua.Name = "btn_luotMua";
             this.btn_luotMua.Size = new System.Drawing.Size(271, 32);
             this.btn_luotMua.TabIndex = 14;
@@ -215,7 +215,7 @@
             this.btn_dangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_dangXuat.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_dangXuat.Location = new System.Drawing.Point(16, 796);
-            this.btn_dangXuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_dangXuat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_dangXuat.Name = "btn_dangXuat";
             this.btn_dangXuat.Size = new System.Drawing.Size(241, 63);
             this.btn_dangXuat.TabIndex = 12;
@@ -229,7 +229,7 @@
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSeparator2.LineThickness = 1;
             this.bunifuSeparator2.Location = new System.Drawing.Point(0, 767);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(307, 21);
             this.bunifuSeparator2.TabIndex = 11;
@@ -251,7 +251,7 @@
             this.btn_user.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_user.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_user.Location = new System.Drawing.Point(16, 705);
-            this.btn_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_user.Margin = new System.Windows.Forms.Padding(4);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(271, 32);
             this.btn_user.TabIndex = 10;
@@ -274,7 +274,7 @@
             this.btn_luotXem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_luotXem.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_luotXem.Location = new System.Drawing.Point(16, 602);
-            this.btn_luotXem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_luotXem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luotXem.Name = "btn_luotXem";
             this.btn_luotXem.Size = new System.Drawing.Size(271, 32);
             this.btn_luotXem.TabIndex = 6;
@@ -297,7 +297,7 @@
             this.btn_doanhThu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_doanhThu.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_doanhThu.Location = new System.Drawing.Point(16, 548);
-            this.btn_doanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_doanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_doanhThu.Name = "btn_doanhThu";
             this.btn_doanhThu.Size = new System.Drawing.Size(271, 32);
             this.btn_doanhThu.TabIndex = 2;
@@ -320,7 +320,7 @@
             this.btn_hang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_hang.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_hang.Location = new System.Drawing.Point(16, 233);
-            this.btn_hang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_hang.Margin = new System.Windows.Forms.Padding(4);
             this.btn_hang.Name = "btn_hang";
             this.btn_hang.Size = new System.Drawing.Size(271, 32);
             this.btn_hang.TabIndex = 5;
@@ -343,7 +343,7 @@
             this.btn_maGiamGia.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_maGiamGia.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_maGiamGia.Location = new System.Drawing.Point(16, 279);
-            this.btn_maGiamGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_maGiamGia.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maGiamGia.Name = "btn_maGiamGia";
             this.btn_maGiamGia.Size = new System.Drawing.Size(271, 32);
             this.btn_maGiamGia.TabIndex = 4;
@@ -366,7 +366,7 @@
             this.btn_danhMuc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_danhMuc.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_danhMuc.Location = new System.Drawing.Point(16, 186);
-            this.btn_danhMuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_danhMuc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_danhMuc.Name = "btn_danhMuc";
             this.btn_danhMuc.Size = new System.Drawing.Size(271, 32);
             this.btn_danhMuc.TabIndex = 3;
@@ -389,7 +389,7 @@
             this.btn_sanPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_sanPham.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_sanPham.Location = new System.Drawing.Point(16, 139);
-            this.btn_sanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sanPham.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sanPham.Name = "btn_sanPham";
             this.btn_sanPham.Size = new System.Drawing.Size(271, 32);
             this.btn_sanPham.TabIndex = 1;
@@ -432,7 +432,7 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(4, 101);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(303, 25);
             this.bunifuSeparator1.TabIndex = 1;
@@ -446,7 +446,7 @@
             this.imageAdmin.Image = global::LapStore.Properties.Resources.daz;
             this.imageAdmin.ImageRotate = 0F;
             this.imageAdmin.Location = new System.Drawing.Point(16, 16);
-            this.imageAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imageAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.imageAdmin.Name = "imageAdmin";
             this.imageAdmin.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.imageAdmin.Size = new System.Drawing.Size(80, 74);
@@ -459,7 +459,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel2.Location = new System.Drawing.Point(316, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(0, 0);
             this.panel2.TabIndex = 1;
@@ -469,7 +469,7 @@
             this.panelChuyen.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panelChuyen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChuyen.Location = new System.Drawing.Point(305, 0);
-            this.panelChuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelChuyen.Margin = new System.Windows.Forms.Padding(4);
             this.panelChuyen.MaximumSize = new System.Drawing.Size(1293, 923);
             this.panelChuyen.MinimumSize = new System.Drawing.Size(1293, 923);
             this.panelChuyen.Name = "panelChuyen";
@@ -487,7 +487,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1600, 923);
             this.MinimumSize = new System.Drawing.Size(1200, 750);
             this.Name = "adminHome";

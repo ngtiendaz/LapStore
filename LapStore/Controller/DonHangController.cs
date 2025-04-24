@@ -324,8 +324,8 @@ namespace LapStore.Controller
             List<DonHang> list = new List<DonHang>();
             using (SqlConnection conn = Database.GetConnection())
             {
-                // Xây dựng câu truy vấn SQL với điều kiện lọc
-                string query = "SELECT * FROM DONHANG WHERE MONTH(created_at) = @thang";
+                // Xây dựng câu truy vấn SQL với điều kiện lọc tháng và trạng thái
+                string query = "SELECT * FROM DONHANG WHERE MONTH(created_at) = @thang AND trangThai != N'Đã hủy'";
 
                 // Nếu có idUser, thêm điều kiện lọc theo idUser
                 if (!string.IsNullOrEmpty(idUser))
@@ -366,6 +366,7 @@ namespace LapStore.Controller
 
             return list;
         }
+
         public static List<DonHang> TimKiemDonHang(string tuKhoa)
         {
             List<DonHang> list = new List<DonHang>();

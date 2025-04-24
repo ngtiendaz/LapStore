@@ -57,9 +57,9 @@ namespace LapStore.Widget.User
                 dgvShowRoom.Rows.Add(
                    sr.Id,
                    sr.TenCuaHang,
-                   sr.DiaChi,
-                   sr.SoDienThoai,
                    sr.Email,
+                   sr.SoDienThoai,
+                   sr.DiaChi,
                    sr.GioMoCua,
                    sr.GioDongCua
                 );

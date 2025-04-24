@@ -3,31 +3,91 @@
   "WorkspaceRootPath": "D:\\C#\\LapStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\admin\\doanhthuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\doanhthuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\tracuubaohanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\tracuubaohanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\showroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\showroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\tracuubaohanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\showroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\showroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\user\\tracuubaohanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\tracuubaohanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\phieubaohanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\phieubaohanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\admin\\doanhthuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\doanhthuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\view\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\magiamgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\magiamgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\luotxemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\luotxemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\controller\\phieubaohanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\phieubaohanhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\model\\magiamgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\model\\magiamgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|d:\\c#\\lapstore\\lapstore\\controller\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\controller\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\user\\tracuubaohanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\user\\tracuubaohanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\view\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\view\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -37,14 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\admin\\showroomcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\showroomcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|solutionrelative:lapstore\\widget\\admin\\baohanhadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BEE6EF7-CC45-4B61-A5DC-8E7FFF34C60D}|LapStore\\LapStore.csproj|D:\\C#\\LapStore\\lapstore\\model\\showroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +110,250 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "showRoom.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\showRoom.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\showRoom.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\showRoom.cs",
+              "RelativeToolTip": "LapStore\\Widget\\User\\showRoom.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T10:32:09.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "showRoom.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\showRoom.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\showRoom.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\showRoom.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\User\\showRoom.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T10:32:08.351Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MaGiamGiaController.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\MaGiamGiaController.cs",
+              "RelativeDocumentMoniker": "LapStore\\Controller\\MaGiamGiaController.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\MaGiamGiaController.cs",
+              "RelativeToolTip": "LapStore\\Controller\\MaGiamGiaController.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAwwLIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:32:12.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MaGiamGia.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Model\\MaGiamGia.cs",
+              "RelativeDocumentMoniker": "LapStore\\Model\\MaGiamGia.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Model\\MaGiamGia.cs",
+              "RelativeToolTip": "LapStore\\Model\\MaGiamGia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:31:20.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "doanhThuAdmin.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\doanhThuAdmin.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\doanhThuAdmin.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\doanhThuAdmin.cs",
+              "RelativeToolTip": "LapStore\\Widget\\Admin\\doanhThuAdmin.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAawGoAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:04:56.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "doanhThuAdmin.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\doanhThuAdmin.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\doanhThuAdmin.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\doanhThuAdmin.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\Admin\\doanhThuAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:04:53.831Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserForm.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
+              "RelativeDocumentMoniker": "LapStore\\View\\UserForm.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs [Design]",
+              "RelativeToolTip": "LapStore\\View\\UserForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T08:37:18.283Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserForm.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
+              "RelativeDocumentMoniker": "LapStore\\View\\UserForm.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
+              "RelativeToolTip": "LapStore\\View\\UserForm.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowFQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T08:38:09.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThongKeController.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\ThongKeController.cs",
+              "RelativeDocumentMoniker": "LapStore\\Controller\\ThongKeController.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\ThongKeController.cs",
+              "RelativeToolTip": "LapStore\\Controller\\ThongKeController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAD4v0YAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:11:03.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminForm.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\AdminForm.cs",
+              "RelativeDocumentMoniker": "LapStore\\View\\AdminForm.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\AdminForm.cs [Design]",
+              "RelativeToolTip": "LapStore\\View\\AdminForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:11:36.217Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "traCuuBaoHanh.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\traCuuBaoHanh.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\traCuuBaoHanh.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\traCuuBaoHanh.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\User\\traCuuBaoHanh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T08:45:43.739Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "thanhToan.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\thanhToan.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs",
+              "RelativeToolTip": "LapStore\\Widget\\User\\thanhToan.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAD4v4kAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:34:02.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LuotXemController.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\LuotXemController.cs",
+              "RelativeDocumentMoniker": "LapStore\\Controller\\LuotXemController.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\LuotXemController.cs",
+              "RelativeToolTip": "LapStore\\Controller\\LuotXemController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:54:44.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PhieuBaoHanhController.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\PhieuBaoHanhController.cs",
+              "RelativeDocumentMoniker": "LapStore\\Controller\\PhieuBaoHanhController.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\PhieuBaoHanhController.cs",
+              "RelativeToolTip": "LapStore\\Controller\\PhieuBaoHanhController.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAqwLEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T08:39:15.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "thanhToan.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\thanhToan.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\thanhToan.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\User\\thanhToan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:34:00.244Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "gioHang.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\gioHang.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\gioHang.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\gioHang.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\User\\gioHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:34:12.593Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "gioHang.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\gioHang.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\gioHang.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\gioHang.cs",
+              "RelativeToolTip": "LapStore\\Widget\\User\\gioHang.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAswBQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:34:15.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "baoHanhAdmin.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs [Design]",
+              "RelativeToolTip": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T21:58:44.07Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "baoHanhAdmin.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
+              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
+              "RelativeToolTip": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAkwEEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T21:58:45.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "traCuuBaoHanh.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\traCuuBaoHanh.cs",
               "RelativeDocumentMoniker": "LapStore\\Widget\\User\\traCuuBaoHanh.cs",
@@ -75,57 +366,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "traCuuBaoHanh.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\traCuuBaoHanh.cs",
-              "RelativeDocumentMoniker": "LapStore\\Widget\\User\\traCuuBaoHanh.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\User\\traCuuBaoHanh.cs [Design]",
-              "RelativeToolTip": "LapStore\\Widget\\User\\traCuuBaoHanh.cs [Design]",
+              "DocumentIndex": 19,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\DonHangController.cs",
+              "RelativeDocumentMoniker": "LapStore\\Controller\\DonHangController.cs",
+              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\DonHangController.cs",
+              "RelativeToolTip": "LapStore\\Controller\\DonHangController.cs",
+              "ViewState": "AgIAAEEBAAAAAAAAAAA2wHABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:45:43.739Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PhieuBaoHanhController.cs",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Controller\\PhieuBaoHanhController.cs",
-              "RelativeDocumentMoniker": "LapStore\\Controller\\PhieuBaoHanhController.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Controller\\PhieuBaoHanhController.cs",
-              "RelativeToolTip": "LapStore\\Controller\\PhieuBaoHanhController.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAEwPQAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:39:15.163Z",
+              "WhenOpened": "2025-04-24T09:06:59.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserForm.cs",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
-              "RelativeDocumentMoniker": "LapStore\\View\\UserForm.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
-              "RelativeToolTip": "LapStore\\View\\UserForm.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAvwG8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:38:09.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserForm.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs",
-              "RelativeDocumentMoniker": "LapStore\\View\\UserForm.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\UserForm.cs [Design]",
-              "RelativeToolTip": "LapStore\\View\\UserForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:37:18.283Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "AdminForm.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\AdminForm.cs",
               "RelativeDocumentMoniker": "LapStore\\View\\AdminForm.cs",
@@ -138,19 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminForm.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\View\\AdminForm.cs",
-              "RelativeDocumentMoniker": "LapStore\\View\\AdminForm.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\View\\AdminForm.cs [Design]",
-              "RelativeToolTip": "LapStore\\View\\AdminForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T22:11:36.217Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "ShowRoom.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Model\\ShowRoom.cs",
               "RelativeDocumentMoniker": "LapStore\\Model\\ShowRoom.cs",
@@ -162,30 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "baoHanhAdmin.cs",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
-              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
-              "RelativeToolTip": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAqwG0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T21:58:45.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "baoHanhAdmin.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
-              "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs",
-              "ToolTip": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\baoHanhAdmin.cs [Design]",
-              "RelativeToolTip": "LapStore\\Widget\\Admin\\baoHanhAdmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T21:58:44.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "showRoomControl.cs",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\showRoomControl.cs",
               "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\showRoomControl.cs",
@@ -197,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 23,
               "Title": "showRoomControl.cs [Design]",
               "DocumentMoniker": "D:\\C#\\LapStore\\LapStore\\Widget\\Admin\\showRoomControl.cs",
               "RelativeDocumentMoniker": "LapStore\\Widget\\Admin\\showRoomControl.cs",
